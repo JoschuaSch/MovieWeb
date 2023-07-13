@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to MovieCoasterTycoon!</h1>
+        <nav>
+            <ul>
+                <li><a href="/users">View Users</a></li>
+                <li><a href="/add_user">Add User</a></li>
+                <li><a href="{{ url_for('add_movie', user_id='some_user_id') }}">Add Movie</a></li>
+                <li><a href="{{ url_for('update_movie', user_id='default_user', movie_id='default_movie') }}">Update Movie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+{% endblock %}
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 MovieCoasterTycoon</p>
+    </footer>
+</body>
+</html>

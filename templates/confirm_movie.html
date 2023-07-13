@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Confirm Movie
+{% endblock %}
+
+{% block content %}
+    <h2>Confirm Movie</h2>
+    <p>Is this the movie you want to add?</p>
+    <p>{{ movie['Title'] }} ({{ movie['Year'] }}) by {{ movie['Director'] }}</p>
+    <img src="{{ movie['Poster'] }}" alt="Movie poster">
+    <form method="POST" action="{{ url_for('add_confirmed_movie', user_id=user_id) }}">
+        {% for key, value in movie.items() %}
+            <input type="hidden" name="{{ key }}" value="{{ value }}">
+        {% endfor %}
+        <input type="hidden" name="user_id" value="{{ user_id }}">
+        <input type="submit" value="Yes, add this movie">
+    </form>
+    <form method="POST" action="{{ url_for('add_movie') }}">
+        <input type="submit" value="No, find another movie">
+    </form>
+{% endblock %}
+

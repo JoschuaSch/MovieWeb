@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>User Movies</h2>
+  {% if movies %}
+    <ul>
+      {% for movie in movies %}
+        <li>{{ movie }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No movies found for this user.</p>
+  {% endif %}
+{% endblock %}
