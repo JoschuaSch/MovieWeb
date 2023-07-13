@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Movie Added
+{% endblock %}
+
+{% block content %}
+    <h2>Movie Added Successfully!</h2>
+    <p>Do you want to add more movies or go to your movie list?</p>
+    <form method="GET" action="{{ url_for('add_movie') }}">
+        <input type="submit" value="Add More Movies">
+    </form>
+    <form method="GET" action="{{ url_for('user_movies', user_id=user_id) }}">
+        <input type="submit" value="Go to My Movie List">
+    </form>
+{% endblock %}

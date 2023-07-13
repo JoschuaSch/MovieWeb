@@ -23,6 +23,11 @@ class MovieNotFoundError(Exception):
     pass
 
 
+class DuplicateMovieError(Exception):
+    """Raised when a movie is already in the user's list."""
+    pass
+
+
 class JSONDataManager(DataManagerInterface):
     def __init__(self, filename):
         self.filename = filename
@@ -85,12 +90,13 @@ class JSONDataManager(DataManagerInterface):
         except Exception as e:
             logger.error(f"An error occurred while deleting the user: {e}")
 
-    def add_movie(self, user_id, movie_id, movie_details):
+    def add_movie(self, user_id, movie_details):
         user = self.users.get(user_id)
         if not user:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
-        if movie_id in user["movies"]:
-            raise ValueError(f"Movie with ID {movie_id} already exists for this user.")
+        for movie in user["movies"].values():
+            if movie["Title"] == movie_details["Title"]:
+                raise DuplicateMovieError(f"You have already added '{movie_details['Title']}' to your list.")
         movie_details.setdefault('personal_rating', None)
         movie_details.setdefault('watched', False)
         unique_movie_id = str(uuid.uuid4())
@@ -150,3 +156,11 @@ class JSONDataManager(DataManagerInterface):
                 raise MovieNotFoundError(f"Movie with ID {movie_id} not found for user with ID {user_id}.")
         else:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
+
+    def movie_exists(self, user_id, movie_title):
+        user = self.users.get(user_id)
+        if user:
+            for movie in user["movies"].values():
+                if movie["Title"].lower() == movie_title.lower():
+                    return True
+        return False

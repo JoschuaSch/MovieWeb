@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from datamanager.json_data_manager import JSONDataManager, UserNotFoundError, MovieNotFoundError
+from datamanager.json_data_manager import JSONDataManager, UserNotFoundError, MovieNotFoundError, DuplicateMovieError
 import uuid
 from werkzeug.exceptions import BadRequest
 import omdb_api
 
 app = Flask(__name__)
-app.secret_key = 'Hello@@'
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 data_manager = JSONDataManager('data.json')
 
 
@@ -44,37 +44,43 @@ def add_user():
 @app.route('/add_movie', methods=['GET', 'POST'])
 def add_movie():
     if request.method == 'POST':
-        user_id = request.form['user_id']
-        movie_name = request.form['movie_name']
-        personal_rating = request.form.get('rating')
-        watched = 'watched' in request.form
-        existing_movies = data_manager.get_user_movies(user_id)
-        if any(movie['Title'] == movie_name for movie in existing_movies):
-            flash('Movie already exists in the user\'s movie list.')
-            return redirect(url_for('add_movie', user_id=user_id))
-        movie_details = omdb_api.fetch_movie_details(movie_name)
-        if movie_details is None:
-            flash('Movie not found. Please check the movie name and try again.')
-            return redirect(url_for('add_movie', user_id=user_id))
+        user_id = request.form.get('user_id')
+        movie_name = request.form.get('movie_name')
+        if not movie_name:
+            flash('No movie name provided. Please check and try again.')
+            return redirect(url_for('add_movie'))
         else:
-            movie_details['personal_rating'] = personal_rating
-            movie_details['watched'] = watched
-            movie_id = data_manager.add_movie(user_id, movie_id=None, movie_details=movie_details)
-            return render_template('confirm_movie.html', user_id=user_id, movie_id=movie_id, movie=movie_details)
+            return redirect(url_for('confirm_movie', user_id=user_id, movie_name=movie_name))
     else:
         users = data_manager.get_all_users()
         return render_template('add_movie.html', users=users)
 
 
-@app.route('/confirm_movie', methods=['POST'])
-def confirm_movie():
-    movie_title = request.form['title']
-    movie_data = omdb_api.fetch_movie_details(movie_title)
-    if movie_data is None:
-        flash('Movie not found. Please check the title and try again.')
-        return redirect(url_for('add_movie'))
+@app.route('/confirm_movie/<user_id>/<movie_name>', methods=['GET', 'POST'])
+def confirm_movie(user_id, movie_name):
+    if request.method == 'GET':
+        movie_data = omdb_api.fetch_movie_details(movie_name)
+        if movie_data is None:
+            flash('Movie not found. Please check the title and try again.')
+            return redirect(url_for('add_movie'))
+        else:
+            return render_template('confirm_movie.html', user_id=user_id, movie=movie_data)
     else:
-        return render_template('confirm_movie.html', movie=movie_data)
+        personal_rating = request.form.get('rating')
+        watched = 'watched' in request.form
+        movie_data = omdb_api.fetch_movie_details(movie_name)
+        if movie_data is None:
+            flash('Movie not found. Please check the title and try again.')
+            return redirect(url_for('add_movie'))
+        movie_data['personal_rating'] = personal_rating
+        movie_data['watched'] = watched
+        try:
+            data_manager.add_movie(user_id, movie_data)
+            flash('Movie added successfully. Do you want to add more or go to your movie list?')
+            return render_template('post_add_movie.html', user_id=user_id)
+        except DuplicateMovieError:
+            flash('This movie is already in your list.')
+            return redirect(url_for('confirm_movie', user_id=user_id, movie_name=movie_name))
 
 
 @app.route('/users/<user_id>/movies/update/<movie_id>', methods=['GET', 'POST'])
@@ -112,35 +118,6 @@ def delete_movie(user_id, movie_id):
         return redirect(url_for('user_movies', user_id=user_id))
     except ValueError as e:
         return render_template('error.html', message=str(e)), 400
-
-
-@app.route('/confirm_movie_for_user', methods=['POST'])
-def confirm_movie_for_user():
-    user_id = request.form['user_id']
-    movie_name = request.form['movie_name']
-    movie_data = omdb_api.fetch_movie_details(movie_name)
-    if movie_data is None:
-        flash('Movie not found. Please check the movie name and try again.')
-        return redirect(url_for('add_movie'))
-    else:
-        return render_template('confirm_movie.html', user_id=user_id, movie=movie_data)
-
-
-@app.route('/users/<user_id>/add_confirmed_movie/', methods=['POST'])
-def add_confirmed_movie(user_id):
-    try:
-        data_manager.find_user_by_id(user_id)
-    except UserNotFoundError:
-        flash('User not found. Please check the user id and try again.')
-        return redirect(url_for('home'))
-    movie_data = request.form
-    keys_of_interest = ['Title', 'Year', 'Rated', 'Director', 'Actors', 'Plot', 'Language', 'Country', 'Awards',
-                        'Poster', 'imdbRating']
-    movie = {key: movie_data.get(key, None) for key in keys_of_interest}
-    movie_id = movie['Title'].replace(' ', '_') if movie.get('Title') else None
-    data_manager.add_movie(user_id, movie_id, movie)
-    flash('Movie successfully added!')
-    return redirect(url_for('user_movies', user_id=user_id))
 
 
 @app.errorhandler(404)

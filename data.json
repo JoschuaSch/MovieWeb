@@ -14,7 +14,167 @@
         "Awards": "3 wins & 3 nominations",
         "Poster": "https://m.media-amazon.com/images/M/MV5BMTQwMDU5NDkxNF5BMl5BanBnXkFtZTcwMjk5OTk4OQ@@._V1_SX300.jpg",
         "imdbRating": "6.5"
-      }
+      },
+      "26e4a718-4120-4c95-ac31-9458803350e0": {
+        "Title": "Full Metal Jacket",
+        "Year": "1987",
+        "Rated": "R",
+        "Released": "10 Jul 1987",
+        "Runtime": "116 min",
+        "Genre": "Drama, War",
+        "Director": "Stanley Kubrick",
+        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
+        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
+        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
+        "Language": "English, Vietnamese",
+        "Country": "United Kingdom, United States",
+        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "78/100"
+          }
+        ],
+        "Metascore": "78",
+        "imdbRating": "8.3",
+        "imdbVotes": "762,151",
+        "imdbID": "tt0093058",
+        "Type": "movie",
+        "DVD": "12 Jun 2001",
+        "BoxOffice": "$46,357,676",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "8",
+        "watched": true
+      },
+      "47d66106-77f6-4b54-b111-4d0d071d970f": {
+        "Title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "87%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,425,956",
+        "imdbID": "tt1375666",
+        "Type": "movie",
+        "DVD": "07 Dec 2010",
+        "BoxOffice": "$292,587,330",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "9",
+        "watched": true
+      },
+      "828af762-dfad-4676-9d3b-7aa01c67ab30": {
+        "Title": "Fear",
+        "Year": "1996",
+        "Rated": "R",
+        "Released": "12 Apr 1996",
+        "Runtime": "97 min",
+        "Genre": "Drama, Thriller",
+        "Director": "James Foley",
+        "Writer": "Christopher Crowe",
+        "Actors": "Mark Wahlberg, Reese Witherspoon, William Petersen",
+        "Plot": "When Nicole met David; handsome, charming, affectionate, he was everything. It seemed perfect, but soon she sees that David has a darker side. And his adoration turns to obsession, their dream into a nightmare, and her love into f...",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "1 win & 2 nominations",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZTM4ZmJmMTQtMWUxOS00MjQxLTllNmQtNzI4YWVhYzZlNTRkXkEyXkFqcGdeQXVyNjU0NTI0Nw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.2/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "46%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "51/100"
+          }
+        ],
+        "Metascore": "51",
+        "imdbRating": "6.2",
+        "imdbVotes": "51,326",
+        "imdbID": "tt0116287",
+        "Type": "movie",
+        "DVD": "25 Feb 2003",
+        "BoxOffice": "$20,831,000",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": true
+      },
+      "7d0bf12b-fc0b-4a1b-9423-31b6c3b17e5e": {
+        "Title": "Jolly",
+        "Year": "2020",
+        "Rated": "N/A",
+        "Released": "19 Dec 2020",
+        "Runtime": "4 min",
+        "Genre": "Short, Horror",
+        "Director": "Todd Spence",
+        "Writer": "Todd Spence, Zak White",
+        "Actors": "N/A",
+        "Plot": "An animatronic Santa head has a different kind of present to give.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTA4YTYxOWYtMWEzMS00NjIyLWFlNmItMDZmNzViZjJjZTc1XkEyXkFqcGdeQXVyNjMyODgzNzY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "4.6/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "4.6",
+        "imdbVotes": "10",
+        "imdbID": "tt13884852",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "",
+        "watched": false
       }
     }
   }
+}
