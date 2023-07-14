@@ -65,7 +65,7 @@ class JSONDataManager(DataManagerInterface):
         try:
             user = self.users.get(user_id)
             if user:
-                return list(user["movies"].values())
+                return [(movie_id, details) for movie_id, details in user["movies"].items()]
         except Exception as e:
             logger.error(f"An error occurred while retrieving user movies: {e}")
         return []
@@ -134,16 +134,14 @@ class JSONDataManager(DataManagerInterface):
             logger.error(f"An error occurred while finding the movie: {e}")
             return None
 
-    def update_movie(self, user_id, movie_id, movie_details):
+    def update_movie(self, user_id, movie_id, new_details):
         user = self.users.get(user_id)
         if not user:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
-        if movie_id not in user["movies"]:
+        movie = user["movies"].get(movie_id)
+        if not movie:
             raise MovieNotFoundError(f"Movie with ID {movie_id} not found for user with ID {user_id}.")
-        movie_details['personal_rating'] = movie_details.get('personal_rating',
-                                                             user["movies"][movie_id].get('personal_rating'))
-        movie_details['watched'] = movie_details.get('watched', user["movies"][movie_id].get('watched'))
-        user["movies"][movie_id] = movie_details
+        movie.update(new_details)
         self.save_to_file()
 
     def delete_movie(self, user_id, movie_id):

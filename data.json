@@ -2,22 +2,9 @@
   "1": {
     "name": "Alice",
     "movies": {
-      "Test": {
-        "Title": "Test",
-        "Year": "2013",
-        "Rated": "TV-MA",
-        "Director": "Chris Mason Johnson",
-        "Actors": "Scott Marlowe, Matthew Risch, Evan Boomer",
-        "Plot": "In 1985, a gay dance understudy hopes for his on-stage chance while fearing the growing AIDS epidemic.",
-        "Language": "English, Portuguese, French",
-        "Country": "United States",
-        "Awards": "3 wins & 3 nominations",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMTQwMDU5NDkxNF5BMl5BanBnXkFtZTcwMjk5OTk4OQ@@._V1_SX300.jpg",
-        "imdbRating": "6.5"
-      },
       "26e4a718-4120-4c95-ac31-9458803350e0": {
         "Title": "Full Metal Jacket",
-        "Year": "1987",
+        "Year": 1987,
         "Rated": "R",
         "Released": "10 Jul 1987",
         "Runtime": "116 min",
@@ -54,8 +41,9 @@
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True",
-        "personal_rating": "8",
-        "watched": true
+        "personal_rating": 8.0,
+        "watched": true,
+        "review": "yes"
       },
       "47d66106-77f6-4b54-b111-4d0d071d970f": {
         "Title": "Inception",
@@ -109,7 +97,7 @@
         "Director": "James Foley",
         "Writer": "Christopher Crowe",
         "Actors": "Mark Wahlberg, Reese Witherspoon, William Petersen",
-        "Plot": "When Nicole met David; handsome, charming, affectionate, he was everything. It seemed perfect, but soon she sees that David has a darker side. And his adoration turns to obsession, their dream into a nightmare, and her love into f...",
+        "Plot": "When Nicole met David; handsome, charming, affectionate, he was everything. It seemed perfect, but soon she sees that David has a darker side. And his adoration turns to obsession, their dream into a nightmare, and her love into fear...",
         "Language": "English",
         "Country": "United States",
         "Awards": "1 win & 2 nominations",

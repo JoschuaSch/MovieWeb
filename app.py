@@ -18,7 +18,7 @@ def home():
 def user_movies(user_id):
     try:
         movies = data_manager.get_user_movies(user_id)
-        return render_template('user_movies.html', movies=movies)
+        return render_template('user_movies.html', movies=movies, user_id=user_id)
     except UserNotFoundError:
         return f"User with ID {user_id} not found."
 
@@ -85,30 +85,36 @@ def confirm_movie(user_id, movie_name):
 
 @app.route('/users/<user_id>/movies/update/<movie_id>', methods=['GET', 'POST'])
 def update_movie(user_id, movie_id):
+    try:
+        movie = data_manager.find_movie_by_id(user_id, movie_id)
+    except (UserNotFoundError, MovieNotFoundError) as e:
+        return render_template('error.html', message=str(e)), 404
     if request.method == 'POST':
-        movie_name = request.form['name']
-        movie_director = request.form['director']
-        movie_year = int(request.form['year'])
-        movie_rating = float(request.form.get('rating'))
+        movie_name = request.form.get('name')
+        movie_director = request.form.get('director')
+        year = request.form.get('year')
+        rating = request.form.get('rating')
         watched = 'watched' in request.form
-        movie_details = {
-            "Title": movie_name,
-            "Director": movie_director,
-            "Year": movie_year,
-            "personal_rating": movie_rating,
-            "watched": watched
-        }
+        review = request.form.get('review')
+        movie_details = {}
+        if movie_name:
+            movie_details["Title"] = movie_name
+        if movie_director:
+            movie_details["Director"] = movie_director
+        if year:
+            movie_details["Year"] = int(year)
+        if rating:
+            movie_details["personal_rating"] = float(rating)
+        movie_details["watched"] = watched
+        if review:
+            movie_details["review"] = review
         try:
             data_manager.update_movie(user_id, movie_id, movie_details)
         except (UserNotFoundError, MovieNotFoundError) as e:
             return render_template('error.html', message=str(e)), 404
         return redirect(url_for('user_movies', user_id=user_id))
     else:
-        try:
-            movie = data_manager.find_movie_by_id(user_id, movie_id)
-        except (UserNotFoundError, MovieNotFoundError) as e:
-            return render_template('error.html', message=str(e)), 404
-        return redirect(url_for('update_movie', user_id=user_id, movie_id=movie_id, movie=movie))
+        return render_template('update_movie.html', user_id=user_id, movie_id=movie_id, movie=movie)
 
 
 @app.route('/users/<user_id>/delete_movie/<movie_id>', methods=['POST'])

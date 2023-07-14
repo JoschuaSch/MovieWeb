@@ -6,22 +6,26 @@ Update Movie
 
 {% block content %}
     <h2>Update Movie</h2>
-    <form method="POST" action="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}">
-        <label for="name">Movie Name:</label>
-        <input type="text" id="name" name="name" required value="{{ movie.Title }}"/>
-        <br/>
+
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ movie.Title }}" readonly>
+
         <label for="director">Director:</label>
-        <input type="text" id="director" name="director" required value="{{ movie.Director }}"/>
-        <br/>
+        <input type="text" id="director" name="director" value="{{ movie.Director }}" readonly>
+
         <label for="year">Year:</label>
-        <input type="number" id="year" name="year" required value="{{ movie.Year }}"/>
-        <br/>
-        <label for="rating">Your Rating:</label>
-        <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" value="{{ movie.personal_rating }}"/>
-        <br/>
-        <label for="watched">Have you watched this movie?</label>
-        <input type="checkbox" id="watched" name="watched" {% if movie.watched %} checked {% endif %}/>
-        <br/>
-        <input type="submit" value="Update"/>
+        <input type="number" id="year" name="year" value="{{ movie.Year }}" readonly>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" value="{{ movie.personal_rating }}" min="0" max="10" step="0.1">
+
+        <label for="watched">Watched:</label>
+        <input type="checkbox" id="watched" name="watched" value="true" {% if movie.watched %} checked {% endif %}>
+
+        <label for="review">Review:</label>
+        <textarea id="review" name="review">{{ movie.review }}</textarea>
+
+        <button type="submit">Update</button>
     </form>
 {% endblock %}
