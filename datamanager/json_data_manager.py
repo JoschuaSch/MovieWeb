@@ -70,10 +70,10 @@ class JSONDataManager(DataManagerInterface):
             logger.error(f"An error occurred while retrieving user movies: {e}")
         return []
 
-    def add_user(self, user_id, name):
+    def add_user(self, user_id, name, password_hash):
         try:
             if user_id not in self.users:
-                self.users[user_id] = {"name": name, "movies": {}}
+                self.users[user_id] = {"name": name, "password": password_hash, "movies": {}}
                 self.save_to_file()
             else:
                 print("User ID already exists.")

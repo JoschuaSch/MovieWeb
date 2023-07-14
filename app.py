@@ -1,12 +1,18 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from datamanager.json_data_manager import JSONDataManager, UserNotFoundError, MovieNotFoundError, DuplicateMovieError
 import uuid
-from werkzeug.exceptions import BadRequest
+from werkzeug.exceptions import BadRequest, abort
 import omdb_api
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 data_manager = JSONDataManager('data.json')
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
 
 
 @app.route('/')
@@ -14,8 +20,11 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/users/<user_id>')
+@app.route('/users/<user_id>/movies')
+@login_required
 def user_movies(user_id):
+    if current_user.id != user_id:
+        return abort(403)
     try:
         movies = data_manager.get_user_movies(user_id)
         return render_template('user_movies.html', movies=movies, user_id=user_id)
@@ -33,10 +42,12 @@ def list_users():
 def add_user():
     if request.method == 'POST':
         name = request.form['name']
+        password = request.form['password']
         if not name or len(name) > 100:
             raise BadRequest('Invalid user name.')
         user_id = str(uuid.uuid4())
-        data_manager.add_user(user_id, name)
+        hashed_password = generate_password_hash(password)
+        data_manager.add_user(user_id, name, hashed_password)
         return redirect(url_for('list_users'))
     return render_template('add_user.html')
 
@@ -135,6 +146,48 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
+
+
+class User(UserMixin):
+    def __init__(self, user_id, name):
+        self.id = user_id
+        self.name = name
+
+    @classmethod
+    def get(cls, user_id):
+        user_data = data_manager.find_user_by_id(user_id)
+        if not user_data:
+            return None
+        return User(user_id, user_data['name'])
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.get(user_id)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        user_id = request.form.get('user_id')
+        password = request.form.get('password')
+        user_data = data_manager.find_user_by_id(user_id)
+        if user_data and check_password_hash(user_data['password'], password):
+            user = User(user_id, user_data['name'])
+            login_user(user)
+            flash('Logged in successfully.')
+            return redirect(url_for('user_movies', user_id=user_id))
+        else:
+            flash('Invalid username or password')
+    return render_template('login.html')
+
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    flash('You have been logged out.')
+    return redirect(url_for('home'))
 
 
 if __name__ == '__main__':

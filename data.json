@@ -4,7 +4,7 @@
     "movies": {
       "26e4a718-4120-4c95-ac31-9458803350e0": {
         "Title": "Full Metal Jacket",
-        "Year": 1987,
+        "Year": "1987",
         "Rated": "R",
         "Released": "10 Jul 1987",
         "Runtime": "116 min",
@@ -41,9 +41,8 @@
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True",
-        "personal_rating": 8.0,
-        "watched": true,
-        "review": "yes"
+        "personal_rating": "8",
+        "watched": true
       },
       "47d66106-77f6-4b54-b111-4d0d071d970f": {
         "Title": "Inception",
@@ -128,6 +127,40 @@
         "Response": "True",
         "personal_rating": "1",
         "watched": true
+      },
+      "7d0bf12b-fc0b-4a1b-9423-31b6c3b17e5e": {
+        "Title": "Jolly",
+        "Year": "2020",
+        "Rated": "N/A",
+        "Released": "19 Dec 2020",
+        "Runtime": "4 min",
+        "Genre": "Short, Horror",
+        "Director": "Todd Spence",
+        "Writer": "Todd Spence, Zak White",
+        "Actors": "N/A",
+        "Plot": "An animatronic Santa head has a different kind of present to give.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTA4YTYxOWYtMWEzMS00NjIyLWFlNmItMDZmNzViZjJjZTc1XkEyXkFqcGdeQXVyNjMyODgzNzY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "4.6/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "4.6",
+        "imdbVotes": "10",
+        "imdbID": "tt13884852",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "",
+        "watched": false
       }
     }
   }
