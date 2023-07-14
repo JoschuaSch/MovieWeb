@@ -5,6 +5,9 @@ from werkzeug.exceptions import BadRequest, abort
 import omdb_api
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
+import random
+import json
+
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -32,9 +35,13 @@ def user_movies(user_id):
         return f"User with ID {user_id} not found."
 
 
-@app.route('/users')
+@app.route('/users', methods=['GET', 'POST'])
 def list_users():
-    users = data_manager.get_all_users()
+    search = request.form.get('search')
+    if search:
+        users = data_manager.get_users_by_name(search)
+    else:
+        users = data_manager.get_all_users()
     return render_template('users.html', users=users)
 
 
@@ -166,6 +173,18 @@ def load_user(user_id):
     return User.get(user_id)
 
 
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        user_id = request.form.get('user_id')
+        password = request.form.get('password')
+        hashed_password = generate_password_hash(password)
+        data_manager.add_user(user_id, user_id, hashed_password)
+        flash('Registered successfully. Please login.')
+        return redirect(url_for('login'))
+    return render_template('register.html')
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -194,6 +213,19 @@ def logout():
 def top_100_movies():
     movies = data_manager.get_most_watched_movies()
     return render_template('top100.html', movies=movies)
+
+
+@app.route('/random-movie', methods=['GET'])
+def random_movie():
+    with open('data.json', 'r') as f:
+        data = json.load(f)
+
+    movie_ids = []
+    for user in data.values():
+        for movie in user['movies'].values():
+            movie_ids.append(movie)
+    randomized_movie = random.choice(movie_ids)
+    return render_template('random.html', movie=randomized_movie)
 
 
 if __name__ == '__main__':

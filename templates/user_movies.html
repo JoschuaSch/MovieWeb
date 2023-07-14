@@ -19,6 +19,8 @@
         </form>
     </div>
     {% endfor %}
-    <button onclick="window.history.back()">Go Back</button>
+    <a href="{{ url_for('home') }}">
+        <button>Go Home</button>
+    </a>
 </body>
 </html>

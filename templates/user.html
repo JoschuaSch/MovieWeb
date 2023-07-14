@@ -1,12 +1,20 @@
 {% extends 'base.html' %}
 
 {% block title %}
-User
+  User Detail
 {% endblock %}
 
 {% block content %}
-<h2>User</h2>
-<p>Name: {{ user.name }}</p>
-<p>ID: {{ user.id }}</p>
-<a href="{{ url_for('user_movies', user_id=user.id) }}">View User's Movies</a>
+  <h2>User Detail</h2>
+
+  <p>Name: {{ user.name }}</p>
+
+  <h3>Movies:</h3>
+  <ul>
+    {% for movie in user.movies.values() %}
+      <li>{{ movie.Title }} - {{ movie.Year }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{{ url_for('users') }}">Back to User List</a>
 {% endblock %}

@@ -1,14 +1,23 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Users
+  User List
 {% endblock %}
 
 {% block content %}
-<h2>All Users</h2>
-{% for user in users %}
-    <h3>{{ user.name }}</h3>
-    <a href="{{ url_for('user_movies', user_id=user.id) }}">View User's Movies</a>
-{% endfor %}
-{% endblock %}
+  <h2>User List</h2>
 
+  <button onclick="window.history.back()">Go Back</button>
+
+  <form method="POST">
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="search" required>
+    <input type="submit" value="Search">
+  </form>
+
+  <ul>
+    {% for user in users %}
+      <li>{{ user.name }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

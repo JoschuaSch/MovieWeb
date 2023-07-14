@@ -161,3 +161,14 @@ class JSONDataManager(DataManagerInterface):
         most_watched_movies = sorted(movie_watches.values(), key=lambda movie: movie['watch_count'], reverse=True)
         return most_watched_movies[:100]
 
+    def search_users(self, query):
+        return [{'id': user_id, **user_data} for user_id, user_data in self.users.items() if
+                query.lower() in user_data['name'].lower()]
+
+    def get_users_by_name(self, search):
+        users = self.get_all_users()
+        users = [user for user in users if search.lower() == user['name'].lower()]
+        users.sort(key=lambda user: user['name'])
+        return users
+
+
