@@ -1,19 +1,24 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Movies</title>
+</head>
+<body>
+    <h1>Welcome to MovieCoasterTycoon!</h1>
 
-{% block title %}
-User Movies
-{% endblock %}
-
-{% block content %}
     <h2>Movies</h2>
-    <ul>
-        {% for movie_id, movie in movies %}
-            <li>
-                <img src="{{ movie.Poster }}" alt="{{ movie.Title }} poster" width="100">
-                {{ movie.Title }}
-                <a href="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}">Update</a>
-            </li>
-        {% endfor %}
-    </ul>
-{% endblock %}
-
+    {% for movie_id, movie in movies %}
+    <div>
+        <p>{{ movie['Title'] }}</p>
+        <img src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster">
+        <form action="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}" method="get">
+            <input type="submit" value="Update">
+        </form>
+        <form action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}" method="post">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+    {% endfor %}
+    <button onclick="window.history.back()">Go Back</button>
+</body>
+</html>

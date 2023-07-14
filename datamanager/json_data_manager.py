@@ -104,20 +104,6 @@ class JSONDataManager(DataManagerInterface):
         self.save_to_file()
         return unique_movie_id
 
-    def delete_movie(self, user_id, movie_id):
-        try:
-            user = self.users.get(user_id)
-            if user:
-                if movie_id in user["movies"]:
-                    del user["movies"][movie_id]
-                    self.save_to_file()
-                else:
-                    print("Movie ID does not exist for this user.")
-            else:
-                print("User ID does not exist.")
-        except Exception as e:
-            logger.error(f"An error occurred while deleting the movie: {e}")
-
     def find_user_by_id(self, user_id):
         try:
             return self.users.get(user_id, None)

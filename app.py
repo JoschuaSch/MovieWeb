@@ -121,6 +121,7 @@ def update_movie(user_id, movie_id):
 def delete_movie(user_id, movie_id):
     try:
         data_manager.delete_movie(user_id, movie_id)
+        flash('Movie deleted successfully.')
         return redirect(url_for('user_movies', user_id=user_id))
     except ValueError as e:
         return render_template('error.html', message=str(e)), 400
