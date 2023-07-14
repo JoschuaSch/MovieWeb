@@ -190,5 +190,11 @@ def logout():
     return redirect(url_for('home'))
 
 
+@app.route('/top100')
+def top_100_movies():
+    movies = data_manager.get_most_watched_movies()
+    return render_template('top100.html', movies=movies)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -5,12 +5,9 @@ Home
 {% endblock %}
 
 {% block content %}
-<h2>Welcome to MovieWeb</h2>
 <ul>
     <li><a href="{{ url_for('top_100_movies') }}">Top 100 Movies</a></li>
     <li><a href="{{ url_for('list_users') }}">View Users</a></li>
-    <li><a href="{{ url_for('surprise_movie') }}">Surprise Movie</a></li>
-    <li><a href="{{ url_for('top_rated_comments') }}">Top Rated Comments</a></li>
     {% if current_user.is_authenticated %}
         <li><a href="{{ url_for('user_movies', user_id=current_user.id) }}">My Profile</a></li>
     {% endif %}
