@@ -256,5 +256,16 @@ def user_profile(user_id):
         return f"User with ID {user_id} not found."
 
 
+@app.route('/users/<user_id>/movies/<movie_id>/like', methods=['POST'])
+@login_required
+def like_review(user_id, movie_id):
+    try:
+        liker_id = current_user.id
+        data_manager.like_review(user_id, movie_id, liker_id)
+        return redirect(url_for('user_movies', user_id=user_id))
+    except ValueError as e:
+        return render_template('error.html', message=str(e)), 400
+
+
 if __name__ == '__main__':
     app.run(debug=True)

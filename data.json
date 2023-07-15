@@ -1,9 +1,57 @@
 {
-  "Hullu": {
-    "name": "Hullu",
-    "password": "pbkdf2:sha256:260000$n301jWIMiyDEzmbG$24f9c7a7ea5b3e7aa3e85b5a207e4f3386a3834831130e0b4ae93ab1315aa3f6",
+  "Testa": {
+    "name": "Testa",
+    "password": "pbkdf2:sha256:260000$YrfSKSfm9wre3YqQ$6b86c852be3c0dcfc3d99db5cff53d70700f3e194e4d3e984694f6f6dc8d7d50",
     "movies": {
-      "63da7a89-32bb-4e77-a293-860c7d9456d1": {
+      "4886e6b0-143a-47e5-944f-66919ac54b7e": {
+        "Title": "Full Metal Jacket",
+        "Year": "1987",
+        "Rated": "R",
+        "Released": "10 Jul 1987",
+        "Runtime": "116 min",
+        "Genre": "Drama, War",
+        "Director": "Stanley Kubrick",
+        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
+        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
+        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
+        "Language": "English, Vietnamese",
+        "Country": "United Kingdom, United States",
+        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "78/100"
+          }
+        ],
+        "Metascore": "78",
+        "imdbRating": "8.3",
+        "imdbVotes": "762,151",
+        "imdbID": "tt0093058",
+        "Type": "movie",
+        "DVD": "12 Jun 2001",
+        "BoxOffice": "$46,357,676",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "10",
+        "watched": true,
+        "likes": {
+          "count": 1,
+          "users": [
+            "Alice"
+          ]
+        }
+      },
+      "c1830a6c-9701-4857-91f0-e08461b0c3c8": {
         "Title": "Inception",
         "Year": "2010",
         "Rated": "PG-13",
@@ -42,205 +90,28 @@
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True",
-        "personal_rating": "8",
+        "personal_rating": "8.2",
         "watched": true,
-        "watch_count": 1
+        "likes": {
+          "count": 1,
+          "users": [
+            "Alice"
+          ]
+        }
       }
     },
     "age": "27",
-    "favorite_movie": "Inkabell",
+    "favorite_movie": "Paw Patrol",
     "favorite_quote": "I am tho i am no longer",
-    "profile_picture": 1
-  },
-  "Testa": {
-    "name": "Testa",
-    "password": "pbkdf2:sha256:260000$TgSTZGbdZW23qdSY$f77d8bdeb66b4fc506fa7f47d189b11ac21d22509580dd78c20af86a50392cc8",
-    "movies": {
-      "93671d1b-6275-42df-a955-1c1525b00ca8": {
-        "Title": "Full Metal Jacket",
-        "Year": 1987,
-        "Rated": "R",
-        "Released": "10 Jul 1987",
-        "Runtime": "116 min",
-        "Genre": "Drama, War",
-        "Director": "Stanley Kubrick",
-        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
-        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
-        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
-        "Language": "English, Vietnamese",
-        "Country": "United Kingdom, United States",
-        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.3/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "91%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "78/100"
-          }
-        ],
-        "Metascore": "78",
-        "imdbRating": "8.3",
-        "imdbVotes": "762,151",
-        "imdbID": "tt0093058",
-        "Type": "movie",
-        "DVD": "12 Jun 2001",
-        "BoxOffice": "$46,357,676",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": 1.0,
-        "watched": true,
-        "review": "yes yes yey"
-      },
-      "756ceced-83a5-4c89-a11c-1329ae646fa3": {
-        "Title": "The Lord of the Rings: The Fellowship of the Ring",
-        "Year": 2001,
-        "Rated": "PG-13",
-        "Released": "19 Dec 2001",
-        "Runtime": "178 min",
-        "Genre": "Action, Adventure, Drama",
-        "Director": "Peter Jackson",
-        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
-        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
-        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
-        "Language": "English, Sindarin",
-        "Country": "New Zealand, United States",
-        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.8/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "91%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "92/100"
-          }
-        ],
-        "Metascore": "92",
-        "imdbRating": "8.8",
-        "imdbVotes": "1,923,743",
-        "imdbID": "tt0120737",
-        "Type": "movie",
-        "DVD": "06 Aug 2002",
-        "BoxOffice": "$316,115,420",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": 10.0,
-        "watched": true,
-        "review": "And my Website!!!"
-      }
-    },
-    "age": "28",
-    "favorite_movie": "Da",
-    "favorite_quote": "dede",
     "profile_picture": 1
   },
   "Alice": {
     "name": "Alice",
-    "password": "pbkdf2:sha256:260000$z2GbaxQMN1zSmpST$c5bc4864f53325f067a86fddd50182abd7847c7dea054a37a2c0348644769fe0",
-    "movies": {
-      "16b131f2-d0f9-4273-a83c-c0011a00ba60": {
-        "Title": "Full Metal Jacket",
-        "Year": 1987,
-        "Rated": "R",
-        "Released": "10 Jul 1987",
-        "Runtime": "116 min",
-        "Genre": "Drama, War",
-        "Director": "Stanley Kubrick",
-        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
-        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
-        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
-        "Language": "English, Vietnamese",
-        "Country": "United Kingdom, United States",
-        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.3/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "91%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "78/100"
-          }
-        ],
-        "Metascore": "78",
-        "imdbRating": "8.3",
-        "imdbVotes": "762,151",
-        "imdbID": "tt0093058",
-        "Type": "movie",
-        "DVD": "12 Jun 2001",
-        "BoxOffice": "$46,357,676",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": 9.0,
-        "watched": true,
-        "review": "Hello was"
-      }
-    },
-    "age": "",
-    "favorite_movie": "",
-    "favorite_quote": "",
-    "profile_picture": 1
-  },
-  "Paul": {
-    "name": "Paul",
-    "password": "pbkdf2:sha256:260000$lsdYdljtyIg54gjR$25a0cfd62959606316f539fb57de5fc812810d04ab55323e800c62113d405b20",
-    "movies": {
-      "9085132c-438c-40f7-b529-2e0c09ab110a": {
-        "Title": "PAW Patrol",
-        "Year": "2013",
-        "Rated": "TV-Y",
-        "Released": "14 Nov 2013",
-        "Runtime": "23 min",
-        "Genre": "Animation, Adventure, Comedy",
-        "Director": "N/A",
-        "Writer": "Keith Chapman, Scott Kraft",
-        "Actors": "Ron Pardo, Kallan Holley, Justin Paul Kelly",
-        "Plot": "Led by a boy named Ryder, a team of six playful rescue dogs use their individual talents to protect the seaside town of Adventure Bay. The pups are occasionally joined by newer helpers: Cap'n Turbot, Robo-Dog, Everest, and Tracker.",
-        "Language": "English",
-        "Country": "United States, Canada",
-        "Awards": "37 wins & 39 nominations",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMGM5OTM3NzgtODQ4My00OTk3LWI5MmMtODU3NDIyMzc3MzgyXkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "6.1/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "6.1",
-        "imdbVotes": "3,795",
-        "imdbID": "tt3121722",
-        "Type": "series",
-        "totalSeasons": "9",
-        "Response": "True",
-        "personal_rating": 10.0,
-        "watched": true,
-        "review": "I like the minute 10"
-      }
-    },
-    "age": "5",
-    "favorite_movie": "Paw Patrol",
-    "favorite_quote": "I like Dogs and so on",
-    "profile_picture": 1
+    "password": "pbkdf2:sha256:260000$dxt7viPIxbi6FUr4$5ee3c00b794efc8b420887762cbd7e7343ddd6b5296015f9a738b8bd2452a353",
+    "movies": {},
+    "age": "28",
+    "favorite_movie": "Inkabell",
+    "favorite_quote": "dede",
+    "profile_picture": 0
   }
 }

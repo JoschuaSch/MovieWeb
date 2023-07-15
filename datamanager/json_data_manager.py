@@ -181,3 +181,18 @@ class JSONDataManager(DataManagerInterface):
         users = [user for user in users if search.lower() == user['name'].lower()]
         users.sort(key=lambda user: user['name'])
         return users
+
+    def like_review(self, user_id, movie_id, liker_id):
+        user = self.users.get(user_id)
+        if not user:
+            raise UserNotFoundError(f"User with ID {user_id} not found.")
+        movie = user["movies"].get(movie_id)
+        if not movie:
+            raise MovieNotFoundError(f"Movie with ID {movie_id} not found for user with ID {user_id}.")
+        if "likes" not in movie or not isinstance(movie["likes"], dict):
+            movie["likes"] = {"count": 0, "users": []}
+        if liker_id in movie["likes"]["users"]:
+            return
+        movie["likes"]["count"] += 1
+        movie["likes"]["users"].append(liker_id)
+        self.save_to_file()

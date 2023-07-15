@@ -12,17 +12,19 @@
                     <img src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster" width="100">
                 </a>
                 <span>{{ movie['Title'] }}</span>
-                {% if movie['personal_rating'] %}
-                    <p>Personal Rating: {{ movie['personal_rating'] }}</p>
-                {% endif %}
-                {% if movie['review'] %}
-                    <p>Review: {{ movie['review'] }}</p>
-                {% endif %}
+                <p>{{ movie['review'] }}</p>
+                {% set likes = movie['likes']|default({'count': 0}) %}
+                Likes: {{ likes['count'] }}
                 {% if current_user_id == user_id %}
                     <form method="post" action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}">
                         <input type="submit" value="Delete">
                     </form>
                     <a href="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}" class="btn btn-primary">Update</a>
+                {% endif %}
+                {% if current_user_id != user_id %}
+                    <form method="post" action="{{ url_for('like_review', user_id=user_id, movie_id=movie_id, liker_id=current_user_id) }}">
+                        <input type="submit" value="Like">
+                    </form>
                 {% endif %}
             </li>
         {% endfor %}
