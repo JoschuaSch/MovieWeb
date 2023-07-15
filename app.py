@@ -200,7 +200,7 @@ def login():
             user = User(user_id, user_data['name'])
             login_user(user)
             flash('Logged in successfully.')
-            return redirect(url_for('user_movies', user_id=user_id))
+            return redirect(url_for('home'))
         else:
             flash('Invalid username or password')
     return render_template('login.html')
@@ -215,9 +215,10 @@ def logout():
 
 
 @app.route('/top100')
+@login_required
 def top_100_movies():
-    movies = data_manager.get_most_watched_movies()
-    return render_template('top100.html', movies=movies)
+    movie_counts = data_manager.get_most_watched_movies()
+    return render_template('top100.html', movie_counts=movie_counts)
 
 
 @app.route('/random-movie', methods=['GET'])
@@ -241,7 +242,8 @@ def user_profile(user_id):
     try:
         user_data = data_manager.find_user_by_id(user_id)
         profile_pictures = ['female_pic1.png', 'male_pic1.png']
-        profile_picture = url_for('static', filename='profile_pictures/'+profile_pictures[user_data['profile_picture']])
+        profile_picture = url_for('static',
+                                  filename='profile_pictures/' + profile_pictures[user_data['profile_picture']])
         return render_template('user_profile.html', user=user_data, profile_picture=profile_picture)
     except UserNotFoundError:
         return f"User with ID {user_id} not found."

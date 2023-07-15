@@ -9,12 +9,6 @@ Home
     <li><a href="{{ url_for('top_100_movies') }}">Top 100 Movies</a></li>
     <li><a href="{{ url_for('list_users') }}">View Users</a></li>
     <li><a href="{{ url_for('random_movie') }}">Surprise Me!</a></li>
-    <li><a href="{{ url_for('login') }}">Login</a></li>
-    <li><a href="{{ url_for('register') }}">Register</a></li>
-    {% if current_user.is_authenticated %}
-        <li><a href="{{ url_for('user_profile', user_id=current_user.id) }}">My Profile</a></li>
-        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-    {% endif %}
 </ul>
 {% endblock %}
 
