@@ -12,6 +12,12 @@
                     <img src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster" width="100">
                 </a>
                 <span>{{ movie['Title'] }}</span>
+                {% if movie['personal_rating'] %}
+                    <p>Personal Rating: {{ movie['personal_rating'] }}</p>
+                {% endif %}
+                {% if movie['review'] %}
+                    <p>Review: {{ movie['review'] }}</p>
+                {% endif %}
                 {% if current_user_id == user_id %}
                     <form method="post" action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}">
                         <input type="submit" value="Delete">

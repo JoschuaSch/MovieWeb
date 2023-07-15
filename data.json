@@ -200,5 +200,47 @@
     "favorite_movie": "",
     "favorite_quote": "",
     "profile_picture": 1
+  },
+  "Paul": {
+    "name": "Paul",
+    "password": "pbkdf2:sha256:260000$lsdYdljtyIg54gjR$25a0cfd62959606316f539fb57de5fc812810d04ab55323e800c62113d405b20",
+    "movies": {
+      "9085132c-438c-40f7-b529-2e0c09ab110a": {
+        "Title": "PAW Patrol",
+        "Year": "2013",
+        "Rated": "TV-Y",
+        "Released": "14 Nov 2013",
+        "Runtime": "23 min",
+        "Genre": "Animation, Adventure, Comedy",
+        "Director": "N/A",
+        "Writer": "Keith Chapman, Scott Kraft",
+        "Actors": "Ron Pardo, Kallan Holley, Justin Paul Kelly",
+        "Plot": "Led by a boy named Ryder, a team of six playful rescue dogs use their individual talents to protect the seaside town of Adventure Bay. The pups are occasionally joined by newer helpers: Cap'n Turbot, Robo-Dog, Everest, and Tracker.",
+        "Language": "English",
+        "Country": "United States, Canada",
+        "Awards": "37 wins & 39 nominations",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMGM5OTM3NzgtODQ4My00OTk3LWI5MmMtODU3NDIyMzc3MzgyXkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.1/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "6.1",
+        "imdbVotes": "3,795",
+        "imdbID": "tt3121722",
+        "Type": "series",
+        "totalSeasons": "9",
+        "Response": "True",
+        "personal_rating": 10.0,
+        "watched": true,
+        "review": "I like the minute 10"
+      }
+    },
+    "age": "5",
+    "favorite_movie": "Paw Patrol",
+    "favorite_quote": "I like Dogs and so on",
+    "profile_picture": 1
   }
 }
