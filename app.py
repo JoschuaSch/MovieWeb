@@ -181,7 +181,7 @@ def register():
         age = request.form.get('age')
         favorite_movie = request.form.get('favorite_movie')
         favorite_quote = request.form.get('favorite_quote')
-        profile_picture_index = int(request.form.get('profile_picture', 0))
+        profile_picture_index = int(request.form.get('profile_picture', 2))
         hashed_password = generate_password_hash(password)
         data_manager.add_user(user_id, user_id, hashed_password, age, favorite_movie, favorite_quote,
                               profile_picture_index)
@@ -237,13 +237,16 @@ def random_movie():
 @app.route('/users/<user_id>/profile')
 @login_required
 def user_profile(user_id):
-    if current_user.id != user_id:
-        return abort(403)
     try:
         user_data = data_manager.find_user_by_id(user_id)
-        profile_pictures = ['female_pic1.png', 'male_pic1.png']
-        profile_picture = url_for('static',
-                                  filename='profile_pictures/' + profile_pictures[user_data['profile_picture']])
+        profile_pictures = ['profile_pictures/female_pic1.png', 'profile_pictures/male_pic1.png',
+                            'profile_pictures/placeholder.png']
+        if user_data['profile_picture'] is not None:
+            profile_picture = url_for('static',
+                                      filename=profile_pictures[user_data['profile_picture']])
+        else:
+            profile_picture = url_for('static',
+                                      filename=profile_pictures[2])  # default to placeholder image
         return render_template('user_profile.html', user=user_data, profile_picture=profile_picture)
     except UserNotFoundError:
         return f"User with ID {user_id} not found."
