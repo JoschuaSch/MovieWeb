@@ -275,5 +275,32 @@
     "name": "Christina",
     "password": "pbkdf2:sha256:260000$t3dCvo6HbhnwYQqp$aef1b139bf1f5a8afb62c9cc78abeffca20af5d6dd68d9269e9eda10ae7aa9cb",
     "movies": {}
+  },
+  "Peter": {
+    "name": "Peter",
+    "password": "pbkdf2:sha256:260000$ECIL8OD3o4kLq5xj$20ce835b6b88002757a542d4b43d439c3f893480a0b326504766b9c3272378c5",
+    "movies": {},
+    "age": "",
+    "favorite_movie": "",
+    "favorite_quote": "",
+    "profile_picture": 0
+  },
+  "Hullu": {
+    "name": "Hullu",
+    "password": "pbkdf2:sha256:260000$n301jWIMiyDEzmbG$24f9c7a7ea5b3e7aa3e85b5a207e4f3386a3834831130e0b4ae93ab1315aa3f6",
+    "movies": {},
+    "age": "27",
+    "favorite_movie": "Inkabell",
+    "favorite_quote": "I am tho i am no longer",
+    "profile_picture": 1
+  },
+  "Testa": {
+    "name": "Testa",
+    "password": "pbkdf2:sha256:260000$TgSTZGbdZW23qdSY$f77d8bdeb66b4fc506fa7f47d189b11ac21d22509580dd78c20af86a50392cc8",
+    "movies": {},
+    "age": "28",
+    "favorite_movie": "Da",
+    "favorite_quote": "dede",
+    "profile_picture": 1
   }
 }

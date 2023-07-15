@@ -8,7 +8,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import random
 import json
 
-
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 data_manager = JSONDataManager('data.json')
@@ -175,14 +174,20 @@ def load_user(user_id):
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    profile_pictures = ['profile_pictures/female_pic1.png', 'profile_pictures/male_pic1.png']
     if request.method == 'POST':
         user_id = request.form.get('user_id')
         password = request.form.get('password')
+        age = request.form.get('age')
+        favorite_movie = request.form.get('favorite_movie')
+        favorite_quote = request.form.get('favorite_quote')
+        profile_picture_index = int(request.form.get('profile_picture', 0))
         hashed_password = generate_password_hash(password)
-        data_manager.add_user(user_id, user_id, hashed_password)
+        data_manager.add_user(user_id, user_id, hashed_password, age, favorite_movie, favorite_quote,
+                              profile_picture_index)
         flash('Registered successfully. Please login.')
         return redirect(url_for('login'))
-    return render_template('register.html')
+    return render_template('register.html', profile_pictures=profile_pictures)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -226,6 +231,20 @@ def random_movie():
             movie_ids.append(movie)
     randomized_movie = random.choice(movie_ids)
     return render_template('random.html', movie=randomized_movie)
+
+
+@app.route('/users/<user_id>/profile')
+@login_required
+def user_profile(user_id):
+    profile_pictures = ['profile_pictures/female_pic1.png', 'profile_pictures/male_pic1.png']
+    if current_user.id != user_id:
+        return abort(403)
+    try:
+        user_data = data_manager.find_user_by_id(user_id)
+        profile_picture = profile_pictures[user_data['profile_picture']]
+        return render_template('user_profile.html', user=user_data, profile_picture=profile_picture)
+    except UserNotFoundError:
+        return f"User with ID {user_id} not found."
 
 
 if __name__ == '__main__':

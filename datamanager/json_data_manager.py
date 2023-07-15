@@ -70,10 +70,19 @@ class JSONDataManager(DataManagerInterface):
             logger.error(f"An error occurred while retrieving user movies: {e}")
         return []
 
-    def add_user(self, user_id, name, password_hash):
+    def add_user(self, user_id, name, password_hash, age=None, favorite_movie=None, favorite_quote=None,
+                 profile_picture=None):
         try:
             if user_id not in self.users:
-                self.users[user_id] = {"name": name, "password": password_hash, "movies": {}}
+                self.users[user_id] = {
+                    "name": name,
+                    "password": password_hash,
+                    "movies": {},
+                    "age": age,
+                    "favorite_movie": favorite_movie,
+                    "favorite_quote": favorite_quote,
+                    "profile_picture": profile_picture
+                }
                 self.save_to_file()
             else:
                 print("User ID already exists.")
@@ -106,7 +115,9 @@ class JSONDataManager(DataManagerInterface):
 
     def find_user_by_id(self, user_id):
         try:
-            return self.users.get(user_id, None)
+            user = self.users.get(user_id, None)
+            if user:
+                return user
         except Exception as e:
             logger.error(f"An error occurred while finding the user: {e}")
             return None
@@ -170,5 +181,3 @@ class JSONDataManager(DataManagerInterface):
         users = [user for user in users if search.lower() == user['name'].lower()]
         users.sort(key=lambda user: user['name'])
         return users
-
-

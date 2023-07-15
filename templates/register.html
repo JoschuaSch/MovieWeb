@@ -10,8 +10,27 @@
   <form method="POST">
     <label for="user_id">User ID:</label>
     <input type="text" id="user_id" name="user_id" required>
+
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
+
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age">
+
+    <label for="favorite_movie">Favorite Movie:</label>
+    <input type="text" id="favorite_movie" name="favorite_movie">
+
+    <label for="favorite_quote">Favorite Quote:</label>
+    <input type="text" id="favorite_quote" name="favorite_quote">
+
+    <p>Choose your profile picture:</p>
+    {% for picture in profile_pictures %}
+        <input type="radio" id="profile_picture{{ loop.index0 }}" name="profile_picture" value="{{ loop.index0 }}">
+        <label for="profile_picture{{ loop.index0 }}">
+            <img src="{{ url_for('static', filename=picture) }}" alt="Profile Picture {{ loop.index0 }}" style="width:100px;height:100px;">
+        </label>
+    {% endfor %}
+
     <input type="submit" value="Register">
   </form>
 {% endblock %}

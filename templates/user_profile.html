@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Profile
+{% endblock %}
+
+{% block content %}
+  <h2>Profile</h2>
+
+  <img src="{{ profile_picture }}" alt="Profile picture">
+  <p>User ID: {{ user['name'] }}</p>
+  <p>Age: {{ user['age'] }}</p>
+  <p>Favorite Movie: {{ user['favorite_movie'] }}</p>
+  <p>Favorite Quote: {{ user['favorite_quote'] }}</p>
+
+  <a href="{{ url_for('home') }}">Go Back</a>
+{% endblock %}
+
