@@ -1,11 +1,27 @@
-<!-- random.html -->
-
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>{{ movie.Title }}</h2>
+  <h2>{{ movie.Title }} ({{ movie.Year }})</h2>
   <a href="https://www.imdb.com/title/{{ movie.imdbID }}/">
     <img src="{{ movie.Poster }}" alt="{{ movie.Title }} poster">
   </a>
-  <p>{{ movie.Plot }}</p>
+  <p><b>Rated:</b> {{ movie.Rated }}</p>
+  <p><b>Released:</b> {{ movie.Released }}</p>
+  <p><b>Runtime:</b> {{ movie.Runtime }}</p>
+  <p><b>Genre:</b> {{ movie.Genre }}</p>
+  <p><b>Director:</b> {{ movie.Director }}</p>
+  <p><b>Writer:</b> {{ movie.Writer }}</p>
+  <p><b>Actors:</b> {{ movie.Actors }}</p>
+  <p><b>Plot:</b> {{ movie.Plot }}</p>
+  <p><b>Language:</b> {{ movie.Language }}</p>
+  <p><b>Country:</b> {{ movie.Country }}</p>
+  <p><b>Awards:</b> {{ movie.Awards }}</p>
+  <p><b>Ratings:</b></p>
+  <p><b>Metascore:</b> {{ movie.Metascore }}</p>
+  <p><b>IMDb Rating:</b> {{ movie.imdbRating }}</p>
+  <p><b>IMDb Votes:</b> {{ movie.imdbVotes }}</p>
+  <p><b>Type:</b> {{ movie.Type }}</p>
+  <p><b>DVD Release Date:</b> {{ movie.DVD }}</p>
+  <p><b>Box Office:</b> {{ movie.BoxOffice }}</p>
+  <p><b>Production:</b> {{ movie.Production }}</p>
 {% endblock %}
