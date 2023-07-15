@@ -7,13 +7,6 @@ Add Movie
 {% block content %}
     <h2>Add a Movie</h2>
     <form method="POST" action="{{ url_for('add_movie') }}">
-    <label for="user_id">Select User:</label>
-    <select id="user_id" name="user_id" required>
-        <option value="">--Please choose an option--</option>
-        {% for user in users %}
-            <option value="{{ user.id }}">{{ user.name }}</option>
-        {% endfor %}
-    </select>
     <br/>
     <label for="movie_name">Movie name:</label>
     <input type="text" id="movie_name" name="movie_name" required/>

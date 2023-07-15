@@ -12,5 +12,6 @@
   <p>Age: {{ user['age'] }}</p>
   <p>Favorite Movie: {{ user['favorite_movie'] }}</p>
   <p>Favorite Quote: {{ user['favorite_quote'] }}</p>
-{% endblock %}
 
+  <a href="{{ url_for('user_movies', user_id=user['name']) }}">My Movie List</a>
+{% endblock %}

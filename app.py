@@ -25,11 +25,9 @@ def home():
 @app.route('/users/<user_id>/movies')
 @login_required
 def user_movies(user_id):
-    if current_user.id != user_id:
-        return abort(403)
     try:
         movies = data_manager.get_user_movies(user_id)
-        return render_template('user_movies.html', movies=movies, user_id=user_id)
+        return render_template('user_movies.html', movies=movies, user_id=user_id, current_user_id=current_user.id)
     except UserNotFoundError:
         return f"User with ID {user_id} not found."
 
@@ -59,15 +57,15 @@ def add_user():
 
 
 @app.route('/add_movie', methods=['GET', 'POST'])
+@login_required
 def add_movie():
     if request.method == 'POST':
-        user_id = request.form.get('user_id')
         movie_name = request.form.get('movie_name')
         if not movie_name:
             flash('No movie name provided. Please check and try again.')
             return redirect(url_for('add_movie'))
         else:
-            return redirect(url_for('confirm_movie', user_id=user_id, movie_name=movie_name))
+            return redirect(url_for('confirm_movie', user_id=current_user.id, movie_name=movie_name))
     else:
         users = data_manager.get_all_users()
         return render_template('add_movie.html', users=users)
@@ -101,7 +99,10 @@ def confirm_movie(user_id, movie_name):
 
 
 @app.route('/users/<user_id>/movies/update/<movie_id>', methods=['GET', 'POST'])
+@login_required
 def update_movie(user_id, movie_id):
+    if current_user.id != user_id:
+        abort(403)
     try:
         movie = data_manager.find_movie_by_id(user_id, movie_id)
     except (UserNotFoundError, MovieNotFoundError) as e:
@@ -135,7 +136,10 @@ def update_movie(user_id, movie_id):
 
 
 @app.route('/users/<user_id>/delete_movie/<movie_id>', methods=['POST'])
+@login_required
 def delete_movie(user_id, movie_id):
+    if current_user.id != user_id:
+        abort(403)
     try:
         data_manager.delete_movie(user_id, movie_id)
         flash('Movie deleted successfully.')
@@ -246,7 +250,7 @@ def user_profile(user_id):
                                       filename=profile_pictures[user_data['profile_picture']])
         else:
             profile_picture = url_for('static',
-                                      filename=profile_pictures[2])  # default to placeholder image
+                                      filename=profile_pictures[2])
         return render_template('user_profile.html', user=user_data, profile_picture=profile_picture)
     except UserNotFoundError:
         return f"User with ID {user_id} not found."

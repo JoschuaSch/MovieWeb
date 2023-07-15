@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Movies</title>
-</head>
-<body>
-    <h1>Welcome to MovieCoasterTycoon!</h1>
+{% extends 'base.html' %}
 
-    <h2>Movies</h2>
-    {% for movie_id, movie in movies %}
-    <div>
-        <p>{{ movie['Title'] }}</p>
-        <img src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster">
-        <form action="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}" method="get">
-            <input type="submit" value="Update">
-        </form>
-        <form action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}" method="post">
-            <input type="submit" value="Delete">
-        </form>
-    </div>
-    {% endfor %}
-    <a href="{{ url_for('home') }}">
-        <button>Go Home</button>
-    </a>
-</body>
-</html>
+{% block content %}
+    <h1>Movies</h1>
+    {% if current_user_id == user_id %}
+        <a href="{{ url_for('add_movie', user_id=user_id) }}" class="btn btn-primary">Add Movie</a>
+    {% endif %}
+    <ul>
+        {% for movie_id, movie in movies %}
+            <li>
+                <a href="https://www.imdb.com/title/{{ movie['imdbID'] }}/" target="_blank">
+                    <img src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster" width="100">
+                </a>
+                <span>{{ movie['Title'] }}</span>
+                {% if current_user_id == user_id %}
+                    <form method="post" action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}">
+                        <input type="submit" value="Delete">
+                    </form>
+                    <a href="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}" class="btn btn-primary">Update</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
