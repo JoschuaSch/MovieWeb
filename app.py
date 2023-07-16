@@ -134,9 +134,10 @@ def update_movie(user_id, movie_id):
             data_manager.update_movie(user_id, movie_id, movie_details)
             if watched:
                 return redirect(url_for('user_watchlist', user_id=user_id))
+            else:
+                return redirect(url_for('user_movies', user_id=user_id))
         except (UserNotFoundError, MovieNotFoundError) as e:
             return render_template('error.html', message=str(e)), 404
-        return redirect(url_for('user_movies', user_id=user_id))
     else:
         return render_template('update_movie.html', user_id=user_id, movie_id=movie_id, movie=movie)
 
@@ -343,8 +344,7 @@ def movie_reviews():
 @login_required
 def user_watchlist(user_id):
     try:
-        movies = data_manager.get_user_movies(user_id)
-        watchlist_movies = [(movie_id, details) for movie_id, details in movies if not details['watched']]
+        watchlist_movies = data_manager.get_user_watchlist(user_id)
         return render_template('user_watchlist.html', movies=watchlist_movies, user_id=user_id,
                                current_user_id=current_user.id)
     except UserNotFoundError:
