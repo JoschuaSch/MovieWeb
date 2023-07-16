@@ -6,17 +6,6 @@
 
 {% block content %}
   <h2>Register</h2>
-
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      <ul class=flashes>
-      {% for message in messages %}
-        <li>{{ message }}</li>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endwith %}
-
   <form method="POST">
     <label for="user_id">User ID:</label>
     <input type="text" id="user_id" name="user_id" required>

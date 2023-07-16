@@ -1,24 +1,13 @@
 {
-  "Alice": {
-    "name": "Alice",
-    "password": "pbkdf2:sha256:260000$q3SNbQyuOIVSLihZ$adb0841db566c08b0077a8e9363170d53ce9cb985ea3325d046df92b3a6fd314",
-    "movies": {},
-    "age": "27",
-    "favorite_movie": "female",
-    "favorite_quote": "Always have Chocolate",
-    "words_to_live_by": "Paw Patrol",
-    "sex": "",
-    "profile_picture": "Alice_Stuck.PNG"
-  },
-  "Alice5": {
-    "name": "Alice5",
-    "password": "pbkdf2:sha256:260000$0PQQs7ZjtU48ZwFz$7cb862a3613d8913aaa31b04710d5f532b0ec84f35abe0024fe822668a7f50dd",
+  "Testa": {
+    "name": "Testa",
+    "password": "pbkdf2:sha256:260000$ufMmsjbHKeXPTUfV$42267cd02a5f385d8d8f8b6cc6d922472428e826ec9d299143a39bc7b9777fbc",
     "movies": {},
     "age": "",
     "favorite_movie": "",
     "favorite_quote": "",
     "words_to_live_by": "",
     "sex": "",
-    "profile_picture": "profile_pictures/placeholder.png"
+    "profile_picture": "C:\\Users\\schro\\MovieWeb\\static\\profile_pictures\\placeholder.png"
   }
 }

@@ -183,17 +183,18 @@ def load_user(user_id):
 def register():
     if request.method == 'POST':
         user_id = request.form.get('user_id')
+        user_id = user_id[0].upper() + user_id[1:].lower()
+        existing_user_data = data_manager.find_user_by_id(user_id)
+        if existing_user_data:
+            flash('This username is already taken. Please choose a different one.')
+            return redirect(url_for('register'))
         password = request.form.get('password')
         age = request.form.get('age')
         sex = request.form.get('sex')
         words_to_live_by = request.form.get('words_to_live_by')
         favorite_movie = request.form.get('favorite_movie')
         favorite_quote = request.form.get('favorite_quote')
-        existing_user = data_manager.find_user_by_id(user_id)
-        if existing_user is not None:
-            flash('Username already taken, please choose another one.')
-            return render_template('register.html')
-        profile_picture = 'profile_pictures/placeholder.png'
+        profile_picture = r'C:\Users\schro\MovieWeb\static\profile_pictures\placeholder.png'
         hashed_password = generate_password_hash(password)
         data_manager.add_user(user_id, user_id, hashed_password, age, sex, words_to_live_by, favorite_movie,
                               favorite_quote, profile_picture)
@@ -206,6 +207,7 @@ def register():
 def login():
     if request.method == 'POST':
         user_id = request.form.get('user_id')
+        user_id = user_id[0].upper() + user_id[1:].lower()
         password = request.form.get('password')
         user_data = data_manager.find_user_by_id(user_id)
         if user_data and check_password_hash(user_data['password'], password):
