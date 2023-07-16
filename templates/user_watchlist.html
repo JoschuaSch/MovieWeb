@@ -16,9 +16,4 @@
       </form>
     </div>
   {% endfor %}
-  <form method="POST" action="{{ url_for('add_to_watchlist', user_id=user_id) }}">
-    <label for="movie_name">Add movie to watchlist:</label>
-    <input type="text" id="movie_name" name="movie_name">
-    <input type="submit" value="Add">
-  </form>
 {% endblock %}

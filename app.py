@@ -364,7 +364,7 @@ def add_to_watchlist(user_id):
     if movie_data is None:
         flash('Movie not found. Please check the title and try again.')
     else:
-        data_manager.add_movie(user_id, movie_data)
+        data_manager.add_to_watchlist(user_id, movie_data)
         flash('Movie added successfully to your watchlist.')
     return redirect(url_for('user_watchlist', user_id=user_id))
 

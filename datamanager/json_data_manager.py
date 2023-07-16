@@ -79,6 +79,7 @@ class JSONDataManager(DataManagerInterface):
                     "name": name,
                     "password": password_hash,
                     "movies": {},
+                    "watchlist": {},
                     "age": age,
                     "favorite_movie": favorite_movie,
                     "favorite_quote": favorite_quote,
@@ -261,3 +262,24 @@ class JSONDataManager(DataManagerInterface):
         except Exception as e:
             logger.error(f"An error occurred while getting reviews sorted by date: {e}")
             return []
+
+    def add_to_watchlist(self, user_id, movie_details):
+        user = self.users.get(user_id)
+        if not user:
+            raise UserNotFoundError(f"User with ID {user_id} not found.")
+        for movie in user["watchlist"].values():
+            if movie["Title"] == movie_details["Title"]:
+                if movie["watched"]:
+                    movie["watched"] = False
+                    self.save_to_file()
+                    return
+        user.setdefault("watchlist", {})
+        movie_details.setdefault("personal_rating", None)
+        movie_details.setdefault("watched", False)
+        unique_movie_id = str(uuid.uuid4())
+        user["watchlist"][unique_movie_id] = movie_details
+        self.save_to_file()
+        return unique_movie_id
+
+
+

@@ -22,6 +22,10 @@
                         <input type="submit" value="Delete">
                     </form>
                     <a href="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}" class="btn btn-primary">Update</a>
+                    <form method="POST" action="{{ url_for('add_to_watchlist', user_id=user_id) }}">
+                        <input type="hidden" name="movie_name" value="{{ movie['Title'] }}">
+                        <input type="submit" value="Add to Watchlist">
+                    </form>
                 {% endif %}
                 {% if current_user_id != user_id and movie['review'] %}
                     <form method="post" action="{{ url_for('like_review', user_id=user_id, movie_id=movie_id, liker_id=current_user_id) }}">
