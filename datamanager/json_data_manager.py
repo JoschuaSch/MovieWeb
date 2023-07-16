@@ -70,8 +70,8 @@ class JSONDataManager(DataManagerInterface):
             logger.error(f"An error occurred while retrieving user movies: {e}")
         return []
 
-    def add_user(self, user_id, name, password_hash, age=None, sex=None, words_to_live_by=None,
-                 favorite_movie=None, favorite_quote=None, profile_picture=None):
+    def add_user(self, user_id, name, password_hash, age=None, favorite_movie=None, favorite_quote=None,
+                 words_to_live_by=None, sex=None, profile_picture=None):
         try:
             if user_id not in self.users:
                 self.users[user_id] = {
@@ -79,10 +79,10 @@ class JSONDataManager(DataManagerInterface):
                     "password": password_hash,
                     "movies": {},
                     "age": age,
-                    "sex": sex,
-                    "words_to_live_by": words_to_live_by,
                     "favorite_movie": favorite_movie,
                     "favorite_quote": favorite_quote,
+                    "words_to_live_by": words_to_live_by,
+                    "sex": sex,
                     "profile_picture": profile_picture
                 }
                 self.save_to_file()

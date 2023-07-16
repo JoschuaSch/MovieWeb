@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
 from datamanager.json_data_manager import JSONDataManager, UserNotFoundError, MovieNotFoundError, DuplicateMovieError
 import uuid
 from werkzeug.exceptions import BadRequest, abort
@@ -7,10 +7,13 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, login_
 from werkzeug.security import generate_password_hash, check_password_hash
 import random
 import json
+from werkzeug.utils import secure_filename
+import os
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 data_manager = JSONDataManager('data.json')
+app.config['UPLOAD_FOLDER'] = 'C:/Users/schro/MovieWeb/static/User_picked_profile_pictures'
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -187,10 +190,14 @@ def register():
         words_to_live_by = request.form.get('words_to_live_by')
         favorite_movie = request.form.get('favorite_movie')
         favorite_quote = request.form.get('favorite_quote')
-        profile_picture_index = int(request.form.get('profile_picture', 2))
+        profile_picture_index = request.form.get('profile_picture')
+        if profile_picture_index is not None:
+            profile_picture = profile_pictures[int(profile_picture_index)]
+        else:
+            profile_picture = None
         hashed_password = generate_password_hash(password)
-        data_manager.add_user(user_id, user_id, hashed_password, age, sex, words_to_live_by, favorite_movie, favorite_quote,
-                              profile_picture_index)
+        data_manager.add_user(user_id, user_id, hashed_password, age, sex, words_to_live_by, favorite_movie,
+                              favorite_quote, profile_picture)
         flash('Registered successfully. Please login.')
         return redirect(url_for('login'))
     return render_template('register.html', profile_pictures=profile_pictures)
@@ -244,14 +251,10 @@ def random_movie():
 def user_profile(user_id):
     try:
         user_data = data_manager.find_user_by_id(user_id)
-        profile_pictures = ['profile_pictures/female_pic1.png', 'profile_pictures/male_pic1.png',
-                            'profile_pictures/placeholder.png']
         if user_data['profile_picture'] is not None:
-            profile_picture = url_for('static',
-                                      filename=profile_pictures[user_data['profile_picture']])
+            profile_picture = url_for('uploaded_file', filename=user_data['profile_picture'])
         else:
-            profile_picture = url_for('static',
-                                      filename=profile_pictures[2])
+            profile_picture = url_for('static', filename='profile_pictures/placeholder.png')
         return render_template('user_profile.html', user=user_data, profile_picture=profile_picture)
     except UserNotFoundError:
         return f"User with ID {user_id} not found."
@@ -283,6 +286,7 @@ def update_profile(user_id):
         words_to_live_by = request.form.get('words_to_live_by')
         favorite_movie = request.form.get('favorite_movie')
         favorite_quote = request.form.get('favorite_quote')
+        profile_picture = request.files.get('profile_picture')
         user_details = {
             "age": age,
             "sex": sex,
@@ -290,10 +294,25 @@ def update_profile(user_id):
             "favorite_movie": favorite_movie,
             "favorite_quote": favorite_quote,
         }
+        if profile_picture:
+            app.logger.info(f"Type of user['profile_picture']: {type(user['profile_picture'])}")
+            if user['profile_picture'] is not None and user['profile_picture'] != 'profile_pictures/female_pic1.png' and \
+                    user['profile_picture'] != 'profile_pictures/male_pic1.png':
+                old_picture_path = os.path.join(app.config['UPLOAD_FOLDER'], str(user["profile_picture"]))
+                if os.path.isfile(old_picture_path):
+                    os.remove(old_picture_path)
+            filename = secure_filename(profile_picture.filename)
+            profile_picture.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            user_details["profile_picture"] = filename
         data_manager.update_user(user_id, user_details)
         return redirect(url_for('user_profile', user_id=user_id))
     else:
         return render_template('update_profile.html', user=user)
+
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
 if __name__ == '__main__':

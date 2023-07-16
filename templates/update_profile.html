@@ -7,7 +7,7 @@
 {% block content %}
   <h2>Update Profile</h2>
 
-  <form method="POST">
+  <form method="POST" enctype="multipart/form-data">
     <label for="age">Age:</label>
     <input type="text" id="age" name="age" value="{{ user['age'] or '' }}">
 
@@ -27,6 +27,9 @@
 
     <label for="favorite_quote">Favorite Quote:</label>
     <input type="text" id="favorite_quote" name="favorite_quote" value="{{ user['favorite_quote'] or '' }}">
+
+    <label for="profile_picture">Profile Picture:</label>
+    <input type="file" id="profile_picture" name="profile_picture">
 
     <input type="submit" value="Update">
   </form>
