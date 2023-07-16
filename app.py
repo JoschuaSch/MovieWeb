@@ -183,11 +183,13 @@ def register():
         user_id = request.form.get('user_id')
         password = request.form.get('password')
         age = request.form.get('age')
+        sex = request.form.get('sex')
+        words_to_live_by = request.form.get('words_to_live_by')
         favorite_movie = request.form.get('favorite_movie')
         favorite_quote = request.form.get('favorite_quote')
         profile_picture_index = int(request.form.get('profile_picture', 2))
         hashed_password = generate_password_hash(password)
-        data_manager.add_user(user_id, user_id, hashed_password, age, favorite_movie, favorite_quote,
+        data_manager.add_user(user_id, user_id, hashed_password, age, sex, words_to_live_by, favorite_movie, favorite_quote,
                               profile_picture_index)
         flash('Registered successfully. Please login.')
         return redirect(url_for('login'))
@@ -219,7 +221,6 @@ def logout():
 
 
 @app.route('/top100')
-@login_required
 def top_100_movies():
     movie_counts = data_manager.get_most_watched_movies()
     return render_template('top100.html', movie_counts=movie_counts)

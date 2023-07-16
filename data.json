@@ -154,9 +154,11 @@
         "watched": true,
         "review": "Dede",
         "likes": {
-          "count": 1,
+          "count": 3,
           "users": [
-            "Odlyr"
+            "Odlyr",
+            "Fuz",
+            "Testa"
           ]
         }
       },
@@ -259,5 +261,52 @@
     "favorite_movie": "",
     "favorite_quote": "",
     "profile_picture": 2
+  },
+  "Fuz": {
+    "name": "Fuz",
+    "password": "pbkdf2:sha256:260000$Nj04qbyn2EgW1TkB$a8d4e274d3013e32d83754293d9abcb04a89eca0a76e335696deb22b2fa14203",
+    "movies": {
+      "2654d33a-d0d3-4e72-844a-4b00a7db21cb": {
+        "Title": "Dudu",
+        "Year": 2018,
+        "Rated": "N/A",
+        "Released": "28 Feb 2018",
+        "Runtime": "20 min",
+        "Genre": "Short, Comedy",
+        "Director": "Ophir Ariel",
+        "Writer": "Ophir Ariel",
+        "Actors": "Ophir Ariel, Camille Theobald, Martin Dubreuil",
+        "Plot": "When DUDU wins a game-show in his home-country, the production fulfill his dream to become a mega-star - and send him to New York City to pursue his dream; his only obstacle - other than the fact he has no talent - is himself.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOGM4MWM2MmMtNWJlYS00YTk0LWE2MDctNTA3NzBhOTE0NjUwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjQyMjM3NjU@._V1_SX300.jpg",
+        "Ratings": [],
+        "Metascore": "N/A",
+        "imdbRating": "N/A",
+        "imdbVotes": "N/A",
+        "imdbID": "tt5850454",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": 10.0,
+        "watched": true,
+        "review": "I love Dudu he has a handsome face. ",
+        "likes": {
+          "count": 1,
+          "users": [
+            "Alice"
+          ]
+        },
+        "watch_count": 1
+      }
+    },
+    "age": "30",
+    "favorite_movie": "dudu",
+    "favorite_quote": "I like turtles",
+    "profile_picture": 0
   }
 }
