@@ -3,6 +3,7 @@ import logging
 from retrying import retry
 from .data_manager_interface import DataManagerInterface
 import uuid
+import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -90,16 +91,6 @@ class JSONDataManager(DataManagerInterface):
                 print("User ID already exists.")
         except Exception as e:
             logger.error(f"An error occurred while adding the user: {e}")
-
-    def delete_user(self, user_id):
-        try:
-            if user_id in self.users:
-                del self.users[user_id]
-                self.save_to_file()
-            else:
-                print("User ID does not exist.")
-        except Exception as e:
-            logger.error(f"An error occurred while deleting the user: {e}")
 
     def add_movie(self, user_id, movie_details):
         user = self.users.get(user_id)
@@ -206,3 +197,23 @@ class JSONDataManager(DataManagerInterface):
         user.update(new_details)
         self.save_to_file()
 
+    def delete_user(self, user_id):
+        try:
+            if user_id in self.users:
+                user = self.users[user_id]
+                profile_picture = user.get('profile_picture', None)
+                if profile_picture and profile_picture != 'profile_pictures/placeholder.png':
+                    try:
+                        profile_picture_path = os.path.join(
+                            'C:\\Users\\schro\\MovieWeb\\static\\User_picked_profile_pictures', profile_picture)
+                        if os.path.isfile(profile_picture_path):
+                            os.remove(profile_picture_path)
+                    except Exception as e:
+                        logger.error(f"An error occurred while deleting the profile picture: {e}")
+                del self.users[user_id]
+                self.save_to_file()
+            else:
+                raise UserNotFoundError(f"User with ID {user_id} does not exist.")
+        except Exception as e:
+            logger.error(f"An error occurred while deleting the user: {e}")
+            raise

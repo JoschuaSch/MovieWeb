@@ -181,7 +181,6 @@ def load_user(user_id):
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    profile_pictures = ['profile_pictures/female_pic1.png', 'profile_pictures/male_pic1.png']
     if request.method == 'POST':
         user_id = request.form.get('user_id')
         password = request.form.get('password')
@@ -190,17 +189,17 @@ def register():
         words_to_live_by = request.form.get('words_to_live_by')
         favorite_movie = request.form.get('favorite_movie')
         favorite_quote = request.form.get('favorite_quote')
-        profile_picture_index = request.form.get('profile_picture')
-        if profile_picture_index is not None:
-            profile_picture = profile_pictures[int(profile_picture_index)]
-        else:
-            profile_picture = None
+        existing_user = data_manager.find_user_by_id(user_id)
+        if existing_user is not None:
+            flash('Username already taken, please choose another one.')
+            return render_template('register.html')
+        profile_picture = 'profile_pictures/placeholder.png'
         hashed_password = generate_password_hash(password)
         data_manager.add_user(user_id, user_id, hashed_password, age, sex, words_to_live_by, favorite_movie,
                               favorite_quote, profile_picture)
         flash('Registered successfully. Please login.')
         return redirect(url_for('login'))
-    return render_template('register.html', profile_pictures=profile_pictures)
+    return render_template('register.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -295,19 +294,27 @@ def update_profile(user_id):
             "favorite_quote": favorite_quote,
         }
         if profile_picture:
-            app.logger.info(f"Type of user['profile_picture']: {type(user['profile_picture'])}")
-            if user['profile_picture'] is not None and user['profile_picture'] != 'profile_pictures/female_pic1.png' and \
-                    user['profile_picture'] != 'profile_pictures/male_pic1.png':
-                old_picture_path = os.path.join(app.config['UPLOAD_FOLDER'], str(user["profile_picture"]))
-                if os.path.isfile(old_picture_path):
-                    os.remove(old_picture_path)
-            filename = secure_filename(profile_picture.filename)
+            filename = secure_filename(user_id + '_' + profile_picture.filename)  # Adding user_id to make it unique
             profile_picture.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             user_details["profile_picture"] = filename
         data_manager.update_user(user_id, user_details)
         return redirect(url_for('user_profile', user_id=user_id))
     else:
         return render_template('update_profile.html', user=user)
+
+
+@app.route('/users/<user_id>/delete', methods=['POST'])
+@login_required
+def delete_account(user_id):
+    if current_user.id != user_id:
+        abort(403)
+    try:
+        data_manager.delete_user(user_id)
+        logout_user()
+        flash('Your account has been deleted.')
+        return redirect(url_for('home'))
+    except UserNotFoundError:
+        return render_template('error.html', message="User not found"), 404
 
 
 @app.route('/uploads/<filename>')

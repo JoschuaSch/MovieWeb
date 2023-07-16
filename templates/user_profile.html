@@ -19,6 +19,10 @@
 
   {% if current_user.is_authenticated and current_user.id == user['name'] %}
     <a href="{{ url_for('update_profile', user_id=user['name']) }}" class="button">Update Profile</a>
+
+    <form method="POST" action="{{ url_for('delete_account', user_id=user['name']) }}">
+      <input type="submit" value="Delete Account" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
+    </form>
+
   {% endif %}
 {% endblock %}
-
