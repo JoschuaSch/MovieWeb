@@ -132,6 +132,8 @@ def update_movie(user_id, movie_id):
             movie_details["review"] = review
         try:
             data_manager.update_movie(user_id, movie_id, movie_details)
+            if watched:
+                return redirect(url_for('user_watchlist', user_id=user_id))
         except (UserNotFoundError, MovieNotFoundError) as e:
             return render_template('error.html', message=str(e)), 404
         return redirect(url_for('user_movies', user_id=user_id))
@@ -335,6 +337,36 @@ def movie_reviews():
     else:
         reviews = data_manager.get_reviews_sorted_by_date()
     return render_template('movie_reviews.html', reviews=reviews, sort_by=sort_by)
+
+
+@app.route('/users/<user_id>/watchlist')
+@login_required
+def user_watchlist(user_id):
+    try:
+        movies = data_manager.get_user_movies(user_id)
+        watchlist_movies = [(movie_id, details) for movie_id, details in movies if not details['watched']]
+        return render_template('user_watchlist.html', movies=watchlist_movies, user_id=user_id,
+                               current_user_id=current_user.id)
+    except UserNotFoundError:
+        return f"User with ID {user_id} not found."
+
+
+@app.route('/users/<user_id>/movies/add_to_watchlist', methods=['POST'])
+@login_required
+def add_to_watchlist(user_id):
+    if current_user.id != user_id:
+        abort(403)
+    movie_name = request.form.get('movie_name')
+    if not movie_name:
+        flash('No movie name provided. Please check and try again.')
+        return redirect(url_for('user_watchlist', user_id=user_id))
+    movie_data = omdb_api.fetch_movie_details(movie_name)
+    if movie_data is None:
+        flash('Movie not found. Please check the title and try again.')
+    else:
+        data_manager.add_movie(user_id, movie_data)
+        flash('Movie added successfully to your watchlist.')
+    return redirect(url_for('user_watchlist', user_id=user_id))
 
 
 if __name__ == '__main__':

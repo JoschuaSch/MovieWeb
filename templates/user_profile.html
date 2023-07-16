@@ -21,6 +21,7 @@
   <p>Favorite Quote: {{ user['favorite_quote'] or 'N/A' }}</p>
 
   <a href="{{ url_for('user_movies', user_id=user['name']) }}">My Movie List</a>
+  <a href="{{ url_for('user_watchlist', user_id=user['name']) }}">Watchlist</a>
 
   {% if current_user.is_authenticated and current_user.id == user['name'] %}
     <a href="{{ url_for('update_profile', user_id=user['name']) }}" class="button">Update Profile</a>
