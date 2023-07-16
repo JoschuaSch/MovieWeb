@@ -217,3 +217,43 @@ class JSONDataManager(DataManagerInterface):
         except Exception as e:
             logger.error(f"An error occurred while deleting the user: {e}")
             raise
+
+    def get_reviews_sorted_by_likes(self):
+        try:
+            reviews = []
+            for user in self.users.values():
+                for movie_id, movie in user['movies'].items():
+                    if 'review' in movie:
+                        reviews.append({
+                            'user': user['name'],
+                            'Poster': movie['Poster'],
+                            'Title': movie['Title'],
+                            'content': movie['review'],
+                            'likes': movie.get('likes', {}).get('count', 0),
+                            'imdbID': movie['imdbID']
+                        })
+            reviews.sort(key=lambda review: review['likes'], reverse=True)
+            return reviews
+        except Exception as e:
+            logger.error(f"An error occurred while getting reviews sorted by likes: {e}")
+            return []
+
+    def get_reviews_sorted_by_date(self):
+        try:
+            reviews = []
+            for user in self.users.values():
+                for movie_id, movie in user['movies'].items():
+                    if 'review' in movie:
+                        reviews.append({
+                            'user': user['name'],
+                            'Poster': movie['Poster'],
+                            'Title': movie['Title'],
+                            'content': movie['review'],
+                            'likes': movie.get('likes', {}).get('count', 0),
+                            'imdbID': movie['imdbID']
+                        })
+            reviews.sort(key=lambda review: review['Title'], reverse=True)
+            return reviews
+        except Exception as e:
+            logger.error(f"An error occurred while getting reviews sorted by date: {e}")
+            return []

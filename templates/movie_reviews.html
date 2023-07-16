@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Reviews
+{% endblock %}
+
+{% block content %}
+  <h2>Movie Reviews</h2>
+  <div class="sorting">
+    Sort by:
+    <a href="{{ url_for('movie_reviews', sort_by='newest') }}" class="{% if sort_by == 'newest' %}active{% endif %}">Newest</a>
+    <a href="{{ url_for('movie_reviews', sort_by='liked') }}" class="{% if sort_by == 'liked' %}active{% endif %}">Most Liked</a>
+  </div>
+  <ul class="review-list">
+    {% for review in reviews %}
+      <li>
+        <div class="review">
+          <div class="review-movie">
+            <a href="https://www.imdb.com/title/{{ review['imdbID'] }}/" target="_blank">
+              <img src="{{ review['Poster'] }}" alt="{{ review['Title'] }} Poster">
+            </a>
+            <h3>{{ review['Title'] }}</h3>
+          </div>
+          <div class="review-info">
+            <p>{{ review['user'] }}</p>
+            <p>{{ review['content'] }}</p>
+            <p>Likes: {{ review['likes'] }}</p>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -326,5 +326,16 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
+@app.route('/reviews', methods=['GET'])
+def movie_reviews():
+    sort_by = request.args.get('sort_by', 'newest')
+    if sort_by == 'liked':
+        reviews = data_manager.get_reviews_sorted_by_likes()
+    else:
+        reviews = data_manager.get_reviews_sorted_by_date()
+
+    return render_template('movie_reviews.html', reviews=reviews, sort_by=sort_by)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
