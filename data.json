@@ -1,13 +1,13 @@
 {
   "Testa": {
     "name": "Testa",
-    "password": "pbkdf2:sha256:260000$ufMmsjbHKeXPTUfV$42267cd02a5f385d8d8f8b6cc6d922472428e826ec9d299143a39bc7b9777fbc",
+    "password": "pbkdf2:sha256:260000$yJWQ77VNYKlpwXoz$dd9c8fb245611861a9780956928fa3899397781e5bd70dc8cfd7866f915b67f4",
     "movies": {},
     "age": "",
     "favorite_movie": "",
     "favorite_quote": "",
     "words_to_live_by": "",
     "sex": "",
-    "profile_picture": "C:\\Users\\schro\\MovieWeb\\static\\profile_pictures\\placeholder.png"
+    "profile_picture": "Testa_Stuck.PNG"
   }
 }

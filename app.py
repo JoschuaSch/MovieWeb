@@ -9,6 +9,7 @@ import random
 import json
 from werkzeug.utils import secure_filename
 import os
+from urllib.parse import unquote
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -183,7 +184,7 @@ def load_user(user_id):
 def register():
     if request.method == 'POST':
         user_id = request.form.get('user_id')
-        user_id = user_id[0].upper() + user_id[1:].lower()
+        user_id = user_id.capitalize()
         existing_user_data = data_manager.find_user_by_id(user_id)
         if existing_user_data:
             flash('This username is already taken. Please choose a different one.')
@@ -194,7 +195,7 @@ def register():
         words_to_live_by = request.form.get('words_to_live_by')
         favorite_movie = request.form.get('favorite_movie')
         favorite_quote = request.form.get('favorite_quote')
-        profile_picture = r'C:\Users\schro\MovieWeb\static\profile_pictures\placeholder.png'
+        profile_picture = None
         hashed_password = generate_password_hash(password)
         data_manager.add_user(user_id, user_id, hashed_password, age, sex, words_to_live_by, favorite_movie,
                               favorite_quote, profile_picture)
@@ -253,9 +254,10 @@ def user_profile(user_id):
     try:
         user_data = data_manager.find_user_by_id(user_id)
         if user_data['profile_picture'] is not None:
-            profile_picture = url_for('uploaded_file', filename=user_data['profile_picture'])
+            profile_picture_path = unquote(user_data['profile_picture'])
+            profile_picture = url_for('uploaded_file', filename=profile_picture_path)
         else:
-            profile_picture = url_for('static', filename='profile_pictures/placeholder.png')
+            profile_picture = None
         return render_template('user_profile.html', user=user_data, profile_picture=profile_picture)
     except UserNotFoundError:
         return f"User with ID {user_id} not found."

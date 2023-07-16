@@ -7,7 +7,12 @@
 {% block content %}
   <h2>Profile</h2>
 
-  <img class="profile-picture" src="{{ profile_picture }}" alt="Profile picture">
+  {% if profile_picture %}
+    <img class="profile-picture" src="{{ profile_picture }}" alt="Profile picture">
+  {% else %}
+    <div class="broken-image-icon"></div>
+  {% endif %}
+
   <p>Name: {{ user['name'] }}</p>
   <p>Age: {{ user['age'] or 'N/A' }}</p>
   <p>Sex: {{ user['sex'] or 'N/A' }}</p>
@@ -23,6 +28,5 @@
     <form method="POST" action="{{ url_for('delete_account', user_id=user['name']) }}">
       <input type="submit" value="Delete Account" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
     </form>
-
   {% endif %}
 {% endblock %}
