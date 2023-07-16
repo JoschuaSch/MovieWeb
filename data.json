@@ -4,7 +4,7 @@
     "password": "pbkdf2:sha256:260000$7ZjlKmkQReTTDNcN$3643d7162a2cda65f1e76064dd0028935572975ff2f0969c7878f473a6f270e3",
     "movies": {
       "c76da635-d589-4764-9191-2f1ca8035e9e": {
-        "Title": "Inception",
+        "Title": null,
         "Year": "2010",
         "Rated": "PG-13",
         "Released": "16 Jul 2010",
@@ -46,12 +46,100 @@
         "watched": true
       }
     },
-    "watchlist": {},
+    "watchlist": {
+      "e6cee19f-7afe-40a5-8825-c2017141e706": {
+        "Title": "Master of None",
+        "Year": "2015\u20132021",
+        "Rated": "TV-MA",
+        "Released": "06 Nov 2015",
+        "Runtime": "1 min",
+        "Genre": "Comedy, Drama",
+        "Director": "N/A",
+        "Writer": "Aziz Ansari, Alan Yang",
+        "Actors": "Aziz Ansari, Eric Wareheim, Lena Waithe",
+        "Plot": "The personal and professional life of Dev, a 30-year-old actor in New York.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "Won 3 Primetime Emmys. 17 wins & 75 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjI1MDgyMTMwMF5BMl5BanBnXkFtZTgwMDU5MzAxNzE@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.2/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "8.2",
+        "imdbVotes": "74,676",
+        "imdbID": "tt4635276",
+        "Type": "series",
+        "totalSeasons": "3",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "e6cee19f-7afe-40a5-8825-c2017141e706"
+      }
+    },
     "age": "27",
     "favorite_movie": "female",
     "favorite_quote": "test",
     "words_to_live_by": "",
     "sex": "",
+    "profile_picture": null
+  },
+  "Alice": {
+    "name": "Alice",
+    "password": "pbkdf2:sha256:260000$nCcFPZ0T3erUJ1lz$389d3b44e9d0c9bce8af094bab36dc50491f63a91403b46ca8e1ba4dd27f4d3e",
+    "movies": {
+      "7225a344-d3c3-43dc-9752-a5eed8895bdc": {
+        "Title": "Full Metal Jacket",
+        "Year": "1987",
+        "Rated": "R",
+        "Released": "10 Jul 1987",
+        "Runtime": "116 min",
+        "Genre": "Drama, War",
+        "Director": "Stanley Kubrick",
+        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
+        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
+        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
+        "Language": "English, Vietnamese",
+        "Country": "United Kingdom, United States",
+        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "78/100"
+          }
+        ],
+        "Metascore": "78",
+        "imdbRating": "8.3",
+        "imdbVotes": "762,151",
+        "imdbID": "tt0093058",
+        "Type": "movie",
+        "DVD": "12 Jun 2001",
+        "BoxOffice": "$46,357,676",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": true
+      }
+    },
+    "watchlist": {},
+    "age": "28",
+    "favorite_movie": "female",
+    "favorite_quote": "1",
+    "words_to_live_by": "1",
+    "sex": "female",
     "profile_picture": null
   }
 }

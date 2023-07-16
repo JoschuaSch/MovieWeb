@@ -156,12 +156,12 @@ def delete_movie(user_id, movie_id):
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found():
     return render_template('404.html'), 404
 
 
 @app.errorhandler(500)
-def internal_server_error(e):
+def internal_server_error():
     return render_template('500.html'), 500
 
 
@@ -360,13 +360,17 @@ def add_to_watchlist(user_id):
     if not movie_name:
         flash('No movie name provided. Please check and try again.')
         return redirect(url_for('user_watchlist', user_id=user_id))
-    movie_data = omdb_api.fetch_movie_details(movie_name)
-    if movie_data is None:
-        flash('Movie not found. Please check the title and try again.')
-    else:
-        data_manager.add_to_watchlist(user_id, movie_data)
-        flash('Movie added successfully to your watchlist.')
-    return redirect(url_for('user_watchlist', user_id=user_id))
+    try:
+        movie_data = omdb_api.fetch_movie_details(movie_name)
+        if movie_data is None:
+            flash('Movie not found. Please check the title and try again.')
+        else:
+            data_manager.add_to_watchlist(user_id, movie_data)
+            flash('Movie added successfully to your watchlist.')
+            return redirect(url_for('user_movies', user_id=user_id))
+    except DuplicateMovieError as e:
+        flash(str(e))
+    return redirect(url_for('user_movies', user_id=user_id))
 
 
 if __name__ == '__main__':

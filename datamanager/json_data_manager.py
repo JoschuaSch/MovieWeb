@@ -298,17 +298,6 @@ class JSONDataManager(DataManagerInterface):
         del user["watchlist"][movie_id]
         self.save_to_file()
 
-    def mark_as_unwatched(self, user_id, movie_id):
-        user = self.users.get(user_id)
-        if not user:
-            raise UserNotFoundError(f"User with ID {user_id} not found.")
-        movie = user["movies"].get(movie_id)
-        if not movie:
-            raise MovieNotFoundError(f"Movie with ID {movie_id} not found for user with ID {user_id}.")
-        user["watchlist"][movie_id] = movie
-        del user["movies"][movie_id]
-        self.save_to_file()
-
     def get_user_watchlist(self, user_id):
         try:
             user = self.users.get(user_id)

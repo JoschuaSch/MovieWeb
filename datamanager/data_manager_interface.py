@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class DataManagerInterface(ABC):
     @abstractmethod
     def get_all_users(self):
@@ -64,11 +65,6 @@ class DataManagerInterface(ABC):
     @abstractmethod
     def mark_as_watched(self, user_id, movie_id):
         """Mark a movie as watched for a user"""
-        pass
-
-    @abstractmethod
-    def mark_as_unwatched(self, user_id, movie_id):
-        """Mark a movie as unwatched for a user"""
         pass
 
     @abstractmethod
