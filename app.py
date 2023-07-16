@@ -269,7 +269,8 @@ def like_review(user_id, movie_id):
     try:
         liker_id = current_user.id
         data_manager.like_review(user_id, movie_id, liker_id)
-        return redirect(url_for('user_movies', user_id=user_id))
+        next_url = request.args.get('next', url_for('home'))
+        return redirect(next_url)
     except ValueError as e:
         return render_template('error.html', message=str(e)), 400
 
@@ -333,7 +334,6 @@ def movie_reviews():
         reviews = data_manager.get_reviews_sorted_by_likes()
     else:
         reviews = data_manager.get_reviews_sorted_by_date()
-
     return render_template('movie_reviews.html', reviews=reviews, sort_by=sort_by)
 
 

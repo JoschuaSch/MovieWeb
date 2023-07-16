@@ -221,11 +221,13 @@ class JSONDataManager(DataManagerInterface):
     def get_reviews_sorted_by_likes(self):
         try:
             reviews = []
-            for user in self.users.values():
+            for user_id, user in self.users.items():
                 for movie_id, movie in user['movies'].items():
                     if 'review' in movie:
                         reviews.append({
                             'user': user['name'],
+                            'user_id': user_id,
+                            'movie_id': movie_id,
                             'Poster': movie['Poster'],
                             'Title': movie['Title'],
                             'content': movie['review'],
@@ -241,11 +243,13 @@ class JSONDataManager(DataManagerInterface):
     def get_reviews_sorted_by_date(self):
         try:
             reviews = []
-            for user in self.users.values():
+            for user_id, user in self.users.items():
                 for movie_id, movie in user['movies'].items():
                     if 'review' in movie:
                         reviews.append({
                             'user': user['name'],
+                            'user_id': user_id,
+                            'movie_id': movie_id,
                             'Poster': movie['Poster'],
                             'Title': movie['Title'],
                             'content': movie['review'],
