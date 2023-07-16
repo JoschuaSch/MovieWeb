@@ -268,5 +268,33 @@ def like_review(user_id, movie_id):
         return render_template('error.html', message=str(e)), 400
 
 
+@app.route('/users/<user_id>/update_profile', methods=['GET', 'POST'])
+@login_required
+def update_profile(user_id):
+    if current_user.id != user_id:
+        abort(403)
+    try:
+        user = data_manager.find_user_by_id(user_id)
+    except UserNotFoundError:
+        return render_template('error.html', message="User not found"), 404
+    if request.method == 'POST':
+        age = request.form.get('age')
+        sex = request.form.get('sex')
+        words_to_live_by = request.form.get('words_to_live_by')
+        favorite_movie = request.form.get('favorite_movie')
+        favorite_quote = request.form.get('favorite_quote')
+        user_details = {
+            "age": age,
+            "sex": sex,
+            "words_to_live_by": words_to_live_by,
+            "favorite_movie": favorite_movie,
+            "favorite_quote": favorite_quote,
+        }
+        data_manager.update_user(user_id, user_details)
+        return redirect(url_for('user_profile', user_id=user_id))
+    else:
+        return render_template('update_profile.html', user=user)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

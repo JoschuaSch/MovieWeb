@@ -102,10 +102,12 @@
         "watch_count": 2
       }
     },
-    "age": "27",
-    "favorite_movie": "Paw Patrol",
-    "favorite_quote": "I am tho i am no longer",
-    "profile_picture": 1
+    "age": "30",
+    "favorite_movie": "Nijka",
+    "favorite_quote": "I wanna be lol",
+    "profile_picture": 1,
+    "sex": "female",
+    "words_to_live_by": "Gaga baba"
   },
   "Alice": {
     "name": "Alice",

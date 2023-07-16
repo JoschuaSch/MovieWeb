@@ -198,3 +198,11 @@ class JSONDataManager(DataManagerInterface):
         movie["likes"]["count"] += 1
         movie["likes"]["users"].append(liker_id)
         self.save_to_file()
+
+    def update_user(self, user_id, new_details):
+        user = self.users.get(user_id)
+        if not user:
+            raise UserNotFoundError(f"User with ID {user_id} not found.")
+        user.update(new_details)
+        self.save_to_file()
+
