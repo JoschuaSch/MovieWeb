@@ -10,26 +10,15 @@
       <img src="{{ url_for('static', filename='images/Movie.jpg') }}" alt="Movie image">
     </div>
     <h1 class="header-title">MovieCoasterTycoon - Let's take a ride</h1>
-    <div class="header-buttons">
+    <nav class="navbar">
+      <a href="{{ url_for('home') }}">Home</a>
       {% if current_user.is_authenticated %}
         <a href="{{ url_for('user_profile', user_id=current_user.id) }}">My Profile</a>
-        <a href="{{ url_for('logout') }}">Logout</a>
-      {% else %}
-        <a href="{{ url_for('login') }}">Login</a>
-        <a href="{{ url_for('register') }}">Register</a>
       {% endif %}
-    </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('top_100_movies') }}">Top 100 Movies</a></li>
-        <li><a href="{{ url_for('list_users') }}">View Users</a></li>
-        <li><a href="{{ url_for('random_movie') }}">Surprise Me!</a></li>
-        <li><a href="{{ url_for('movie_reviews') }}">Reviews</a></li>
-        {% if current_user.is_authenticated %}
-          <li><a href="{{ url_for('user_profile', user_id=current_user.id) }}">My Profile</a></li>
-        {% endif %}
-      </ul>
+      <a href="{{ url_for('top_100_movies') }}">Top 100 Movies</a>
+      <a href="{{ url_for('list_users') }}">View Users</a>
+      <a href="{{ url_for('random_movie') }}">Surprise Me!</a>
+      <a href="{{ url_for('movie_reviews') }}">Reviews</a>
     </nav>
   </header>
 
