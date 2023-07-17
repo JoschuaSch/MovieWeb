@@ -10,10 +10,12 @@
     <div class="movie">
       <h3>{{ movie["Title"] }}</h3>
       <img src="{{ movie['Poster'] }}" alt="Poster for {{ movie['Title'] }}">
+      {% if current_user_id == user_id %}
       <form method="POST" action="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}">
         <input type="submit" value="Mark as Watched">
         <input type="hidden" name="watched" value="true">
       </form>
+      {% endif %}
     </div>
   {% endfor %}
 {% endblock %}
