@@ -14,9 +14,9 @@
     <label for="sex">Sex:</label>
     <select id="sex" name="sex">
         <option value="">Select...</option>
-        <option value="male" {% if user['sex'] == 'male' %} selected {% endif %}>Male</option>
-        <option value="female" {% if user['sex'] == 'female' %} selected {% endif %}>Female</option>
-        <option value="other" {% if user['sex'] == 'other' %} selected {% endif %}>Other</option>
+        <option value="Male" {% if user['sex'] == 'male' %} selected {% endif %}>Male</option>
+        <option value="Female" {% if user['sex'] == 'female' %} selected {% endif %}>Female</option>
+        <option value="Other" {% if user['sex'] == 'other' %} selected {% endif %}>Other</option>
     </select>
 
     <label for="words_to_live_by">Words to live by:</label>
