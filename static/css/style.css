@@ -45,7 +45,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #f0f0f0;
+  background-color: #1a2b42;
   position: sticky;
   top: 0;
   padding: 15px 0;
@@ -53,7 +53,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 0 10px;
 }
 
@@ -61,4 +61,15 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.header-links {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.header-links a {
+  margin-left: 10px;
+  color: white;
 }
