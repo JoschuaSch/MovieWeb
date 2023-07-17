@@ -200,7 +200,14 @@
         "Response": "True",
         "personal_rating": 1.0,
         "watched": false,
-        "review": "dd"
+        "review": "dd",
+        "watch_count": 0,
+        "likes": {
+          "count": 1,
+          "users": [
+            "Testa"
+          ]
+        }
       }
     },
     "watchlist": {
