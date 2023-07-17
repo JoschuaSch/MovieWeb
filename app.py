@@ -272,7 +272,7 @@ def like_review(user_id, movie_id):
     try:
         liker_id = current_user.id
         data_manager.like_review(user_id, movie_id, liker_id)
-        next_url = request.args.get('next', url_for('home'))
+        next_url = request.referrer
         return redirect(next_url)
     except ValueError as e:
         return render_template('error.html', message=str(e)), 400
