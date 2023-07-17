@@ -1,0 +1,40 @@
+.profile-picture {
+    max-width: 300px;
+    height: auto;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+}
+
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}

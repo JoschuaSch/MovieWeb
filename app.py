@@ -399,5 +399,11 @@ def add_to_watchlist(user_id):
     return redirect(url_for('user_movies', user_id=user_id))
 
 
+@app.errorhandler(404)
+def page_not_found(error):
+    """Render the custom 404 error page."""
+    return render_template('404.html'), 404
+
+
 if __name__ == '__main__':
     app.run(debug=True)

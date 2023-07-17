@@ -2,12 +2,13 @@
 <html>
 <head>
   <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <header>
-    <h1>MovieCoasterTycoon - Let's take a ride</h1>
-    <nav>
+  <header class="header">
+    <img src="{{ url_for('static', filename='images/Movie.jpg') }}" alt="Movie image">
+    <h1 class="header-title">MovieCoasterTycoon - Let's take a ride</h1>
+    <nav class="navbar">
       <ul>
         <li><a href="{{ url_for('home') }}">Home</a></li>
         {% if current_user.is_authenticated %}
@@ -17,6 +18,10 @@
           <li><a href="{{ url_for('login') }}">Login</a></li>
           <li><a href="{{ url_for('register') }}">Register</a></li>
         {% endif %}
+        <li><a href="{{ url_for('top_100_movies') }}">Top 100 Movies</a></li>
+        <li><a href="{{ url_for('list_users') }}">View Users</a></li>
+        <li><a href="{{ url_for('random_movie') }}">Surprise Me!</a></li>
+        <li><a href="{{ url_for('movie_reviews') }}">Reviews</a></li>
       </ul>
     </nav>
   </header>
