@@ -81,18 +81,63 @@ body {
   object-fit: cover;
   border: 4px solid black;
   box-shadow: 0 0 5px rgba(26, 43, 66, 0.3);
-}
-.profile-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  margin-right: 5px;
 }
 
-.profile-info {
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
   margin-left: 5px;
 }
 
+.profile-info {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
 .profile-actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-actions a {
+  margin-right: 10px;
+}
+
+.profile-actions .profile-actions-bar {
+  display: flex;
+}
+
+.profile-actions .profile-actions-bar a {
+  margin-right: 10px;
+}
+
+.profile-actions form {
   margin-left: auto;
 }
 
+.profile-details p {
+  margin-bottom: 10px;
+}
+
+.profile-details .profile-detail {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.profile-details .profile-detail .detail-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-details .profile-detail .detail-value {
+  margin-left: 20px;
+}
+
+.profile-title {
+  margin-bottom: 30px; /* Adjust this value to increase or decrease the spacing */
+}
