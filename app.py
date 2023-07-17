@@ -200,8 +200,8 @@ def register():
         favorite_quote = request.form.get('favorite_quote')
         profile_picture = None
         hashed_password = generate_password_hash(password)
-        data_manager.add_user(user_id, user_id, hashed_password, age, sex, words_to_live_by, favorite_movie,
-                              favorite_quote, profile_picture)
+        data_manager.add_user(user_id, user_id, hashed_password, age, favorite_movie, favorite_quote,
+                              words_to_live_by, sex, profile_picture)
         flash('Registered successfully. Please login.')
         return redirect(url_for('login'))
     return render_template('register.html')

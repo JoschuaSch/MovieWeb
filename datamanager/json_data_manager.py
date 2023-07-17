@@ -84,7 +84,7 @@ class JSONDataManager(DataManagerInterface):
                     "favorite_movie": favorite_movie,
                     "favorite_quote": favorite_quote,
                     "words_to_live_by": words_to_live_by,
-                    "sex": sex,
+                    "sex": sex.capitalize() if sex else None,
                     "profile_picture": profile_picture
                 }
                 self.save_to_file()
