@@ -141,6 +141,8 @@ class JSONDataManager(DataManagerInterface):
             movie = user["watchlist"].get(movie_id)
             if not movie:
                 raise MovieNotFoundError(f"Movie with ID {movie_id} not found for user with ID {user_id}.")
+        if "review" in new_details:
+            movie["review"] = new_details["review"]
         movie.update(new_details)
         if new_details.get('watched', False):
             self.mark_as_watched(user_id, movie_id)

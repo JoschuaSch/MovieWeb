@@ -111,7 +111,6 @@ def confirm_movie(user_id, movie_name):
 @app.route('/users/<user_id>/movies/update/<movie_id>', methods=['GET', 'POST'])
 @login_required
 def update_movie(user_id, movie_id):
-    """Update the details of a movie in a user's movie list."""
     if current_user.id != user_id:
         abort(403)
     try:
@@ -143,7 +142,7 @@ def update_movie(user_id, movie_id):
                 return redirect(url_for('user_watchlist', user_id=user_id))
             else:
                 return redirect(url_for('user_movies', user_id=user_id))
-        except (UserNotFoundError, MovieNotFoundError) as e:
+        except MovieNotFoundError as e:
             return render_template('error.html', message=str(e)), 404
     else:
         return render_template('update_movie.html', user_id=user_id, movie_id=movie_id, movie=movie)
