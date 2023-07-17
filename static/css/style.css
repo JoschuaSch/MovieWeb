@@ -6,6 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #dcdcdc;
 }
 
 .header {
@@ -72,4 +73,24 @@ body {
 .header-links a {
   margin-left: 10px;
   color: white;
+}
+
+.profile-picture {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border: 4px solid black;
+  box-shadow: 0 0 5px rgba(26, 43, 66, 0.3);
+}
+profile-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-info > p {
+  margin-right: 20px;
+}
+
+.profile-actions {
+  margin-left: auto;
 }
