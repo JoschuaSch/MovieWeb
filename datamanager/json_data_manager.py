@@ -37,6 +37,7 @@ class JSONDataManager(DataManagerInterface):
 
     @retry(stop_max_attempt_number=max_attempts, wait_fixed=try_again_in)
     def load_from_file(self):
+        """Load data from the JSON file."""
         try:
             with open(self.filename, 'r') as f:
                 self.users = json.load(f)
@@ -48,6 +49,7 @@ class JSONDataManager(DataManagerInterface):
 
     @retry(stop_max_attempt_number=max_attempts, wait_fixed=try_again_in)
     def save_to_file(self):
+        """Save data to the JSON file."""
         try:
             with open(self.filename, 'w') as f:
                 json.dump(self.users, f, indent=2)
@@ -56,6 +58,7 @@ class JSONDataManager(DataManagerInterface):
             raise
 
     def get_all_users(self):
+        """Get all users in the data."""
         try:
             return [{'id': user_id, **user_data} for user_id, user_data in self.users.items()]
         except Exception as e:
@@ -63,6 +66,7 @@ class JSONDataManager(DataManagerInterface):
             return []
 
     def get_user_movies(self, user_id):
+        """Get the movies of a specific user."""
         try:
             user = self.users.get(user_id)
             if user:
@@ -73,6 +77,7 @@ class JSONDataManager(DataManagerInterface):
 
     def add_user(self, user_id, name, password_hash, age=None, favorite_movie=None, favorite_quote=None,
                  words_to_live_by=None, sex=None, profile_picture=None):
+        """Add a new user to the data."""
         try:
             if user_id not in self.users:
                 self.users[user_id] = {
@@ -88,12 +93,11 @@ class JSONDataManager(DataManagerInterface):
                     "profile_picture": profile_picture
                 }
                 self.save_to_file()
-            else:
-                print("User ID already exists.")
         except Exception as e:
             logger.error(f"An error occurred while adding the user: {e}")
 
     def add_movie(self, user_id, movie_details):
+        """Add a movie to a user's movie list."""
         user = self.users.get(user_id)
         if not user:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
@@ -108,6 +112,7 @@ class JSONDataManager(DataManagerInterface):
         return unique_movie_id
 
     def find_user_by_id(self, user_id):
+        """Find a user by their ID."""
         try:
             user = self.users.get(user_id, None)
             if user:
@@ -117,6 +122,7 @@ class JSONDataManager(DataManagerInterface):
             return None
 
     def find_movie_by_id(self, user_id, movie_id):
+        """Find a movie by its ID within a user's list."""
         try:
             user = self.find_user_by_id(user_id)
             if user:
@@ -126,6 +132,7 @@ class JSONDataManager(DataManagerInterface):
             return None
 
     def update_movie(self, user_id, movie_id, new_details):
+        """Update the details of a movie in a user's list."""
         user = self.users.get(user_id)
         if not user:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
@@ -140,6 +147,7 @@ class JSONDataManager(DataManagerInterface):
         self.save_to_file()
 
     def delete_movie(self, user_id, movie_id):
+        """Delete a movie from a user's list."""
         user = self.users.get(user_id)
         if user:
             if movie_id in user["movies"]:
@@ -151,6 +159,7 @@ class JSONDataManager(DataManagerInterface):
             raise UserNotFoundError(f"User with ID {user_id} not found.")
 
     def movie_exists(self, user_id, movie_title):
+        """Check if a movie with the given title exists in a user's list."""
         user = self.users.get(user_id)
         if user:
             for movie in user["movies"].values():
@@ -159,6 +168,7 @@ class JSONDataManager(DataManagerInterface):
         return False
 
     def get_most_watched_movies(self):
+        """Get the most watched movies across all users."""
         movie_watches = {}
         for user in self.users.values():
             for movie_id, movie in user['movies'].items():
@@ -171,16 +181,19 @@ class JSONDataManager(DataManagerInterface):
         return most_watched_movies[:100]
 
     def search_users(self, query):
+        """Search for users by their name."""
         return [{'id': user_id, **user_data} for user_id, user_data in self.users.items() if
                 query.lower() in user_data['name'].lower()]
 
     def get_users_by_name(self, search):
+        """Get users with the exact matching name."""
         users = self.get_all_users()
         users = [user for user in users if search.lower() == user['name'].lower()]
         users.sort(key=lambda user: user['name'])
         return users
 
     def like_review(self, user_id, movie_id, liker_id):
+        """Like a review for a movie in a user's list."""
         user = self.users.get(user_id)
         if not user:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
@@ -196,6 +209,7 @@ class JSONDataManager(DataManagerInterface):
         self.save_to_file()
 
     def update_user(self, user_id, new_details):
+        """Update the details of a user."""
         user = self.users.get(user_id)
         if not user:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
@@ -203,6 +217,7 @@ class JSONDataManager(DataManagerInterface):
         self.save_to_file()
 
     def delete_user(self, user_id):
+        """Delete a user from the data."""
         try:
             if user_id in self.users:
                 user = self.users[user_id]
@@ -224,6 +239,7 @@ class JSONDataManager(DataManagerInterface):
             raise
 
     def get_reviews_sorted_by_likes(self):
+        """Get reviews sorted by the number of likes."""
         try:
             reviews = []
             for user_id, user in self.users.items():
@@ -246,6 +262,7 @@ class JSONDataManager(DataManagerInterface):
             return []
 
     def get_reviews_sorted_by_date(self):
+        """Get reviews sorted by date."""
         try:
             reviews = []
             for user_id, user in self.users.items():
@@ -268,6 +285,7 @@ class JSONDataManager(DataManagerInterface):
             return []
 
     def add_to_watchlist(self, user_id, movie_details):
+        """Add a movie to a user's watchlist."""
         user = self.users.get(user_id)
         if not user:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
@@ -288,6 +306,7 @@ class JSONDataManager(DataManagerInterface):
             raise DuplicateMovieError(f"The movie '{movie_details['Title']}' is already in your watchlist.")
 
     def mark_as_watched(self, user_id, movie_id):
+        """Mark a movie in a user's watchlist as watched."""
         user = self.users.get(user_id)
         if not user:
             raise UserNotFoundError(f"User with ID {user_id} not found.")
@@ -299,6 +318,7 @@ class JSONDataManager(DataManagerInterface):
         self.save_to_file()
 
     def get_user_watchlist(self, user_id):
+        """Get the watchlist of a specific user."""
         try:
             user = self.users.get(user_id)
             if user:

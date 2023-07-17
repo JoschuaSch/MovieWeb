@@ -23,12 +23,14 @@ login_manager.login_view = 'login'
 
 @app.route('/')
 def home():
+    """Render the home page."""
     return render_template('home.html')
 
 
 @app.route('/users/<user_id>/movies')
 @login_required
 def user_movies(user_id):
+    """Render the page showing movies of a specific user."""
     try:
         movies = data_manager.get_user_movies(user_id)
         return render_template('user_movies.html', movies=movies, user_id=user_id, current_user_id=current_user.id)
@@ -38,6 +40,7 @@ def user_movies(user_id):
 
 @app.route('/users', methods=['GET', 'POST'])
 def list_users():
+    """Render the page showing all users."""
     search = request.form.get('search')
     if search:
         users = data_manager.get_users_by_name(search)
@@ -48,6 +51,7 @@ def list_users():
 
 @app.route('/add_user', methods=['GET', 'POST'])
 def add_user():
+    """Add a new user to the system."""
     if request.method == 'POST':
         name = request.form['name']
         password = request.form['password']
@@ -63,6 +67,7 @@ def add_user():
 @app.route('/add_movie', methods=['GET', 'POST'])
 @login_required
 def add_movie():
+    """Add a movie to a user's movie list."""
     if request.method == 'POST':
         movie_name = request.form.get('movie_name')
         if not movie_name:
@@ -77,6 +82,7 @@ def add_movie():
 
 @app.route('/confirm_movie/<user_id>/<movie_name>', methods=['GET', 'POST'])
 def confirm_movie(user_id, movie_name):
+    """Confirm the movie details before adding it to a user's movie list."""
     if request.method == 'GET':
         movie_data = omdb_api.fetch_movie_details(movie_name)
         if movie_data is None:
@@ -105,6 +111,7 @@ def confirm_movie(user_id, movie_name):
 @app.route('/users/<user_id>/movies/update/<movie_id>', methods=['GET', 'POST'])
 @login_required
 def update_movie(user_id, movie_id):
+    """Update the details of a movie in a user's movie list."""
     if current_user.id != user_id:
         abort(403)
     try:
@@ -145,6 +152,7 @@ def update_movie(user_id, movie_id):
 @app.route('/users/<user_id>/delete_movie/<movie_id>', methods=['POST'])
 @login_required
 def delete_movie(user_id, movie_id):
+    """Delete a movie from a user's movie list."""
     if current_user.id != user_id:
         abort(403)
     try:
@@ -157,11 +165,13 @@ def delete_movie(user_id, movie_id):
 
 @app.errorhandler(404)
 def page_not_found():
+    """Render the 404 page."""
     return render_template('404.html'), 404
 
 
 @app.errorhandler(500)
 def internal_server_error():
+    """Render the 500 page."""
     return render_template('500.html'), 500
 
 
@@ -185,6 +195,7 @@ def load_user(user_id):
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    """Register a new user."""
     if request.method == 'POST':
         user_id = request.form.get('user_id')
         user_id = user_id.capitalize()
@@ -213,6 +224,7 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    """Log in a user."""
     if request.method == 'POST':
         user_id = request.form.get('user_id')
         user_id = user_id[0].upper() + user_id[1:].lower()
@@ -231,6 +243,7 @@ def login():
 @app.route("/logout")
 @login_required
 def logout():
+    """Log out the current user."""
     logout_user()
     flash('You have been logged out.')
     return redirect(url_for('home'))
@@ -238,12 +251,14 @@ def logout():
 
 @app.route('/top100')
 def top_100_movies():
+    """Render the page showing the top 100 most watched movies."""
     movie_counts = data_manager.get_most_watched_movies()
     return render_template('top100.html', movie_counts=movie_counts)
 
 
 @app.route('/random-movie', methods=['GET'])
 def random_movie():
+    """Render the page showing a random movie from the data."""
     with open('data.json', 'r') as f:
         data = json.load(f)
 
@@ -258,6 +273,7 @@ def random_movie():
 @app.route('/users/<user_id>/profile')
 @login_required
 def user_profile(user_id):
+    """Render the profile page of a specific user."""
     try:
         user_data = data_manager.find_user_by_id(user_id)
         if user_data['profile_picture'] is not None:
@@ -273,6 +289,7 @@ def user_profile(user_id):
 @app.route('/users/<user_id>/movies/<movie_id>/like', methods=['POST'])
 @login_required
 def like_review(user_id, movie_id):
+    """Like a review for a movie in a user's movie list."""
     try:
         liker_id = current_user.id
         data_manager.like_review(user_id, movie_id, liker_id)
@@ -285,6 +302,7 @@ def like_review(user_id, movie_id):
 @app.route('/users/<user_id>/update_profile', methods=['GET', 'POST'])
 @login_required
 def update_profile(user_id):
+    """Update the profile details of a user."""
     if current_user.id != user_id:
         abort(403)
     try:
@@ -306,7 +324,7 @@ def update_profile(user_id):
             "favorite_quote": favorite_quote,
         }
         if profile_picture:
-            filename = secure_filename(user_id + '_' + profile_picture.filename)  # Adding user_id to make it unique
+            filename = secure_filename(user_id + '_' + profile_picture.filename)
             profile_picture.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             user_details["profile_picture"] = filename
         data_manager.update_user(user_id, user_details)
@@ -318,6 +336,7 @@ def update_profile(user_id):
 @app.route('/users/<user_id>/delete', methods=['POST'])
 @login_required
 def delete_account(user_id):
+    """Delete a user account."""
     if current_user.id != user_id:
         abort(403)
     try:
@@ -331,11 +350,13 @@ def delete_account(user_id):
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
+    """Serve uploaded files from the UPLOAD_FOLDER directory."""
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
 @app.route('/reviews', methods=['GET'])
 def movie_reviews():
+    """Render the page showing movie reviews, sorted by likes or date."""
     sort_by = request.args.get('sort_by', 'newest')
     if sort_by == 'liked':
         reviews = data_manager.get_reviews_sorted_by_likes()
@@ -347,6 +368,7 @@ def movie_reviews():
 @app.route('/users/<user_id>/watchlist')
 @login_required
 def user_watchlist(user_id):
+    """Render the watchlist page of a specific user."""
     try:
         watchlist_movies = data_manager.get_user_watchlist(user_id)
         return render_template('user_watchlist.html', movies=watchlist_movies, user_id=user_id,
@@ -358,6 +380,7 @@ def user_watchlist(user_id):
 @app.route('/users/<user_id>/movies/add_to_watchlist', methods=['POST'])
 @login_required
 def add_to_watchlist(user_id):
+    """Add a movie to a user's watchlist."""
     if current_user.id != user_id:
         abort(403)
     movie_name = request.form.get('movie_name')
