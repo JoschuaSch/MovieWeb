@@ -193,6 +193,10 @@ def register():
             flash('This username is already taken. Please choose a different one.')
             return redirect(url_for('register'))
         password = request.form.get('password')
+        password_verify = request.form.get('password_verify')
+        if password != password_verify:
+            flash('Passwords do not match. Please try again.')
+            return redirect(url_for('register'))
         age = request.form.get('age')
         sex = request.form.get('sex')
         words_to_live_by = request.form.get('words_to_live_by')

@@ -22,5 +22,17 @@
     "words_to_live_by": "",
     "sex": "Female",
     "profile_picture": null
+  },
+  "Odlyr": {
+    "name": "Odlyr",
+    "password": "pbkdf2:sha256:260000$Id4bSsokOVI0r5Kq$9fb478a4d6c25d2261d7bed585bfa789cc591fce875283b621d5b874b21b23f4",
+    "movies": {},
+    "watchlist": {},
+    "age": "28",
+    "favorite_movie": "dd",
+    "favorite_quote": "dd",
+    "words_to_live_by": "dd",
+    "sex": "Male",
+    "profile_picture": null
   }
 }
