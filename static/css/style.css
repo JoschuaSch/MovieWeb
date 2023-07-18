@@ -84,6 +84,7 @@ body, html {
   border: 1px solid black;
   box-shadow: 0 0 5px rgba(26, 43, 66, 0.3);
   margin-right: 5px;
+  margin-top: 18px;
 }
 
 .profile-container {
@@ -97,6 +98,7 @@ body, html {
 .profile-info {
   margin-left: 15px;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .profile-actions {
@@ -115,6 +117,17 @@ body, html {
 
 .profile-actions .profile-actions-bar a {
   margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #1a2b42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile-actions .profile-actions-bar a:hover {
+  background-color: #294965;
 }
 
 .profile-actions form {
@@ -162,4 +175,21 @@ body, html {
 .profile-details .profile-detail .detail-value {
   margin-left: 20px;
   color: #555555;
+  font-weight: bold;
+}
+.image-and-actions-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+.profile-actions {
+  align-self: center;
+}
+
+.profile-picture {
+  align-self: center;
+}
+.buttons {
+  margin-top: -45px;
 }
