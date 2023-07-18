@@ -5,18 +5,21 @@
 {% endblock %}
 
 {% block content %}
-  <h2>User List</h2>
-  <form method="POST">
-    <label for="search">Search:</label>
-    <input type="text" id="search" name="search" required>
-    <input type="submit" value="Search">
+  <div class="user-list-title-container">
+    <h2>User List</h2>
+  </div>
+  <form class="search-container" method="POST">
+    <input class="search-input" type="text" id="search" name="search" required>
+    <input class="search-button" type="submit" value="Search">
   </form>
 
-  <ul>
-    {% for user in users %}
-      <li>
-        <a href="{{ url_for('user_profile', user_id=user.id) }}">{{ user.name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="user-list-container">
+    <ul class="user-list">
+      {% for user in users %}
+        <li>
+          <a href="{{ url_for('user_profile', user_id=user.id) }}">{{ user.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock %}
