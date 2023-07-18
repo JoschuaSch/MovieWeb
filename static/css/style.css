@@ -91,7 +91,7 @@ body, html {
   display: flex;
   align-items: flex-start;
   margin-top: 50px;
-  margin-left: -25px;
+  margin-left: 50px;
 }
 
 .profile-info {
