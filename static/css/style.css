@@ -432,83 +432,114 @@ body, html {
 .movie-info a:hover {
   text-decoration: underline;
 }
-.review-list {
-  list-style-type: none;
-  padding: 0;
-}
 
-.review-list li {
+.sorting {
+  text-align: center;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  background-color: #f7f7f7;
 }
 
-.review-list {
-  list-style-type: none;
-  padding: 0;
+.sorting a {
+  margin: 0 10px;
+  color: #007BFF;
+  text-decoration: none;
 }
 
-.review-list li {
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  background-color: #f7f7f7;
-  width: 80%; /* Set width to 80% */
-  margin: 0 auto; /* Center the box */
+.sorting a.active {
+  font-weight: bold;
 }
 
-.review {
+.review-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
+.review-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 80%;
+  margin-bottom: 20px;
+  border: 1px solid #DDD;
+  padding: 10px;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+  position: relative;
+}
+
 .review-movie {
-  margin-right: 20px;
+  flex-basis: 30%;
 }
 
-.review-movie img {
-  max-width: 100px;
-  height: auto;
+.review-info {
+  flex-basis: 70%;
 }
 
-.review-info p {
-  margin-bottom: 5px;
-}
-
-.review-info form {
-  margin-top: 10px;
-}
-
-.review-info form input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.review-info form input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-.review-info p.author {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.review-info p.content {
-  font-style: italic;
-}
-
-h2 {
+.movie-poster {
   text-align: center;
 }
 
+.movie-poster h3 {
+  margin-bottom: 10px;
+}
 
+.movie-poster img {
+  max-width: 100%;
+}
+
+.review-content-box {
+  padding: 10px;
+}
+
+.review-content-box p {
+  margin: 10px 0;
+}
+
+.review-content-box {
+  padding: 10px;
+}
+
+.author {
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  display: block;
+  margin: 50px;
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 0 50px 200px 10px;
+  border-radius: 0;
+}
+
+.review-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.like-section {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.like-button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.like-button:hover {
+  color: #0056b3;
+}
 
 
 
