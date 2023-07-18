@@ -16,7 +16,13 @@
       <div class="profile-actions">
         <div class="buttons">
           <div class="profile-actions-bar">
-            <a href="{{ url_for('user_movies', user_id=user['name']) }}">My Movie List</a>
+            <a href="{{ url_for('user_movies', user_id=user['name']) }}">
+              {% if current_user.is_authenticated and current_user.id == user['name'] %}
+                My Movie List
+              {% else %}
+                {{ user['name'] }}'s Movie List
+              {% endif %}
+            </a>
             <a href="{{ url_for('user_watchlist', user_id=user['name']) }}">Watchlist</a>
           </div>
         </div>
