@@ -15,22 +15,24 @@ Reviews
 <ul class="review-list">
   {% for review in reviews %}
   <li>
-    <div class="review">
-      <div class="review-movie">
-        <a href="https://www.imdb.com/title/{{ review['imdbID'] }}/" target="_blank">
-          <img src="{{ review['Poster'] }}" alt="{{ review['Title'] }} Poster">
-        </a>
-        <h3>{{ review['Title'] }}</h3>
-      </div>
-      <div class="review-info">
-        <p>{{ review['user'] }}</p>
-        <p>{{ review['content'] }}</p>
-        <p>Likes: {{ review['likes'] }}</p>
-        {% if current_user.is_authenticated and current_user.id != review['user_id'] %}
-        <form method="post" action="{{ url_for('like_review', user_id=review['user_id'], movie_id=review['movie_id'], next=request.path) }}">
-          <input type="submit" value="Like">
-        </form>
-        {% endif %}
+    <div class="post">
+      <div class="review">
+        <div class="review-movie">
+          <a href="https://www.imdb.com/title/{{ review['imdbID'] }}/" target="_blank">
+            <img src="{{ review['Poster'] }}" alt="{{ review['Title'] }} Poster">
+          </a>
+          <h3>{{ review['Title'] }}</h3>
+        </div>
+        <div class="review-info">
+          <p class="author">Written by {{ review['user'] }}</p>
+          <p class="content">{{ review['content'] }}</p>
+          <p>Likes: {{ review['likes'] }}</p>
+          {% if current_user.is_authenticated and current_user.id != review['user_id'] %}
+          <form method="post" action="{{ url_for('like_review', user_id=review['user_id'], movie_id=review['movie_id'], next=request.path) }}">
+            <input type="submit" value="Like">
+          </form>
+          {% endif %}
+        </div>
       </div>
     </div>
   </li>

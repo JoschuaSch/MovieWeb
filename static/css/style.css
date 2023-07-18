@@ -432,6 +432,83 @@ body, html {
 .movie-info a:hover {
   text-decoration: underline;
 }
+.review-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.review-list li {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.review-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.review-list li {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  width: 80%; /* Set width to 80% */
+  margin: 0 auto; /* Center the box */
+}
+
+.review {
+  display: flex;
+  align-items: center;
+}
+
+.review-movie {
+  margin-right: 20px;
+}
+
+.review-movie img {
+  max-width: 100px;
+  height: auto;
+}
+
+.review-info p {
+  margin-bottom: 5px;
+}
+
+.review-info form {
+  margin-top: 10px;
+}
+
+.review-info form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.review-info form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.review-info p.author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-info p.content {
+  font-style: italic;
+}
+
+h2 {
+  text-align: center;
+}
+
+
 
 
 
