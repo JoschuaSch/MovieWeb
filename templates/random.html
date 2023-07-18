@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="movie-info-wrapper">
   <div class="movie-info">
     <h2>{{ movie.Title }} ({{ movie.Year }})</h2>
     <a href="https://www.imdb.com/title/{{ movie.imdbID }}/">
@@ -20,10 +21,9 @@
     <p><b>Ratings:</b></p>
     <p><b>Metascore:</b> {{ movie.Metascore }}</p>
     <p><b>IMDb Rating:</b> {{ movie.imdbRating }}</p>
-    <p><b>IMDb Votes:</b> {{ movie.imdbVotes }}</p>
-    <p><b>Type:</b> {{ movie.Type }}</p>
     <p><b>DVD Release Date:</b> {{ movie.DVD }}</p>
     <p><b>Box Office:</b> {{ movie.BoxOffice }}</p>
     <p><b>Production:</b> {{ movie.Production }}</p>
   </div>
+</div>
 {% endblock %}
