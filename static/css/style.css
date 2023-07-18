@@ -84,7 +84,7 @@ body, html {
   border: 1px solid black;
   box-shadow: 0 0 5px rgba(26, 43, 66, 0.3);
   margin-right: 5px;
-  margin-top: 18px;
+  margin-top: 15px;
 }
 
 .profile-container {
@@ -98,7 +98,7 @@ body, html {
 .profile-info {
   margin-left: 15px;
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 65px;
 }
 
 .profile-actions {
@@ -193,3 +193,39 @@ body, html {
 .buttons {
   margin-top: -45px;
 }
+.update-delete-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  margin-top: 15px;
+}
+.update-delete-actions a {
+  padding: 10px 20px;
+  background-color: #1a2b42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.update-delete-actions a:hover {
+  background-color: #294965;
+}
+
+.update-delete-actions input[type=submit] {
+  padding: 10px 20px;
+  background-color: #B22222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-delete-actions input[type=submit]:hover {
+  background-color: #8B0000;
+}
+
+
