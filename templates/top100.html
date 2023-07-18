@@ -12,6 +12,10 @@
       <li>
         <img src="{{ movie.Poster }}" alt="{{ movie.Title }} poster" class="movie-poster">
         <a href="https://www.imdb.com/title/{{ movie.imdbID }}/"> {{ movie.Title }} </a> ({{ movie.watch_count }})
+        <form action="{{ url_for('add_to_watchlist', user_id=current_user.id) }}" method="post">
+          <input type="hidden" name="movie_name" value="{{ movie.Title }}">
+          <button type="submit">Add to Watchlist</button>
+        </form>
       </li>
     {% endfor %}
   </ol>

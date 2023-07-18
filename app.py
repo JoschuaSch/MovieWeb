@@ -252,7 +252,7 @@ def logout():
 def top_100_movies():
     """Render the page showing the top 100 most watched movies."""
     movie_counts = data_manager.get_most_watched_movies()
-    return render_template('top100.html', movie_counts=movie_counts)
+    return render_template('top100.html', movie_counts=movie_counts, current_user=current_user)
 
 
 @app.route('/random-movie', methods=['GET'])
@@ -384,23 +384,21 @@ def add_to_watchlist(user_id):
         abort(403)
     movie_name = request.form.get('movie_name')
     if not movie_name:
-        flash('No movie name provided. Please check and try again.')
-        return redirect(url_for('user_watchlist', user_id=user_id))
+        flash('No movie name provided. Please check and try again.', 'error')
     try:
         movie_data = omdb_api.fetch_movie_details(movie_name)
         if movie_data is None:
-            flash('Movie not found. Please check the title and try again.')
+            flash('Movie not found. Please check the title and try again.', 'error')
         else:
             data_manager.add_to_watchlist(user_id, movie_data)
-            flash('Movie added successfully to your watchlist.')
-            return redirect(url_for('user_movies', user_id=user_id))
+            flash('Movie added successfully to your watchlist!', 'success')
     except DuplicateMovieError as e:
-        flash(str(e))
-    return redirect(url_for('user_movies', user_id=user_id))
+        flash(str(e), 'error')
+    return redirect(request.referrer)
 
 
 @app.errorhandler(404)
-def page_not_found(error):
+def page_not_found():
     """Render the custom 404 error page."""
     return render_template('404.html'), 404
 
