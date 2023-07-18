@@ -195,12 +195,13 @@ body, html {
 }
 .update-delete-actions {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 120px;
   margin-top: 535px;
-  margin-left: -540px;
+  margin-left: -539px;
+  gap: 120px;
 }
+
 .update-delete-actions a {
   padding: 10px 20px;
   background-color: #1a2b42;
@@ -239,19 +240,20 @@ body, html {
   margin-bottom: 10px;
   border: 2px solid #dddddd;
   padding: 10px;
+  position: relative;
 }
 
-.movie-list li:before {
-  content: counter(movie-counter) ". ";
-  counter-increment: movie-counter;
-  font-weight: bold;
-  margin-right: 5px;
+.movie-poster {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .add-to-watchlist-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   width: 30px;
   height: 30px;
   font-size: 24px;
@@ -260,6 +262,18 @@ body, html {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-details {
+  display: flex;
+  align-items: center;
+}
+
+.movie-title {
+  margin-right: 10px;
 }
 
 

@@ -5,21 +5,22 @@
 {% endblock %}
 
 {% block content %}
-  <h2>Top 100 watched Movies in this community</h2>
+  <div class="movies-section">
+    <h2 class="movies-heading">Top 100 watched Movies in this community</h2>
 
-  <ol class="movie-list">
-    {% for movie in movie_counts %}
-      <li>
-        <div class="movie-container">
-          <img src="{{ movie.Poster }}" alt="{{ movie.Title }} poster" class="movie-poster">
-          <form action="{{ url_for('add_to_watchlist', user_id=current_user.id) }}" method="post">
-            <input type="hidden" name="movie_name" value="{{ movie.Title }}">
-            <button type="submit" class="add-to-watchlist-button">+</button>
-          </form>
-        </div>
-        <a href="https://www.imdb.com/title/{{ movie.imdbID }}/"> {{ movie.Title }} </a>
-      </li>
-    {% endfor %}
-  </ol>
+    <ol class="movie-list">
+      {% for movie in movie_counts %}
+        <li>
+          <div class="movie-container">
+            <img src="{{ movie.Poster }}" alt="{{ movie.Title }} poster" class="movie-poster">
+            <form action="{{ url_for('add_to_watchlist', user_id=current_user.id) }}" method="post">
+              <input type="hidden" name="movie_name" value="{{ movie.Title }}">
+              <button type="submit" class="add-to-watchlist-button">+</button>
+            </form>
+          </div>
+          <a href="https://www.imdb.com/title/{{ movie.imdbID }}/"> {{ movie.Title }} </a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
 {% endblock %}
-
