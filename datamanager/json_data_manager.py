@@ -176,10 +176,7 @@ class JSONDataManager(DataManagerInterface):
             for movie_id, movie in user['movies'].items():
                 if movie['Title'] not in movie_watches:
                     movie_watches[movie['Title']] = movie
-                    movie_watches[movie['Title']]['watch_count'] = 0
-                if movie['watched']:
-                    movie_watches[movie['Title']]['watch_count'] += 1
-        most_watched_movies = sorted(movie_watches.values(), key=lambda movies: movies['watch_count'], reverse=True)
+        most_watched_movies = list(movie_watches.values())
         return most_watched_movies[:100]
 
     def search_users(self, query):
