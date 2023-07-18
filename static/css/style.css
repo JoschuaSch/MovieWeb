@@ -228,5 +228,21 @@ body, html {
 .update-delete-actions input[type=submit]:hover {
   background-color: #8B0000;
 }
+.movie-list {
+  list-style-type: decimal;
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.movie-list li {
+  margin-bottom: 10px;
+}
+
+.movie-poster {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
 
 
