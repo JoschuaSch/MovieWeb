@@ -386,3 +386,39 @@ body, html {
   margin-bottom: 10px;
   margin-left: 88px;
 }
+.movie-info {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.movie-info img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.movie-info p {
+  margin-bottom: 10px;
+}
+
+.movie-info b {
+  font-weight: bold;
+}
+
+.movie-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.movie-info a:hover {
+  text-decoration: underline;
+}
