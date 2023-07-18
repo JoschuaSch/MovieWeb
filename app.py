@@ -41,9 +41,12 @@ def user_movies(user_id):
 @app.route('/users', methods=['GET', 'POST'])
 def list_users():
     """Render the page showing all users."""
-    search = request.form.get('search')
-    if search:
-        users = data_manager.get_users_by_name(search)
+    if request.method == 'POST':
+        search = request.form.get('search')
+        if search:
+            users = data_manager.get_users_by_name(search)
+        else:
+            users = data_manager.get_all_users()
     else:
         users = data_manager.get_all_users()
     return render_template('users.html', users=users)

@@ -8,8 +8,8 @@
   <div class="user-list-title-container">
     <h2>User List</h2>
   </div>
-  <form class="search-container" method="POST">
-    <input class="search-input" type="text" id="search" name="search" required>
+  <form class="search-container" method="POST" action="{{ url_for('list_users') }}">
+    <input class="search-input" type="text" id="search" name="search">
     <input class="search-button" type="submit" value="Search">
   </form>
 

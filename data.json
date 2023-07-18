@@ -1,252 +1,9 @@
 {
   "Testa": {
     "name": "Testa",
-    "password": "pbkdf2:sha256:260000$6tR88rUPgjmCpLXX$2b62cb6fbde996c30c1002a0f99505304b6c2e6c9b7d9ba1f145b8a95c921282",
+    "password": "pbkdf2:sha256:260000$08xH8ldocZKH4utb$d78c8e6d7a7bdb1af29b100273901ab82d290ae3992d91c7e4a9c97fac30e2f7",
     "movies": {
-      "982c8b3e-6343-4fca-b5eb-8d6436f1feb1": {
-        "Title": "Inception",
-        "Year": 2010,
-        "Rated": "PG-13",
-        "Released": "16 Jul 2010",
-        "Runtime": "148 min",
-        "Genre": "Action, Adventure, Sci-Fi",
-        "Director": "Christopher Nolan",
-        "Writer": "Christopher Nolan",
-        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
-        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
-        "Language": "English, Japanese, French",
-        "Country": "United States, United Kingdom",
-        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.8/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "87%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "74/100"
-          }
-        ],
-        "Metascore": "74",
-        "imdbRating": "8.8",
-        "imdbVotes": "2,425,956",
-        "imdbID": "tt1375666",
-        "Type": "movie",
-        "DVD": "07 Dec 2010",
-        "BoxOffice": "$292,587,330",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": 1.0,
-        "watched": false,
-        "review": "adadsad",
-        "likes": {
-          "count": 1,
-          "users": [
-            "Alice"
-          ]
-        },
-        "watch_count": 0
-      },
-      "88ba27fe-1a07-4dac-a202-8dd25bd68635": {
-        "Title": "The Lord of the Rings: The Fellowship of the Ring",
-        "Year": 2001,
-        "Rated": "PG-13",
-        "Released": "19 Dec 2001",
-        "Runtime": "178 min",
-        "Genre": "Action, Adventure, Drama",
-        "Director": "Peter Jackson",
-        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
-        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
-        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
-        "Language": "English, Sindarin",
-        "Country": "New Zealand, United States",
-        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.8/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "91%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "92/100"
-          }
-        ],
-        "Metascore": "92",
-        "imdbRating": "8.8",
-        "imdbVotes": "1,923,743",
-        "imdbID": "tt0120737",
-        "Type": "movie",
-        "DVD": "06 Aug 2002",
-        "BoxOffice": "$316,115,420",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": "",
-        "watched": false,
-        "review": "dasdasd",
-        "watch_count": 0
-      }
-    },
-    "watchlist": {
-      "3807d668-d54e-4e2d-8816-12d6520f32ad": {
-        "Title": "Inception",
-        "Year": "2010",
-        "Rated": "PG-13",
-        "Released": "16 Jul 2010",
-        "Runtime": "148 min",
-        "Genre": "Action, Adventure, Sci-Fi",
-        "Director": "Christopher Nolan",
-        "Writer": "Christopher Nolan",
-        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
-        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
-        "Language": "English, Japanese, French",
-        "Country": "United States, United Kingdom",
-        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.8/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "87%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "74/100"
-          }
-        ],
-        "Metascore": "74",
-        "imdbRating": "8.8",
-        "imdbVotes": "2,425,956",
-        "imdbID": "tt1375666",
-        "Type": "movie",
-        "DVD": "07 Dec 2010",
-        "BoxOffice": "$292,587,330",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": null,
-        "watched": false,
-        "id": "3807d668-d54e-4e2d-8816-12d6520f32ad"
-      },
-      "6722a644-559f-45cf-8ab0-f61dbc3954f1": {
-        "Title": "The Lord of the Rings: The Fellowship of the Ring",
-        "Year": "2001",
-        "Rated": "PG-13",
-        "Released": "19 Dec 2001",
-        "Runtime": "178 min",
-        "Genre": "Action, Adventure, Drama",
-        "Director": "Peter Jackson",
-        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
-        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
-        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
-        "Language": "English, Sindarin",
-        "Country": "New Zealand, United States",
-        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.8/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "91%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "92/100"
-          }
-        ],
-        "Metascore": "92",
-        "imdbRating": "8.8",
-        "imdbVotes": "1,923,743",
-        "imdbID": "tt0120737",
-        "Type": "movie",
-        "DVD": "06 Aug 2002",
-        "BoxOffice": "$316,115,420",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": null,
-        "watched": false,
-        "id": "6722a644-559f-45cf-8ab0-f61dbc3954f1"
-      }
-    },
-    "age": "27",
-    "favorite_movie": "Paw Patrol",
-    "favorite_quote": "I am, tho i am no longer",
-    "words_to_live_by": "Always have Chocolate",
-    "sex": "Male",
-    "profile_picture": "Testa_Stuck.PNG"
-  },
-  "Alice": {
-    "name": "Alice",
-    "password": "pbkdf2:sha256:260000$4s7amHtHtflix9IB$bbff1ede0e98d0689d620e50e58a337304feee59b7e37362d4db5f66f41de6b7",
-    "movies": {
-      "3cfb5704-8ad0-4265-89b5-d3f1efa5b126": {
-        "Title": "Inception",
-        "Year": 2010,
-        "Rated": "PG-13",
-        "Released": "16 Jul 2010",
-        "Runtime": "148 min",
-        "Genre": "Action, Adventure, Sci-Fi",
-        "Director": "Christopher Nolan",
-        "Writer": "Christopher Nolan",
-        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
-        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
-        "Language": "English, Japanese, French",
-        "Country": "United States, United Kingdom",
-        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.8/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "87%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "74/100"
-          }
-        ],
-        "Metascore": "74",
-        "imdbRating": "8.8",
-        "imdbVotes": "2,425,956",
-        "imdbID": "tt1375666",
-        "Type": "movie",
-        "DVD": "07 Dec 2010",
-        "BoxOffice": "$292,587,330",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": 9.0,
-        "watched": false,
-        "review": "dasdasd",
-        "likes": {
-          "count": 1,
-          "users": [
-            "Testa"
-          ]
-        }
-      },
-      "71d7b71c-711e-4d6f-a98e-0cd2d69392c8": {
+      "cbb4029c-3553-4c0d-ad0c-b8a15a5e4e57": {
         "Title": "Full Metal Jacket",
         "Year": 1987,
         "Rated": "R",
@@ -287,18 +44,222 @@
         "Response": "True",
         "personal_rating": 1.0,
         "watched": false,
-        "review": "dd",
-        "watch_count": 0,
-        "likes": {
-          "count": 1,
-          "users": [
-            "Testa"
-          ]
-        }
+        "review": "dddd"
+      },
+      "2e99f24f-b4eb-4f2c-9302-66348e3316a3": {
+        "Title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "87%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,425,956",
+        "imdbID": "tt1375666",
+        "Type": "movie",
+        "DVD": "07 Dec 2010",
+        "BoxOffice": "$292,587,330",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
+      },
+      "543bcd25-be75-451f-a0e6-c49228c14004": {
+        "Title": "The Lord of the Rings: The Fellowship of the Ring",
+        "Year": "2001",
+        "Rated": "PG-13",
+        "Released": "19 Dec 2001",
+        "Runtime": "178 min",
+        "Genre": "Action, Adventure, Drama",
+        "Director": "Peter Jackson",
+        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
+        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+        "Language": "English, Sindarin",
+        "Country": "New Zealand, United States",
+        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "92/100"
+          }
+        ],
+        "Metascore": "92",
+        "imdbRating": "8.8",
+        "imdbVotes": "1,923,743",
+        "imdbID": "tt0120737",
+        "Type": "movie",
+        "DVD": "06 Aug 2002",
+        "BoxOffice": "$316,115,420",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
+      },
+      "78113ea1-a276-4a68-9fcb-8a033221d0d0": {
+        "Title": "The Dark Knight",
+        "Year": "2008",
+        "Rated": "PG-13",
+        "Released": "18 Jul 2008",
+        "Runtime": "152 min",
+        "Genre": "Action, Crime, Drama",
+        "Director": "Christopher Nolan",
+        "Writer": "Jonathan Nolan, Christopher Nolan, David S. Goyer",
+        "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+        "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        "Language": "English, Mandarin",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 2 Oscars. 162 wins & 164 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "9.0/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "94%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "84/100"
+          }
+        ],
+        "Metascore": "84",
+        "imdbRating": "9.0",
+        "imdbVotes": "2,733,700",
+        "imdbID": "tt0468569",
+        "Type": "movie",
+        "DVD": "09 Dec 2008",
+        "BoxOffice": "$534,987,076",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
+      },
+      "7bea511b-0056-4bea-bcc4-29419544dba9": {
+        "Title": "The Lord of the Rings: The Return of the King",
+        "Year": "2003",
+        "Rated": "PG-13",
+        "Released": "17 Dec 2003",
+        "Runtime": "201 min",
+        "Genre": "Action, Adventure, Drama",
+        "Director": "Peter Jackson",
+        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
+        "Actors": "Elijah Wood, Viggo Mortensen, Ian McKellen",
+        "Plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+        "Language": "English, Quenya, Old English, Sindarin",
+        "Country": "New Zealand, United States",
+        "Awards": "Won 11 Oscars. 213 wins & 124 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "9.0/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "93%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "94/100"
+          }
+        ],
+        "Metascore": "94",
+        "imdbRating": "9.0",
+        "imdbVotes": "1,895,028",
+        "imdbID": "tt0167260",
+        "Type": "movie",
+        "DVD": "25 May 2004",
+        "BoxOffice": "$379,427,292",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
       }
     },
     "watchlist": {
-      "b15f4c82-8520-4ade-aabc-54910042218c": {
+      "29747d14-4201-4c7a-9d3a-932a52f9d58e": {
+        "Title": "Full Metal Jacket",
+        "Year": "1987",
+        "Rated": "R",
+        "Released": "10 Jul 1987",
+        "Runtime": "116 min",
+        "Genre": "Drama, War",
+        "Director": "Stanley Kubrick",
+        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
+        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
+        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
+        "Language": "English, Vietnamese",
+        "Country": "United Kingdom, United States",
+        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "78/100"
+          }
+        ],
+        "Metascore": "78",
+        "imdbRating": "8.3",
+        "imdbVotes": "762,151",
+        "imdbID": "tt0093058",
+        "Type": "movie",
+        "DVD": "12 Jun 2001",
+        "BoxOffice": "$46,357,676",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "29747d14-4201-4c7a-9d3a-932a52f9d58e"
+      },
+      "ab6dfefc-973b-4e78-8d94-4b9d0f830e75": {
         "Title": "Inception",
         "Year": "2010",
         "Rated": "PG-13",
@@ -339,14 +300,290 @@
         "Response": "True",
         "personal_rating": null,
         "watched": false,
-        "id": "b15f4c82-8520-4ade-aabc-54910042218c"
+        "id": "ab6dfefc-973b-4e78-8d94-4b9d0f830e75"
+      },
+      "e41914fa-9bb6-44fb-8dde-0730bdb73553": {
+        "Title": "The Lord of the Rings: The Fellowship of the Ring",
+        "Year": "2001",
+        "Rated": "PG-13",
+        "Released": "19 Dec 2001",
+        "Runtime": "178 min",
+        "Genre": "Action, Adventure, Drama",
+        "Director": "Peter Jackson",
+        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
+        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+        "Language": "English, Sindarin",
+        "Country": "New Zealand, United States",
+        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "92/100"
+          }
+        ],
+        "Metascore": "92",
+        "imdbRating": "8.8",
+        "imdbVotes": "1,923,743",
+        "imdbID": "tt0120737",
+        "Type": "movie",
+        "DVD": "06 Aug 2002",
+        "BoxOffice": "$316,115,420",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "e41914fa-9bb6-44fb-8dde-0730bdb73553"
+      },
+      "01b82e83-530e-4582-9de5-e1c3a7f90316": {
+        "Title": "The Dark Knight",
+        "Year": "2008",
+        "Rated": "PG-13",
+        "Released": "18 Jul 2008",
+        "Runtime": "152 min",
+        "Genre": "Action, Crime, Drama",
+        "Director": "Christopher Nolan",
+        "Writer": "Jonathan Nolan, Christopher Nolan, David S. Goyer",
+        "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+        "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        "Language": "English, Mandarin",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 2 Oscars. 162 wins & 164 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "9.0/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "94%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "84/100"
+          }
+        ],
+        "Metascore": "84",
+        "imdbRating": "9.0",
+        "imdbVotes": "2,733,700",
+        "imdbID": "tt0468569",
+        "Type": "movie",
+        "DVD": "09 Dec 2008",
+        "BoxOffice": "$534,987,076",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "01b82e83-530e-4582-9de5-e1c3a7f90316"
+      }
+    },
+    "age": "222",
+    "favorite_movie": "Paw Patrol",
+    "favorite_quote": "ddd",
+    "words_to_live_by": "Always have Chocolate",
+    "sex": "",
+    "profile_picture": "Testa_male-avatar.png"
+  },
+  "Alice": {
+    "name": "Alice",
+    "password": "pbkdf2:sha256:260000$YfeaVi40sCmtyRWk$b51407f99a439e0f18f5274bfada4bef209fa51f6c78b99e61fca8e29f3f067d",
+    "movies": {
+      "74302410-61be-43c1-9a05-fdbc90c33da7": {
+        "Title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "87%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,425,956",
+        "imdbID": "tt1375666",
+        "Type": "movie",
+        "DVD": "07 Dec 2010",
+        "BoxOffice": "$292,587,330",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
+      }
+    },
+    "watchlist": {},
+    "age": "",
+    "favorite_movie": "",
+    "favorite_quote": "",
+    "words_to_live_by": "",
+    "sex": "",
+    "profile_picture": "Alice_avatar-gac5dbc80e_1280.png"
+  },
+  "Odlyr": {
+    "name": "Odlyr",
+    "password": "pbkdf2:sha256:260000$qcfnCYgbSryS2XUR$618e3bcdbdc87e02b0cd07a91d433a88286ebf154d3381465d237e7b3cc8d1bd",
+    "movies": {},
+    "watchlist": {},
+    "age": "2222",
+    "favorite_movie": "asdasd",
+    "favorite_quote": "asdasd",
+    "words_to_live_by": "dasdasd",
+    "sex": "",
+    "profile_picture": "Odlyr_profile-picture-gd7ec6d242_1280.png"
+  },
+  "Hullu": {
+    "name": "Hullu",
+    "password": "pbkdf2:sha256:260000$KjB5pecfpBc8jh4O$484b13cf26e9748865d1174e91082e60033297aa3e2400ed6a2f76a16bbdb1cc",
+    "movies": {},
+    "watchlist": {},
+    "age": "",
+    "favorite_movie": "",
+    "favorite_quote": "",
+    "words_to_live_by": "",
+    "sex": "",
+    "profile_picture": "Hullu_FzkGTYkXwA0OPDx.jpg"
+  },
+  "Peter": {
+    "name": "Peter",
+    "password": "pbkdf2:sha256:260000$OKymvVg6LCen7eeg$7a77460c11bc2ba86cfaff5d796fd42fdcfa3081b79b30506a456019431acf3d",
+    "movies": {},
+    "watchlist": {},
+    "age": "",
+    "favorite_movie": "",
+    "favorite_quote": "",
+    "words_to_live_by": "",
+    "sex": "",
+    "profile_picture": "Peter_FzkGTYkXwA0OPDx_2.jpg"
+  },
+  "Teta": {
+    "name": "Teta",
+    "password": "pbkdf2:sha256:260000$klhWFZJbzUj2PxIC$68fa05cf69fc2d374aa6770f06b99d05b4c11acf5e66212d95f5bece22fe2036",
+    "movies": {
+      "fd3b5e8c-de6c-4e58-82a0-ba4447017f3a": {
+        "Title": "Fear",
+        "Year": "1996",
+        "Rated": "R",
+        "Released": "12 Apr 1996",
+        "Runtime": "97 min",
+        "Genre": "Drama, Thriller",
+        "Director": "James Foley",
+        "Writer": "Christopher Crowe",
+        "Actors": "Mark Wahlberg, Reese Witherspoon, William Petersen",
+        "Plot": "When Nicole met David; handsome, charming, affectionate, he was everything. It seemed perfect, but soon she sees that David has a darker side. And his adoration turns to obsession, their dream into a nightmare, and her love into f...",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "1 win & 2 nominations",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZTM4ZmJmMTQtMWUxOS00MjQxLTllNmQtNzI4YWVhYzZlNTRkXkEyXkFqcGdeQXVyNjU0NTI0Nw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.2/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "46%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "51/100"
+          }
+        ],
+        "Metascore": "51",
+        "imdbRating": "6.2",
+        "imdbVotes": "51,326",
+        "imdbID": "tt0116287",
+        "Type": "movie",
+        "DVD": "25 Feb 2003",
+        "BoxOffice": "$20,831,000",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
+      }
+    },
+    "watchlist": {
+      "16c0800b-2364-446d-9d37-7db72722cbf3": {
+        "Title": "Fear",
+        "Year": "1996",
+        "Rated": "R",
+        "Released": "12 Apr 1996",
+        "Runtime": "97 min",
+        "Genre": "Drama, Thriller",
+        "Director": "James Foley",
+        "Writer": "Christopher Crowe",
+        "Actors": "Mark Wahlberg, Reese Witherspoon, William Petersen",
+        "Plot": "When Nicole met David; handsome, charming, affectionate, he was everything. It seemed perfect, but soon she sees that David has a darker side. And his adoration turns to obsession, their dream into a nightmare, and her love into f...",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "1 win & 2 nominations",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZTM4ZmJmMTQtMWUxOS00MjQxLTllNmQtNzI4YWVhYzZlNTRkXkEyXkFqcGdeQXVyNjU0NTI0Nw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.2/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "46%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "51/100"
+          }
+        ],
+        "Metascore": "51",
+        "imdbRating": "6.2",
+        "imdbVotes": "51,326",
+        "imdbID": "tt0116287",
+        "Type": "movie",
+        "DVD": "25 Feb 2003",
+        "BoxOffice": "$20,831,000",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "16c0800b-2364-446d-9d37-7db72722cbf3"
       }
     },
     "age": "",
     "favorite_movie": "",
     "favorite_quote": "",
     "words_to_live_by": "",
-    "sex": "",
-    "profile_picture": "Alice_Stuck.PNG"
+    "sex": null,
+    "profile_picture": null
   }
 }
