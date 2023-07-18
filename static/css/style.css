@@ -198,7 +198,8 @@ body, html {
   justify-content: center;
   align-items: center;
   gap: 120px;
-  margin-top: 15px;
+  margin-top: 535px;
+  margin-left: -615px;
 }
 .update-delete-actions a {
   padding: 10px 20px;
