@@ -5,17 +5,19 @@
 {% endblock %}
 
 {% block content %}
-  <div class="movies-section">
+  <div class="top100-movies-section">
     <h2 class="movies-heading">Top 100 watched Movies in this community</h2>
 
-    <ol class="movie-list">
+    <ol class="top100-movie-list">
       {% for movie in movie_counts %}
         <li>
           <div class="movie-container">
-            <img src="{{ movie.Poster }}" alt="{{ movie.Title }} poster" class="movie-poster">
+            <img src="{{ movie.Poster }}" alt="{{ movie.Title }} poster" class="top100-movie-poster">
             <form action="{{ url_for('add_to_watchlist', user_id=current_user.id) }}" method="post">
               <input type="hidden" name="movie_name" value="{{ movie.Title }}">
-              <button type="submit" class="add-to-watchlist-button">+</button>
+              <button type="submit" class="top100-add-to-watchlist-button" title="Add to watchlist">
+                <i class="fas fa-star"></i>
+              </button>
             </form>
           </div>
           <a href="https://www.imdb.com/title/{{ movie.imdbID }}/"> {{ movie.Title }} </a>

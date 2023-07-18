@@ -52,6 +52,7 @@ body, html {
   position: sticky;
   top: 0;
   padding: 15px 0;
+  z-index: 9999;
 }
 
 .navbar a {
@@ -76,8 +77,7 @@ body, html {
   margin-left: 10px;
   color: white;
 }
-
-.profile-picture {
+.user-profile-profile-picture {
   width: 400px;
   height: 500px;
   object-fit: cover;
@@ -85,9 +85,19 @@ body, html {
   box-shadow: 0 0 5px rgba(26, 43, 66, 0.3);
   margin-right: 5px;
   margin-top: 15px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color: #999;
 }
 
-.profile-container {
+.user-profile-profile-picture::before {
+  content: "👤";
+}
+
+.user-profile-profile-container {
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -95,27 +105,27 @@ body, html {
   margin-left: 50px;
 }
 
-.profile-info {
+.user-profile-profile-info {
   margin-left: 15px;
   margin-bottom: 20px;
   margin-top: 23px;
 }
 
-.profile-actions {
+.user-profile-profile-actions {
   margin-top: 10px;
   display: flex;
   align-items: center;
 }
 
-.profile-actions a {
+.user-profile-profile-actions a {
   margin-right: 10px;
 }
 
-.profile-actions .profile-actions-bar {
+.user-profile-profile-actions-bar {
   display: flex;
 }
 
-.profile-actions .profile-actions-bar a {
+.user-profile-profile-actions-bar a {
   margin-right: 10px;
   padding: 10px 20px;
   background-color: #1a2b42;
@@ -126,34 +136,34 @@ body, html {
   transition: background-color 0.3s ease;
 }
 
-.profile-actions .profile-actions-bar a:hover {
+.user-profile-profile-actions-bar a:hover {
   background-color: #294965;
 }
 
-.profile-actions form {
+.user-profile-profile-actions form {
   margin-left: auto;
 }
 
-.profile-details p {
+.user-profile-profile-details p {
   margin-bottom: 10px;
 }
 
-.profile-details .profile-detail {
+.user-profile-profile-details .user-profile-profile-detail {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
 }
 
-.profile-details .profile-detail .detail-label {
+.user-profile-profile-details .user-profile-profile-detail .detail-label {
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.profile-details .profile-detail .detail-value {
+.user-profile-profile-details .user-profile-profile-detail .detail-value {
   margin-left: 20px;
 }
 
-.profile-title {
+.user-profile-profile-title {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -163,37 +173,25 @@ body, html {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
-.profile-details .profile-detail .detail-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #1a2b42;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.profile-details .profile-detail .detail-value {
-  margin-left: 20px;
-  color: #555555;
-  font-weight: bold;
-}
-.image-and-actions-container {
+.user-profile-image-and-actions-container {
   display: flex;
   flex-direction: column;
   margin-left: 100px;
 }
 
-.profile-actions {
+.user-profile-profile-actions {
   align-self: center;
 }
 
-.profile-picture {
+.user-profile-profile-picture {
   align-self: center;
 }
-.buttons {
+
+.user-profile-buttons {
   margin-top: -45px;
 }
-.update-delete-actions {
+
+.user-profile-update-delete-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -202,7 +200,7 @@ body, html {
   gap: 120px;
 }
 
-.update-delete-actions a {
+.user-profile-update-delete-actions a {
   padding: 10px 20px;
   background-color: #1a2b42;
   color: white;
@@ -212,11 +210,11 @@ body, html {
   transition: background-color 0.3s ease;
 }
 
-.update-delete-actions a:hover {
+.user-profile-update-delete-actions a:hover {
   background-color: #294965;
 }
 
-.update-delete-actions input[type=submit] {
+.user-profile-update-delete-actions input[type=submit] {
   padding: 10px 20px;
   background-color: #B22222;
   color: white;
@@ -226,37 +224,35 @@ body, html {
   transition: background-color 0.3s ease;
 }
 
-.update-delete-actions input[type=submit]:hover {
+.user-profile-update-delete-actions input[type=submit]:hover {
   background-color: #8B0000;
 }
-.movie-list {
+.top100-movie-list {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
   counter-reset: movie-counter;
 }
 
-.movie-list li {
+.top100-movie-list li {
   margin-bottom: 10px;
   border: 2px solid #dddddd;
   padding: 10px;
   position: relative;
 }
 
-.movie-poster {
+.top100-movie-poster {
   max-width: 100%;
   max-height: 200px;
   display: block;
   margin-bottom: 10px;
 }
-
-.add-to-watchlist-button {
+.top100-add-to-watchlist-button {
   position: absolute;
   top: 5px;
   right: 5px;
   width: 30px;
   height: 30px;
-  font-size: 24px;
   color: white;
   background-color: #1a2b42;
   border: none;
@@ -265,16 +261,87 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 15px;
 }
 
-.movie-details {
+.top100-movie-details {
   display: flex;
   align-items: center;
 }
 
-.movie-title {
+.top100-movie-title {
   margin-right: 10px;
 }
+
+.top100-profile-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.top100-image-and-actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.top100-movies-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top100-movie-list {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  counter-reset: movie-counter;
+  width: 100%;
+}
+
+.top100-movie-list li {
+  margin-bottom: 10px;
+  border: 2px solid #dddddd;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.top100-movie-poster {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.top100-movie-list li a {
+  margin-left: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a2b42;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top100-movie-list li a:hover {
+  color: #294965;
+  text-decoration: underline;
+}
+
 
 
 
