@@ -92,7 +92,7 @@ def confirm_movie(user_id, movie_name):
     """Confirm the movie details before adding it to a user's movie list."""
     if request.method == 'GET':
         movie_data = omdb_api.fetch_movie_details(movie_name)
-        if movie_data is None:
+        if movie_data is None or 'Title' not in movie_data or 'Year' not in movie_data or 'Director' not in movie_data:
             flash('Movie not found. Please check the title and try again.')
             return redirect(url_for('add_movie'))
         else:
@@ -101,7 +101,7 @@ def confirm_movie(user_id, movie_name):
         personal_rating = request.form.get('rating')
         watched = 'watched' in request.form
         movie_data = omdb_api.fetch_movie_details(movie_name)
-        if movie_data is None:
+        if movie_data is None or 'Title' not in movie_data or 'Year' not in movie_data or 'Director' not in movie_data:
             flash('Movie not found. Please check the title and try again.')
             return redirect(url_for('add_movie'))
         movie_data['personal_rating'] = personal_rating
@@ -267,13 +267,15 @@ def random_movie():
     """Render the page showing a random movie from the data."""
     with open('data.json', 'r') as f:
         data = json.load(f)
-
     movie_ids = []
     for user in data.values():
         for movie in user['movies'].values():
             movie_ids.append(movie)
-    randomized_movie = random.choice(movie_ids)
-    return render_template('random.html', movie=randomized_movie)
+    if movie_ids:
+        randomized_movie = random.choice(movie_ids)
+        return render_template('random.html', movie=randomized_movie)
+    else:
+        return render_template('random.html', movie=None)
 
 
 @app.route('/users/<user_id>/profile')
