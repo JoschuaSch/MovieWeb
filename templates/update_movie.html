@@ -7,24 +7,36 @@ Update Movie
 {% block content %}
     <h2>Update Movie</h2>
 
-    <form method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ movie.Title }}" readonly>
+    <form method="post" class="update-movie-container">
+        <div class="update-movie-form-group">
+            <label for="name" class="update-movie-label">Name:</label>
+            <input type="text" id="name" name="name" value="{{ movie.Title }}" readonly class="update-movie-input">
+        </div>
 
-        <label for="director">Director:</label>
-        <input type="text" id="director" name="director" value="{{ movie.Director }}" readonly>
+        <div class="update-movie-form-group">
+            <label for="director" class="update-movie-label">Director:</label>
+            <input type="text" id="director" name="director" value="{{ movie.Director }}" readonly class="update-movie-input">
+        </div>
 
-        <label for="year">Year:</label>
-        <input type="number" id="year" name="year" value="{{ movie.Year }}" readonly>
+        <div class="update-movie-form-group">
+            <label for="year" class="update-movie-label">Year:</label>
+            <input type="number" id="year" name="year" value="{{ movie.Year }}" readonly class="update-movie-input">
+        </div>
 
-        <label for="rating">Rating:</label>
-        <input type="number" id="rating" name="rating" value="{{ movie.personal_rating }}" min="0" max="10" step="0.1">
+        <div class="update-movie-form-group">
+            <label for="rating" class="update-movie-label">Rating:</label>
+            <input type="number" id="rating" name="rating" value="{{ movie.personal_rating }}" min="0" max="10" step="0.1" class="update-movie-input">
+        </div>
 
-        <label for="watched">Watched:</label>
-        <input type="checkbox" id="watched" name="watched" value="true" {% if movie.watched %} checked {% endif %}>
+        <div class="update-movie-form-group">
+            <input type="checkbox" id="watched" name="watched" value="true" {% if movie.watched %} checked {% endif %}>
+            <label for="watched" class="update-movie-checkbox-label">Watched</label>
+        </div>
 
-        <label for="review">Review:</label>
-        <textarea id="review" name="review">{{ movie.review }}</textarea>
+        <div class="update-movie-form-group">
+            <label for="review" class="update-movie-label">Review:</label>
+            <textarea id="review" name="review" class="update-movie-textarea">{{ movie.review }}</textarea>
+        </div>
 
         <button type="submit">Update</button>
     </form>
