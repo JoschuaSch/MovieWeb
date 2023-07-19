@@ -729,6 +729,9 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .watchlist h3 {
@@ -739,7 +742,7 @@ h2 {
 
 .watchlist img {
   width: 100%;
-  max-height: 200px;
+  max-height: 150px;
   object-fit: contain;
 }
 
@@ -761,4 +764,5 @@ h2 {
 .watchlist input[type="submit"]:hover {
   background-color: #294965;
 }
+
 
