@@ -876,4 +876,32 @@ h2 {
   background-color: #1a2b42;
   color: white;
 }
+.post-add-movie-message {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.post-add-movie-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.post-add-movie-button {
+  flex: 1;
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: #1a2b42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-add-movie-button:hover {
+  background-color: #294965;
+}
+
 
