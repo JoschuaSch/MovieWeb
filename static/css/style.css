@@ -540,6 +540,114 @@ body, html {
 .like-button:hover {
   color: #0056b3;
 }
+.user-movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.user-movie-card {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(25% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.user-movie-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-movie-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.user-movie-card h2 {
+  font-size: 20px;
+  text-align: center;
+  color: #1a2b42;
+  margin-bottom: 10px;
+}
+
+.user-movie-card p {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.user-movie-card a {
+  color: #1a2b42;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.user-movie-card a:hover {
+  color: #294965;
+}
+
+.user-movie-card form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.user-movie-card form input[type=submit],
+.user-movie-card form a {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.user-movie-card form input[type=submit] {
+  background-color: #B22222;
+  cursor: pointer;
+}
+
+.user-movie-card form input[type=submit]:hover {
+  background-color: #8B0000;
+}
+
+.user-movie-card form a {
+  background-color: #1a2b42;
+}
+
+.user-movie-card form a:hover {
+  background-color: #294965;
+}
+.add-movie-button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-movie-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1a2b42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.add-movie-button:hover {
+  background-color: #294965;
+}
 
 
 
