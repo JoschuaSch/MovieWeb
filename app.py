@@ -342,7 +342,6 @@ def update_profile(user_id):
         return render_template('update_profile.html', user=user)
 
 
-
 @app.route('/users/<user_id>/delete', methods=['POST'])
 @login_required
 def delete_account(user_id):
@@ -372,6 +371,8 @@ def movie_reviews():
         reviews = data_manager.get_reviews_sorted_by_likes()
     else:
         reviews = data_manager.get_reviews_sorted_by_date()
+    for review in reviews:
+        review['content'] = review['content'].replace('\n', '<br>')
     return render_template('movie_reviews.html', reviews=reviews, sort_by=sort_by)
 
 

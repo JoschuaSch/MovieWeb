@@ -1,3 +1,5 @@
+<!-- review.html -->
+
 {% extends 'base.html' %}
 
 {% block title %}
@@ -27,7 +29,7 @@ Reviews
         <div class="review-content-box">
           <p>
             <span class="author">Written by {{ review['user'] }}</span><br>
-            <span class="review-text"><strong>Review:</strong> {{ review['content'] }}</span>
+            <span class="review-text"><strong>Review:</strong><br>{{ review['content']|replace('\n', '<br>')|safe }}</span>
           </p>
         </div>
         <div class="like-section">
