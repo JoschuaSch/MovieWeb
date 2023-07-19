@@ -623,6 +623,11 @@ body, html {
   position: absolute;
   top: 10px;
   right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.poster-wrapper:hover .add-to-watchlist-form {
+  opacity: 1;
 }
 
 .add-to-watchlist-link {
@@ -903,5 +908,47 @@ h2 {
 .post-add-movie-button:hover {
   background-color: #294965;
 }
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a2b42;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.login-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #1a2b42;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  padding: 10px 20px;
+  background-color: #1a2b42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #294965;
+}
+
 
 

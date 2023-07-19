@@ -5,14 +5,15 @@ Login
 {% endblock %}
 
 {% block content %}
-    <h2>Login</h2>
-    <form method="POST" action="{{ url_for('login') }}">
-        <label for="user_id">User ID:</label>
-        <input type="text" id="user_id" name="user_id" required/>
+    <h2 class="login-title">Login</h2>
+
+    <form method="POST" action="{{ url_for('login') }}" class="login-form">
+        <label for="user_id" class="login-label">User ID:</label>
+        <input type="text" id="user_id" name="user_id" required class="login-input" />
         <br/>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required/>
+        <label for="password" class="login-label">Password:</label>
+        <input type="password" id="password" name="password" required class="login-input" />
         <br/>
-        <input type="submit" value="Login"/>
+        <input type="submit" value="Login" class="login-button" />
     </form>
 {% endblock %}
