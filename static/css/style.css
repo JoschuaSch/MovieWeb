@@ -801,7 +801,79 @@ h2 {
 .add-movie-button:hover {
   background-color: #294965;
 }
+.confirm-movie-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a2b42;
+  font-size: 24px;
+  font-weight: bold;
 
+}
 
+.confirm-movie-content {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
+.confirm-movie-poster {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+  height: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.confirm-movie-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirm-movie-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #1a2b42;
+  font-weight: bold;
+}
+
+.confirm-movie-input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #1a2b42;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.confirm-movie-input:focus {
+  border-color: #294965;
+}
+
+.confirm-movie-button {
+  padding: 10px 20px;
+  background-color: #1a2b42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-movie-button:hover {
+  background-color: #294965;
+}
+
+.confirm-movie-secondary-button {
+  background-color: transparent;
+  color: #1a2b42;
+  border: 1px solid #1a2b42;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-movie-secondary-button:hover {
+  background-color: #1a2b42;
+  color: white;
+}
 

@@ -5,16 +5,22 @@ Confirm Movie
 {% endblock %}
 
 {% block content %}
-    <h2>Confirm Movie</h2>
-    <p>Are you sure you want to add the following movie?</p>
-    <p>{{ movie.Title }} ({{ movie.Year }}) by {{ movie.Director }}</p>
-    <img src="{{ movie.Poster }}" alt="Movie poster">
-    <form method="POST" action="{{ url_for('confirm_movie', user_id=user_id, movie_name=movie.Title) }}">
-        <label for="rating">Your Rating:</label>
-        <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" />
-        <input type="submit" value="Yes, add this movie">
-    </form>
-    <form method="POST" action="{{ url_for('add_movie') }}">
-        <input type="submit" value="No, find another movie">
-    </form>
+    <h2 class="confirm-movie-title">Confirm Movie</h2>
+    <div class="confirm-movie-content">
+        <p>Are you sure you want to add the following movie?</p>
+        <p>{{ movie.Title }} ({{ movie.Year }}) by {{ movie.Director }}</p>
+    </div>
+    <div class="confirm-movie-details">
+        <img src="{{ movie.Poster }}" alt="Movie poster" class="confirm-movie-poster">
+        <div class="confirm-movie-actions">
+            <form method="POST" action="{{ url_for('confirm_movie', user_id=user_id, movie_name=movie.Title) }}" class="confirm-movie-form">
+                <label for="rating" class="confirm-movie-label">Your Rating:</label>
+                <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" class="confirm-movie-input" />
+                <div class="confirm-movie-buttons">
+                    <input type="submit" value="Yes, add this movie" class="confirm-movie-button">
+                    <input type="submit" value="No, find another movie" formaction="{{ url_for('add_movie') }}" class="confirm-movie-button">
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock %}

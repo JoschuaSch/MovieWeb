@@ -5,11 +5,11 @@ Movie Added
 {% endblock %}
 
 {% block content %}
-    <p>Do you want to add more movies or go to your movie list?</p>
-    <form method="GET" action="{{ url_for('add_movie') }}">
-        <input type="submit" value="Add More Movies">
+    <p class="post-add-movie-message">Do you want to add more movies or go to your movie list?</p>
+    <form method="GET" action="{{ url_for('add_movie') }}" class="post-add-movie-form">
+        <input type="submit" value="Add More Movies" class="post-add-movie-button">
     </form>
-    <form method="GET" action="{{ url_for('user_movies', user_id=user_id) }}">
-        <input type="submit" value="Go to My Movie List">
+    <form method="GET" action="{{ url_for('user_movies', user_id=user_id) }}" class="post-add-movie-form">
+        <input type="submit" value="Go to My Movie List" class="post-add-movie-button">
     </form>
 {% endblock %}
