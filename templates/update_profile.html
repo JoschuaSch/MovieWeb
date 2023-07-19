@@ -11,7 +11,7 @@
     <label for="age">Age:</label>
     <input type="text" id="age" name="age" value="{{ user['age'] or '' }}">
 
-    <label for="sex">Sex:</label>
+    <label for="sex">Gender:</label>
     <select id="sex" name="sex">
         <option value="">Select...</option>
         <option value="Male" {% if user['sex'] == 'male' %} selected {% endif %}>Male</option>

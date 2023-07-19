@@ -8,7 +8,7 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #F5F5F5;
+  background-color: #E6F2FF;
 }
 
 .header {
@@ -239,6 +239,7 @@ body, html {
   border: 2px solid #dddddd;
   padding: 10px;
   position: relative;
+  background-color: white;
 }
 
 .top100-movie-poster {
@@ -385,9 +386,6 @@ body, html {
   justify-content: flex-start;
   margin-bottom: 10px;
   margin-left: 88px;
-}
-.movie-info-wrapper {
-  background-color: #e8e8e8;
 }
 
 .movie-info {
@@ -656,11 +654,11 @@ body, html {
 
 .review-label {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .review-content {
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 .usermovie-card p {
@@ -1083,6 +1081,11 @@ h2 {
 .update-movie-submit:hover {
   background-color: #4CAF50;
 }
+.page-title {
+  text-align: center;
+}
+
+
 
 
 

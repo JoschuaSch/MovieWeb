@@ -326,11 +326,12 @@ def update_profile(user_id):
         profile_picture = request.files.get('profile_picture')
         user_details = {
             "age": age,
-            "sex": sex,
             "words_to_live_by": words_to_live_by,
             "favorite_movie": favorite_movie,
             "favorite_quote": favorite_quote,
         }
+        if sex:
+            user_details["sex"] = sex.capitalize()
         if profile_picture:
             filename = secure_filename(user_id + '_' + profile_picture.filename)
             profile_picture.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
@@ -339,6 +340,7 @@ def update_profile(user_id):
         return redirect(url_for('user_profile', user_id=user_id))
     else:
         return render_template('update_profile.html', user=user)
+
 
 
 @app.route('/users/<user_id>/delete', methods=['POST'])

@@ -5,44 +5,43 @@ Reviews
 {% endblock %}
 
 {% block content %}
-<h2 class="review-title">Movie Reviews</h2>
-<div class="sorting">
-  Sort by:
-  <a href="{{ url_for('movie_reviews', sort_by='newest') }}" class="{% if sort_by == 'newest' %}active{% endif %}">Newest</a>
-  <a href="{{ url_for('movie_reviews', sort_by='liked') }}" class="{% if sort_by == 'liked' %}active{% endif %}">Most Liked</a>
-</div>
-
-<div class="review-container">
-  {% for review in reviews %}
-  <div class="review-box">
-    <div class="review-movie">
-      <div class="movie-poster">
-        <h3>{{ review['Title'] }}</h3>
-        <a href="https://www.imdb.com/title/{{ review['imdbID'] }}/" target="_blank">
-          <img src="{{ review['Poster'] }}" alt="{{ review['Title'] }} Poster">
-        </a>
-      </div>
-    </div>
-    <div class="review-info">
-      <div class="review-content-box">
-        <p>
-          <span class="author">Written by {{ review['user'] }}</span>
-          <br>
-          <span class="review-text"><strong>Review:</strong> {{ review['content'] }}</span>
-        </p>
-      </div>
-      <div class="like-section">
-        <p>Likes: {{ review['likes'] }}</p>
-        {% if current_user.is_authenticated and current_user.id != review['user_id'] %}
-        <form method="post" action="{{ url_for('like_review', user_id=review['user_id'], movie_id=review['movie_id'], next=request.path) }}">
-          <button type="submit" class="like-button">
-            <i class="fas fa-thumbs-up"></i> Like
-          </button>
-        </form>
-        {% endif %}
-      </div>
-    </div>
+  <h2 class="review-title">Movie Reviews</h2>
+  <div class="sorting">
+    Sort by:
+    <a href="{{ url_for('movie_reviews', sort_by='newest') }}" class="{% if sort_by == 'newest' %}active{% endif %}">Newest</a>
+    <a href="{{ url_for('movie_reviews', sort_by='liked') }}" class="{% if sort_by == 'liked' %}active{% endif %}">Most Liked</a>
   </div>
-  {% endfor %}
-</div>
+
+  <div class="review-container">
+    {% for review in reviews %}
+    <div class="review-box">
+      <div class="review-movie">
+        <div class="movie-poster">
+          <h3>{{ review['Title'] }}</h3>
+          <a href="https://www.imdb.com/title/{{ review['imdbID'] }}/" target="_blank">
+            <img src="{{ review['Poster'] }}" alt="{{ review['Title'] }} Poster">
+          </a>
+        </div>
+      </div>
+      <div class="review-info">
+        <div class="review-content-box">
+          <p>
+            <span class="author">Written by {{ review['user'] }}</span><br>
+            <span class="review-text"><strong>Review:</strong> {{ review['content'] }}</span>
+          </p>
+        </div>
+        <div class="like-section">
+          <p>Likes: {{ review['likes'] }}</p>
+          {% if current_user.is_authenticated and current_user.id != review['user_id'] %}
+          <form method="post" action="{{ url_for('like_review', user_id=review['user_id'], movie_id=review['movie_id'], next=request.path) }}">
+            <button type="submit" class="like-button">
+              <i class="fas fa-thumbs-up"></i> Like
+            </button>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 {% endblock %}
