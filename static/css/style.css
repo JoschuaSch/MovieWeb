@@ -764,5 +764,44 @@ h2 {
 .watchlist input[type="submit"]:hover {
   background-color: #294965;
 }
+.add-movie-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-movie-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-movie-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.add-movie-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.add-movie-button {
+  padding: 10px 20px;
+  background-color: #1a2b42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-movie-button:hover {
+  background-color: #294965;
+}
+
+
 
 

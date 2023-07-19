@@ -5,12 +5,10 @@ Add Movie
 {% endblock %}
 
 {% block content %}
-    <h2>Add a Movie</h2>
-    <form method="POST" action="{{ url_for('add_movie') }}">
-    <br/>
-    <label for="movie_name">Movie name:</label>
-    <input type="text" id="movie_name" name="movie_name" required/>
-    <br/>
-    <input type="submit" value="Submit"/>
+    <h2 class="add-movie-title">Add a Movie</h2>
+    <form method="POST" action="{{ url_for('add_movie') }}" class="add-movie-form">
+        <label for="movie_name" class="add-movie-label">Movie name:</label>
+        <input type="text" id="movie_name" name="movie_name" required class="add-movie-input" />
+        <input type="submit" value="Submit" class="add-movie-button" />
     </form>
 {% endblock %}
