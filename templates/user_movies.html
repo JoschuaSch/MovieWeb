@@ -15,15 +15,20 @@
     <div class="usermovies-container">
         {% for movie_id, movie in movies %}
             <div class="usermovie-card">
-                <a href="https://www.imdb.com/title/{{ movie['imdbID'] }}/" target="_blank">
-                    <img class="usermovie-poster" src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster">
-                </a>
-                <h2>{{ movie['Title'] }}</h2>
-                {% if movie['review'] %}
-                    <p>Review: {{ movie['review'] }}</p>
-                    {% set likes = movie['likes']|default({'count': 0}) %}
-                    <p>Likes: {{ likes['count'] }}</p>
-                {% endif %}
+                <div class="usermovie-title">{{ movie['Title'] }}</div>
+                <div class="usermovie-poster">
+                    <a href="https://www.imdb.com/title/{{ movie['imdbID'] }}/" target="_blank">
+                        <img class="usermovie-poster" src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster">
+                    </a>
+                </div>
+                <div class="usermovie-review">
+                    {% if movie['review'] %}
+                        <p class="review-label">Review:</p>
+                        <p class="review-content">{{ movie['review'] }}</p>
+                        {% set likes = movie['likes']|default({'count': 0}) %}
+                        <p>Likes: {{ likes['count'] }}</p>
+                    {% endif %}
+                </div>
                 <p>Personal Rating: {{ movie['personal_rating'] }}</p>
                 <div class="usermovie-card-actions">
                     {% if current_user_id == user_id %}
