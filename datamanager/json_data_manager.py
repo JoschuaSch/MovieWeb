@@ -65,12 +65,17 @@ class JSONDataManager(DataManagerInterface):
             logger.error(f"An error occurred while getting all users: {e}")
             return []
 
-    def get_user_movies(self, user_id):
-        """Get the movies of a specific user."""
+    def get_user_movies(self, user_id, search=None):
+        """Get the movies of a specific user, optionally filtered by a search term."""
         try:
             user = self.users.get(user_id)
             if user:
-                return [(movie_id, details) for movie_id, details in user["movies"].items()]
+                if search:
+                    lower_search = search.lower()
+                    return [(movie_id, details) for movie_id, details in user["movies"].items()
+                            if lower_search in details["Title"].lower()]
+                else:
+                    return [(movie_id, details) for movie_id, details in user["movies"].items()]
         except Exception as e:
             logger.error(f"An error occurred while retrieving user movies: {e}")
         return []

@@ -9,3 +9,13 @@ window.addEventListener('scroll', function() {
     navbar.classList.remove('fixed-navbar');
   }
 });
+
+document.querySelectorAll('.delete-button').forEach(function(button) {
+    button.addEventListener('submit', function(e) {
+        var confirmation = confirm('Are you sure you want to delete this movie?');
+        if (!confirmation) {
+            e.preventDefault();
+        }
+    });
+});
+

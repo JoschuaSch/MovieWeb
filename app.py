@@ -31,8 +31,12 @@ def home():
 @login_required
 def user_movies(user_id):
     """Render the page showing movies of a specific user."""
+    search = request.args.get('search')
     try:
-        movies = data_manager.get_user_movies(user_id)
+        if search:
+            movies = data_manager.get_user_movies(user_id, search)
+        else:
+            movies = data_manager.get_user_movies(user_id)
         return render_template('user_movies.html', movies=movies, user_id=user_id, current_user_id=current_user.id)
     except UserNotFoundError:
         return f"User with ID {user_id} not found."

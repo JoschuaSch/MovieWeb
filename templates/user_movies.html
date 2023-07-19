@@ -1,17 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Movies</h1>
+    <h1 class="page-title">Movies</h1>
+
     {% if current_user_id == user_id %}
-        <div class="add-movie-button-container">
-            <a href="{{ url_for('add_movie', user_id=user_id) }}" class="add-movie-button">Add Movie</a>
-        </div>
+        <a href="{{ url_for('add_movie', user_id=user_id) }}" class="add-movie-button">Add Movie</a>
     {% endif %}
-    <div class="user-movies-container">
+
+    <form action="{{ url_for('user_movies', user_id=user_id) }}" method="GET" class="usermovies-search-form">
+        <input type="text" name="search" placeholder="Search for a movie..." value="{{ request.args.search or '' }}">
+        <input type="submit" value="Search">
+    </form>
+
+    <div class="usermovies-container">
         {% for movie_id, movie in movies %}
-            <div class="user-movie-card">
+            <div class="usermovie-card">
                 <a href="https://www.imdb.com/title/{{ movie['imdbID'] }}/" target="_blank">
-                    <img src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster">
+                    <img class="usermovie-poster" src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster">
                 </a>
                 <h2>{{ movie['Title'] }}</h2>
                 {% if movie['review'] %}
@@ -20,10 +25,10 @@
                     <p>Likes: {{ likes['count'] }}</p>
                 {% endif %}
                 <p>Personal Rating: {{ movie['personal_rating'] }}</p>
-                <div class="user-movie-card-actions">
+                <div class="usermovie-card-actions">
                     {% if current_user_id == user_id %}
-                        <form method="post" action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}">
-                            <input type="submit" value="Delete">
+                        <form method="post" class="delete-button" action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}">
+                            <input type="submit" value="X">
                         </form>
                         <a href="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}">Update</a>
                         <form method="POST" action="{{ url_for('add_to_watchlist', user_id=user_id) }}">
