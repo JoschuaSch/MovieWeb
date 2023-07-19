@@ -7,11 +7,11 @@
 {% block content %}
   <h2>Watchlist</h2>
   {% for movie_id, movie in movies %}
-    <div class="movie">
+    <div class="watchlist">
       <h3>{{ movie["Title"] }}</h3>
       <img src="{{ movie['Poster'] }}" alt="Poster for {{ movie['Title'] }}">
       {% if current_user_id == user_id %}
-      <form method="POST" action="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}">
+      <form method="POST" class="watchlist-form" action="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}">
         <input type="submit" value="Mark as Watched">
         <input type="hidden" name="watched" value="true">
       </form>

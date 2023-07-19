@@ -16,30 +16,30 @@
         {% for movie_id, movie in movies %}
             <div class="usermovie-card">
                 <div class="usermovie-title">{{ movie['Title'] }}</div>
-                <div class="usermovie-poster">
+                <div class="poster-wrapper">
                     <a href="https://www.imdb.com/title/{{ movie['imdbID'] }}/" target="_blank">
-                        <img class="usermovie-poster" src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster">
+                        <img class="usermovie-poster-image" src="{{ movie['Poster'] }}" alt="{{ movie['Title'] }} poster">
                     </a>
+                    <form method="POST" action="{{ url_for('add_to_watchlist', user_id=user_id) }}" class="add-to-watchlist-form">
+                        <input type="hidden" name="movie_name" value="{{ movie['Title'] }}">
+                        <button type="submit" class="add-to-watchlist-link" title="Add to Watchlist">Add to Watchlist ★</button>
+                    </form>
                 </div>
                 <div class="usermovie-review">
                     {% if movie['review'] %}
                         <p class="review-label">Review:</p>
                         <p class="review-content">{{ movie['review'] }}</p>
                         {% set likes = movie['likes']|default({'count': 0}) %}
-                        <p>Likes: {{ likes['count'] }}</p>
+                        <p class="likes-count">Likes: {{ likes['count'] }}</p>
                     {% endif %}
                 </div>
-                <p>Personal Rating: {{ movie['personal_rating'] }}</p>
+                <p class="personal-rating">Personal Rating: {{ movie['personal_rating'] }}</p>
                 <div class="usermovie-card-actions">
                     {% if current_user_id == user_id %}
                         <form method="post" class="delete-button" action="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}">
                             <input type="submit" value="X">
                         </form>
                         <a href="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}">Update</a>
-                        <form method="POST" action="{{ url_for('add_to_watchlist', user_id=user_id) }}">
-                            <input type="hidden" name="movie_name" value="{{ movie['Title'] }}">
-                            <input type="submit" value="Add to Watchlist">
-                        </form>
                     {% endif %}
                     {% if current_user_id != user_id and movie['review'] %}
                         <form method="post" action="{{ url_for('like_review', user_id=user_id, movie_id=movie_id, liker_id=current_user_id) }}">

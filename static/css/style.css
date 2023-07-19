@@ -599,23 +599,70 @@ body, html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   background-color: #f7f7f7;
   position: relative;
 }
 
-.usermovie-card h2 {
+.usermovie-title {
   text-align: center;
-  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a2b42;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.usermovie-poster {
-  max-width: 300px;
-  max-height: 400px;
-  margin-bottom: 20px;
+.poster-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
+.add-to-watchlist-form {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.add-to-watchlist-link {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.usermovie-review {
+  min-height: 150%;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+  text-align: justify;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.review-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-content {
+  margin-left: 20px;
+}
+
+.usermovie-card p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 14px;
+}
 
 .usermovie-card-actions {
   display: flex;
@@ -643,97 +690,71 @@ body, html {
 .usermovie-card-actions a:hover {
   background-color: #294965;
 }
-.page-title {
-  text-align: center;
-}
+
 .delete-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    border: none;
-    background: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
 }
 
 .delete-button input[type=submit] {
-    background-color: #b22222;
-    color: white;
-    padding: 0px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
+  background-color: #b22222;
+  color: white;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.usermovie-card h2 {
+h2 {
   text-align: center;
-}
-
-.usermovie-card h2 {
-  position: relative;
-  z-index: 1;
-}
-
-.usermovie-poster {
-  position: relative;
-  z-index: 0;
-}
-
-.usermovie-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.usermovie-title {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
   color: #1a2b42;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
 }
 
-.usermovie-poster {
+.watchlist {
+  display: inline-block;
+  width: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+
+.watchlist h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.watchlist img {
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  object-fit: cover;
 }
 
-.usermovie-review {
-  min-height: 150%;
-  font-size: 16px;
-  color: #555;
-  line-height: 1.4;
-  text-align: justify;
-}
-
-.usermovie-card-actions {
+.watchlist-form {
   display: flex;
+  justify-content: flex-start;
   gap: 10px;
-  margin-top: 20px;
 }
 
-.usermovie-review {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.review-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.review-content {
-  margin-left: 20px;
-}
-.usermovie-card p {
-  margin-bottom: 10px;
-  color: #555;
+.watchlist-form input[type=submit] {
+  padding: 8px 16px;
   font-size: 14px;
+  background-color: #1a2b42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-
-
-
+.watchlist-form input[type=submit]:hover {
+  background-color: #294965;
+}
