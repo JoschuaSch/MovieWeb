@@ -195,10 +195,13 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 535px;
-  margin-left: -539px;
+  position: absolute;
+  top: 535px;
+  left: 16.3%;
+  transform: translateX(-50%);
   gap: 120px;
 }
+
 
 .user-profile-update-delete-actions a {
   padding: 10px 20px;
