@@ -230,6 +230,13 @@ body, html {
 .user-profile-update-delete-actions input[type=submit]:hover {
   background-color: #8B0000;
 }
+
+.user-profile-word-wrap {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
 .top100-movie-list {
   list-style-type: none;
   margin-left: 0;
