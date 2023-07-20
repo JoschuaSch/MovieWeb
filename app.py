@@ -10,6 +10,7 @@ import json
 from werkzeug.utils import secure_filename
 import os
 from urllib.parse import unquote
+import bleach
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -131,6 +132,7 @@ def update_movie(user_id, movie_id):
         rating = request.form.get('rating')
         watched = 'watched' in request.form
         review = request.form.get('review')
+        clean_review = bleach.clean(review, tags=['br'], strip=True)
         movie_details = {}
         if movie_name:
             movie_details["Title"] = movie_name
@@ -142,7 +144,7 @@ def update_movie(user_id, movie_id):
             movie_details["personal_rating"] = float(rating)
         movie_details["watched"] = watched
         if review:
-            movie_details["review"] = review
+            movie_details["review"] = clean_review
         try:
             data_manager.update_movie(user_id, movie_id, movie_details)
             if watched:

@@ -28,7 +28,9 @@
                 <div class="usermovie-review">
                     {% if movie['review'] %}
                         <p class="review-label">Review:</p>
-                        <p class="review-content">{{ movie['review'] }}</p>
+                        <p class="review-content review-container-wordwrap">
+                            <strong>Review:</strong><br>{{ movie['review']|replace('\n', '<br>')|safe }}
+                        </p>
                         {% set likes = movie['likes']|default({'count': 0}) %}
                         <p class="likes-count">Likes: {{ likes['count'] }}</p>
                     {% endif %}

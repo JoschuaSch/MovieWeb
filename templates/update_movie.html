@@ -35,9 +35,10 @@ Update Movie
 
         <div class="update-movie-form-group">
             <label for="review" class="update-movie-label">Review:</label>
-            <textarea id="review" name="review" class="update-movie-textarea" rows="4" style="white-space: pre-wrap;">{{ movie.review }}</textarea>
+            <textarea id="review" name="review" class="update-movie-textarea" rows="4">{{ movie.review|safe }}</textarea>
         </div>
 
         <button type="submit">Update</button>
     </form>
+
 {% endblock %}
