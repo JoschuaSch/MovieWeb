@@ -18,4 +18,3 @@ document.querySelectorAll('.delete-button').forEach(function(button) {
         }
     });
 });
-

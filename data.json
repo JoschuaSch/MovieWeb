@@ -3,70 +3,21 @@
     "name": "Testa",
     "password": "pbkdf2:sha256:260000$4TulYKDYBvbweHi0$b223cf5467315448830de4c24b50961431d0fd52e463d2f56b28879c8a68a3a8",
     "movies": {
-      "303c208b-ffff-4c95-bbf3-d467e4eb8eaf": {
-        "Title": "The Lord of the Rings: The Return of the King",
-        "Year": 2003,
+      "da60b895-ab43-44b8-9422-93b176620f1b": {
+        "Title": "The Lord of the Rings: The Fellowship of the Ring",
+        "Year": 2001,
         "Rated": "PG-13",
-        "Released": "17 Dec 2003",
-        "Runtime": "201 min",
+        "Released": "19 Dec 2001",
+        "Runtime": "178 min",
         "Genre": "Action, Adventure, Drama",
         "Director": "Peter Jackson",
         "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
-        "Actors": "Elijah Wood, Viggo Mortensen, Ian McKellen",
-        "Plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
-        "Language": "English, Quenya, Old English, Sindarin",
+        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+        "Language": "English, Sindarin",
         "Country": "New Zealand, United States",
-        "Awards": "Won 11 Oscars. 213 wins & 124 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "9.0/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "93%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "94/100"
-          }
-        ],
-        "Metascore": "94",
-        "imdbRating": "9.0",
-        "imdbVotes": "1,895,028",
-        "imdbID": "tt0167260",
-        "Type": "movie",
-        "DVD": "25 May 2004",
-        "BoxOffice": "$379,427,292",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True",
-        "personal_rating": 10.0,
-        "watched": false,
-        "review": "Test",
-        "likes": {
-          "count": 1,
-          "users": [
-            "Odlyr"
-          ]
-        }
-      },
-      "ad79a0d2-7815-430b-81f2-7b69dfa1d49c": {
-        "Title": "Inception",
-        "Year": "2010",
-        "Rated": "PG-13",
-        "Released": "16 Jul 2010",
-        "Runtime": "148 min",
-        "Genre": "Action, Adventure, Sci-Fi",
-        "Director": "Christopher Nolan",
-        "Writer": "Christopher Nolan",
-        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
-        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
-        "Language": "English, Japanese, French",
-        "Country": "United States, United Kingdom",
-        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
         "Ratings": [
           {
             "Source": "Internet Movie Database",
@@ -74,78 +25,165 @@
           },
           {
             "Source": "Rotten Tomatoes",
-            "Value": "87%"
+            "Value": "91%"
           },
           {
             "Source": "Metacritic",
-            "Value": "74/100"
+            "Value": "92/100"
           }
         ],
-        "Metascore": "74",
+        "Metascore": "92",
         "imdbRating": "8.8",
-        "imdbVotes": "2,425,956",
-        "imdbID": "tt1375666",
+        "imdbVotes": "1,923,743",
+        "imdbID": "tt0120737",
         "Type": "movie",
-        "DVD": "07 Dec 2010",
-        "BoxOffice": "$292,587,330",
+        "DVD": "06 Aug 2002",
+        "BoxOffice": "$316,115,420",
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True",
-        "personal_rating": "9",
-        "watched": false
-      }
-    },
-    "watchlist": {
-      "c3f6d2aa-a2a6-4ecd-9bf3-fd480900fad7": {
-        "Title": "The Lord of the Rings: The Return of the King",
-        "Year": "2003",
-        "Rated": "PG-13",
-        "Released": "17 Dec 2003",
-        "Runtime": "201 min",
-        "Genre": "Action, Adventure, Drama",
-        "Director": "Peter Jackson",
-        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
-        "Actors": "Elijah Wood, Viggo Mortensen, Ian McKellen",
-        "Plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
-        "Language": "English, Quenya, Old English, Sindarin",
-        "Country": "New Zealand, United States",
-        "Awards": "Won 11 Oscars. 213 wins & 124 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "personal_rating": 1.0,
+        "watched": false,
+        "review": "Full Test yooooo"
+      },
+      "273ee393-05a3-456d-94ac-57cd6a2b90de": {
+        "Title": "Goodfellas",
+        "Year": 1990,
+        "Rated": "R",
+        "Released": "21 Sep 1990",
+        "Runtime": "145 min",
+        "Genre": "Biography, Crime, Drama",
+        "Director": "Martin Scorsese",
+        "Writer": "Nicholas Pileggi, Martin Scorsese",
+        "Actors": "Robert De Niro, Ray Liotta, Joe Pesci",
+        "Plot": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.",
+        "Language": "English, Italian",
+        "Country": "United States",
+        "Awards": "Won 1 Oscar. 44 wins & 38 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
         "Ratings": [
           {
             "Source": "Internet Movie Database",
-            "Value": "9.0/10"
+            "Value": "8.7/10"
           },
           {
             "Source": "Rotten Tomatoes",
-            "Value": "93%"
+            "Value": "96%"
           },
           {
             "Source": "Metacritic",
-            "Value": "94/100"
+            "Value": "92/100"
           }
         ],
-        "Metascore": "94",
-        "imdbRating": "9.0",
-        "imdbVotes": "1,895,028",
-        "imdbID": "tt0167260",
+        "Metascore": "92",
+        "imdbRating": "8.7",
+        "imdbVotes": "1,198,435",
+        "imdbID": "tt0099685",
         "Type": "movie",
-        "DVD": "25 May 2004",
-        "BoxOffice": "$379,427,292",
+        "DVD": "22 Aug 1997",
+        "BoxOffice": "$46,909,721",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": 1.0,
+        "watched": false,
+        "review": "Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?Hello is this the real world ?"
+      }
+    },
+    "watchlist": {
+      "dd803baa-e658-4477-a72c-2b37d589a3c1": {
+        "Title": "The Lord of the Rings: The Fellowship of the Ring",
+        "Year": "2001",
+        "Rated": "PG-13",
+        "Released": "19 Dec 2001",
+        "Runtime": "178 min",
+        "Genre": "Action, Adventure, Drama",
+        "Director": "Peter Jackson",
+        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
+        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+        "Language": "English, Sindarin",
+        "Country": "New Zealand, United States",
+        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "92/100"
+          }
+        ],
+        "Metascore": "92",
+        "imdbRating": "8.8",
+        "imdbVotes": "1,923,743",
+        "imdbID": "tt0120737",
+        "Type": "movie",
+        "DVD": "06 Aug 2002",
+        "BoxOffice": "$316,115,420",
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True",
         "personal_rating": null,
         "watched": false,
-        "id": "c3f6d2aa-a2a6-4ecd-9bf3-fd480900fad7"
+        "id": "dd803baa-e658-4477-a72c-2b37d589a3c1"
+      },
+      "9a306e6f-8e15-40ad-b8fc-e8fa6157cd43": {
+        "Title": "Goodfellas",
+        "Year": "1990",
+        "Rated": "R",
+        "Released": "21 Sep 1990",
+        "Runtime": "145 min",
+        "Genre": "Biography, Crime, Drama",
+        "Director": "Martin Scorsese",
+        "Writer": "Nicholas Pileggi, Martin Scorsese",
+        "Actors": "Robert De Niro, Ray Liotta, Joe Pesci",
+        "Plot": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.",
+        "Language": "English, Italian",
+        "Country": "United States",
+        "Awards": "Won 1 Oscar. 44 wins & 38 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.7/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "96%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "92/100"
+          }
+        ],
+        "Metascore": "92",
+        "imdbRating": "8.7",
+        "imdbVotes": "1,198,435",
+        "imdbID": "tt0099685",
+        "Type": "movie",
+        "DVD": "22 Aug 1997",
+        "BoxOffice": "$46,909,721",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "9a306e6f-8e15-40ad-b8fc-e8fa6157cd43"
       }
     },
-    "age": "dd",
-    "favorite_movie": "",
-    "favorite_quote": "",
-    "words_to_live_by": "",
-    "sex": "Male",
-    "profile_picture": "Testa_F08Sg2XX0AAASis_1.jpg"
+    "age": "29",
+    "favorite_movie": "asdasd",
+    "favorite_quote": "I love turtles",
+    "words_to_live_by": "Always have Chocolate",
+    "sex": "Other",
+    "profile_picture": "Testa_FzkGTYkXwA0OPDx_2.jpg"
   },
   "Alice": {
     "name": "Alice",
@@ -204,7 +242,13 @@
         "Response": "True",
         "personal_rating": 1.0,
         "watched": false,
-        "review": "Hello, \r\nI like Turtles.\r\nI like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like TurtI like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.les.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles."
+        "review": "Hello, \r\nI like Turtles.\r\nI like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like TurtI like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.les.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.I like Turtles.",
+        "likes": {
+          "count": 1,
+          "users": [
+            "Testa"
+          ]
+        }
       }
     },
     "watchlist": {},
@@ -218,14 +262,102 @@
   "Hullu": {
     "name": "Hullu",
     "password": "pbkdf2:sha256:260000$utE2tVoS7PtvhnxL$ee6b8337fb543c6b6bc441cc2983cd61cd6a8e41667a4dd476d6ddc498f9f602",
-    "movies": {},
-    "watchlist": {},
+    "movies": {
+      "4db01652-df8c-4968-afff-92bce1e603b6": {
+        "Title": "Fear",
+        "Year": 1996,
+        "Rated": "R",
+        "Released": "12 Apr 1996",
+        "Runtime": "97 min",
+        "Genre": "Drama, Thriller",
+        "Director": "James Foley",
+        "Writer": "Christopher Crowe",
+        "Actors": "Mark Wahlberg, Reese Witherspoon, William Petersen",
+        "Plot": "When Nicole met David; handsome, charming, affectionate, he was everything. It seemed perfect, but soon she sees that David has a darker side. And his adoration turns to obsession, their dream into a nightmare, and her love into f...",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "1 win & 2 nominations",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZTM4ZmJmMTQtMWUxOS00MjQxLTllNmQtNzI4YWVhYzZlNTRkXkEyXkFqcGdeQXVyNjU0NTI0Nw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.2/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "46%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "51/100"
+          }
+        ],
+        "Metascore": "51",
+        "imdbRating": "6.2",
+        "imdbVotes": "51,326",
+        "imdbID": "tt0116287",
+        "Type": "movie",
+        "DVD": "25 Feb 2003",
+        "BoxOffice": "$20,831,000",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": 1.0,
+        "watched": false,
+        "review": "ddddd"
+      }
+    },
+    "watchlist": {
+      "f4cc4f27-7734-44cf-b200-c03a26dcf09e": {
+        "Title": "Full Metal Jacket",
+        "Year": "1987",
+        "Rated": "R",
+        "Released": "10 Jul 1987",
+        "Runtime": "116 min",
+        "Genre": "Drama, War",
+        "Director": "Stanley Kubrick",
+        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
+        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
+        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
+        "Language": "English, Vietnamese",
+        "Country": "United Kingdom, United States",
+        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "78/100"
+          }
+        ],
+        "Metascore": "78",
+        "imdbRating": "8.3",
+        "imdbVotes": "762,151",
+        "imdbID": "tt0093058",
+        "Type": "movie",
+        "DVD": "12 Jun 2001",
+        "BoxOffice": "$46,357,676",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "f4cc4f27-7734-44cf-b200-c03a26dcf09e"
+      }
+    },
     "age": "30",
-    "favorite_movie": "dd",
-    "favorite_quote": "d",
-    "words_to_live_by": "d",
-    "sex": "Female",
-    "profile_picture": null
+    "favorite_movie": "asdasdasdasdasdasdasdasd",
+    "favorite_quote": "dSpasdkasdjniiasdnujioasdbnujiasbdnasdasdasdasd",
+    "words_to_live_by": "dasdasdasdasdasdasdasdasdasdasd",
+    "sex": "Other",
+    "profile_picture": "Hullu_film-g27f53ac4b_1920.jpg"
   },
   "Peter": {
     "name": "Peter",
@@ -237,6 +369,413 @@
     "favorite_quote": "I love turtles",
     "words_to_live_by": "testa",
     "sex": "Other",
+    "profile_picture": null
+  },
+  "Pummel": {
+    "name": "Pummel",
+    "password": "pbkdf2:sha256:260000$jVA2V9bQGVHS7ib7$82f65b87f2c022f76cfbbdfed37a2f14603e58e800fb3863a368f07fbc2feded",
+    "movies": {
+      "64002481-e35c-4040-b177-d2c1b5863ea5": {
+        "Title": "Full Metal Jacket",
+        "Year": 1987,
+        "Rated": "R",
+        "Released": "10 Jul 1987",
+        "Runtime": "116 min",
+        "Genre": "Drama, War",
+        "Director": "Stanley Kubrick",
+        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
+        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
+        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
+        "Language": "English, Vietnamese",
+        "Country": "United Kingdom, United States",
+        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "78/100"
+          }
+        ],
+        "Metascore": "78",
+        "imdbRating": "8.3",
+        "imdbVotes": "762,151",
+        "imdbID": "tt0093058",
+        "Type": "movie",
+        "DVD": "12 Jun 2001",
+        "BoxOffice": "$46,357,676",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": 1.0,
+        "watched": false,
+        "review": "asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd "
+      },
+      "7d7aa31d-f6ae-4895-aff2-5eb0df646d70": {
+        "Title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "87%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,425,956",
+        "imdbID": "tt1375666",
+        "Type": "movie",
+        "DVD": "07 Dec 2010",
+        "BoxOffice": "$292,587,330",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
+      },
+      "2f50f1f7-bf86-4093-8a3d-a964df0d7007": {
+        "Title": "Fear",
+        "Year": "1996",
+        "Rated": "R",
+        "Released": "12 Apr 1996",
+        "Runtime": "97 min",
+        "Genre": "Drama, Thriller",
+        "Director": "James Foley",
+        "Writer": "Christopher Crowe",
+        "Actors": "Mark Wahlberg, Reese Witherspoon, William Petersen",
+        "Plot": "When Nicole met David; handsome, charming, affectionate, he was everything. It seemed perfect, but soon she sees that David has a darker side. And his adoration turns to obsession, their dream into a nightmare, and her love into f...",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "1 win & 2 nominations",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZTM4ZmJmMTQtMWUxOS00MjQxLTllNmQtNzI4YWVhYzZlNTRkXkEyXkFqcGdeQXVyNjU0NTI0Nw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.2/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "46%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "51/100"
+          }
+        ],
+        "Metascore": "51",
+        "imdbRating": "6.2",
+        "imdbVotes": "51,326",
+        "imdbID": "tt0116287",
+        "Type": "movie",
+        "DVD": "25 Feb 2003",
+        "BoxOffice": "$20,831,000",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
+      },
+      "c1a06b88-6558-4501-b325-3060c2cd013c": {
+        "Title": "The Lord of the Rings: The Fellowship of the Ring",
+        "Year": "2001",
+        "Rated": "PG-13",
+        "Released": "19 Dec 2001",
+        "Runtime": "178 min",
+        "Genre": "Action, Adventure, Drama",
+        "Director": "Peter Jackson",
+        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
+        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+        "Language": "English, Sindarin",
+        "Country": "New Zealand, United States",
+        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "92/100"
+          }
+        ],
+        "Metascore": "92",
+        "imdbRating": "8.8",
+        "imdbVotes": "1,923,743",
+        "imdbID": "tt0120737",
+        "Type": "movie",
+        "DVD": "06 Aug 2002",
+        "BoxOffice": "$316,115,420",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "1",
+        "watched": false
+      }
+    },
+    "watchlist": {
+      "93a7e0df-cf35-4110-b3a2-c1b862eb49f1": {
+        "Title": "Full Metal Jacket",
+        "Year": "1987",
+        "Rated": "R",
+        "Released": "10 Jul 1987",
+        "Runtime": "116 min",
+        "Genre": "Drama, War",
+        "Director": "Stanley Kubrick",
+        "Writer": "Stanley Kubrick, Michael Herr, Gustav Hasford",
+        "Actors": "Matthew Modine, R. Lee Ermey, Vincent D'Onofrio",
+        "Plot": "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",
+        "Language": "English, Vietnamese",
+        "Country": "United Kingdom, United States",
+        "Awards": "Nominated for 1 Oscar. 8 wins & 14 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "78/100"
+          }
+        ],
+        "Metascore": "78",
+        "imdbRating": "8.3",
+        "imdbVotes": "762,151",
+        "imdbID": "tt0093058",
+        "Type": "movie",
+        "DVD": "12 Jun 2001",
+        "BoxOffice": "$46,357,676",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "93a7e0df-cf35-4110-b3a2-c1b862eb49f1"
+      },
+      "2d181d22-50ee-4166-93cc-07255fbda421": {
+        "Title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 4 Oscars. 159 wins & 220 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "87%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,425,956",
+        "imdbID": "tt1375666",
+        "Type": "movie",
+        "DVD": "07 Dec 2010",
+        "BoxOffice": "$292,587,330",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "2d181d22-50ee-4166-93cc-07255fbda421"
+      },
+      "9deeaa10-5b6f-43a1-9255-d208aec16d27": {
+        "Title": "The Lord of the Rings: The Fellowship of the Ring",
+        "Year": "2001",
+        "Rated": "PG-13",
+        "Released": "19 Dec 2001",
+        "Runtime": "178 min",
+        "Genre": "Action, Adventure, Drama",
+        "Director": "Peter Jackson",
+        "Writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens",
+        "Actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "Plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+        "Language": "English, Sindarin",
+        "Country": "New Zealand, United States",
+        "Awards": "Won 4 Oscars. 123 wins & 127 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "91%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "92/100"
+          }
+        ],
+        "Metascore": "92",
+        "imdbRating": "8.8",
+        "imdbVotes": "1,923,743",
+        "imdbID": "tt0120737",
+        "Type": "movie",
+        "DVD": "06 Aug 2002",
+        "BoxOffice": "$316,115,420",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": null,
+        "watched": false,
+        "id": "9deeaa10-5b6f-43a1-9255-d208aec16d27"
+      }
+    },
+    "age": "",
+    "favorite_movie": "",
+    "favorite_quote": "",
+    "words_to_live_by": "",
+    "sex": null,
+    "profile_picture": null
+  },
+  "Kl\u00f6ti": {
+    "name": "Kl\u00f6ti",
+    "password": "pbkdf2:sha256:260000$lwZNwDu0p4hwy1BI$b7dfe579dad4a8e84a04d978fab4bcc802783997477ef80718278edb9b6df86f",
+    "movies": {},
+    "watchlist": {},
+    "age": "",
+    "favorite_movie": "",
+    "favorite_quote": "",
+    "words_to_live_by": "",
+    "sex": "Male",
+    "profile_picture": "Kloti_FzkGTYkXwA0OPDx_2.jpg"
+  },
+  "Feta": {
+    "name": "Feta",
+    "password": "pbkdf2:sha256:260000$puTOir9I1gAJ4aiD$214c18e2b9e0f03f6dd3ed172e6407a04abf7127f7bfadb3b0a310c2ac37536f",
+    "movies": {
+      "83cb3cce-779a-4189-8323-638f3d32bcaa": {
+        "Title": "Pope",
+        "Year": 2017,
+        "Rated": "N/A",
+        "Released": "30 Mar 2017",
+        "Runtime": "55 min",
+        "Genre": "Crime, Drama",
+        "Director": "Dwight White",
+        "Writer": "Dwight White",
+        "Actors": "Kevin L. Walker, Noel Gugliemi, Neil Brown Jr.",
+        "Plot": "Born and raised in the ghettos of Detroit, four young Detroit street kids look to provide a better life for what remains of their broken families, but they may have bitten off more than they can handle.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYzllZGJjMWItOGQwZC00MjNjLWI0MjctODE3ZGUwZTBmMjVjXkEyXkFqcGdeQXVyMjQyOTkyNjI@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "9.5/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "9.5",
+        "imdbVotes": "216",
+        "imdbID": "tt4746216",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": "",
+        "watched": false,
+        "review": "Test Test Test Test Test Test \n\n\n\nTest Test Test Test Test Test Test Test Test Test Test Test \n\n\n\nTest Test Test Test Test Test Test Test Test Test Test Test \n\nTest Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test \n\n\nTest Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test \n\n\n\n\n\n\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   \n\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   \n\n\n\n\n\n\n\n\nNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer"
+      },
+      "42f48e10-d229-4d04-9c12-9a7a71716ca9": {
+        "Title": "Turtle",
+        "Year": 2018,
+        "Rated": "N/A",
+        "Released": "25 Jan 2020",
+        "Runtime": "75 min",
+        "Genre": "Drama",
+        "Director": "Dinesh S. Yadav",
+        "Writer": "Ruhin, Suryapal Singh, Dinesh S. Yadav",
+        "Actors": "Sanjay Mishra, Ramnath Choudhary Algoja, Plabita Borthakur",
+        "Plot": "The film is a metaphorical depiction of the turtle where in a drought struck village of Rajasthan, Sanjay Mishra (as Ramkaran Choudhary), is churning the parched, sun baked earth, to extract water and the common folk indulged in a...",
+        "Language": "Hindi",
+        "Country": "India",
+        "Awards": "1 win & 1 nomination",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNWVmNDJhNjEtOTI4NC00YmYwLTkxNDEtYzg3NDlhNTgxM2JlXkEyXkFqcGdeQXVyNjM2MTE2NTM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.2/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "7.2",
+        "imdbVotes": "120",
+        "imdbID": "tt10010814",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True",
+        "personal_rating": 10.0,
+        "watched": false,
+        "review": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   \n\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   \n\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   \n\nNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer"
+      }
+    },
+    "watchlist": {},
+    "age": "",
+    "favorite_movie": "",
+    "favorite_quote": "I am, tho i am noI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longer longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longerI am, tho i am no longer",
+    "words_to_live_by": "",
+    "sex": null,
     "profile_picture": null
   }
 }
